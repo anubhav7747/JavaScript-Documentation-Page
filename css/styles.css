@@ -65,7 +65,10 @@ br {
 #navbar ul li {
     list-style: none;
     /* text-decoration: none; */
-    margin-bottom: 1.1rem;
+    margin-bottom: 0.6rem;
+    font-size: larger;
+    /* text-align: center; */
+    padding-top: 0.6rem;
 }
 
 
