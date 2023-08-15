@@ -41,10 +41,16 @@
             <li id="border"><a href="#Constants" class="nav-link"><img src="/arrow.svg" alt="arrow" width="10" height="12"> Constants</a></li>
 
             <li id="border"><a href="#Data_types" class="nav-link"><img src="/arrow.svg" alt="arrow" width="10" height="12"> Data types</a></li>
+
+            <li class="" id="border"><a href="#expressions_and_operators" class="nav-link"><img src="/arrow.svg" alt="arrow" width="10" height="12"> Expressions and Operators</a></li>
             
             <li id="border"><a href="#if...else_statement" class="nav-link"><img src="/arrow.svg" alt="arrow" width="10" height="12"> if...else statement</a></li>
             
             <li id="border"><a href="#while_statement" class="nav-link"><img src="/arrow.svg" alt="arrow" width="10" height="12"> while statement</a></li>
+
+            <li id="border"><a href="#do...while_statement" class="nav-link"><img src="/arrow.svg" alt="arrow" width="10" height="12"> do...while statement</a></li>
+
+            <li id="border"><a href="#for_loop" class="nav-link"><img src="/arrow.svg" alt="arrow" width="10" height="12"> for loop</a></li>
 
             <li id="border"><a href="#Function_declarations" class="nav-link"><img src="/arrow.svg" alt="arrow" width="10" height="12"> Function declarations</a></li>
             
@@ -75,13 +81,28 @@
 
                     <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
                 </ul>
+
+                <p>JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.</p>
+
+                <p>JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).</p>
+
+                <div class="h3-span">
+                    <h3 class="h3-left"><u>HTML, CSS and JS:</u></h3>
+                    <span class="h3-right">They can be defined as</span>
+                </div>
+                
+                <ul>
+                    <li><p><u><b title="Hypertext Markup Language">HTML:</b></u> It is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.</p></li>
+                    <li><p><u><b title="Cascading Style Sheet">CSS:</b></u> It is a language of styles that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.</p></li>
+                    <li><p><u><b title="JavaScript">JS:</b></u> It is a scripting language that enables us to create dynamically updating content, control multimedia, animate images, and pretty much everything else.</p></li>
+                </ul>               
             </article>
         </section>
 
 
         <!-- What_can_JavaScript_do? -->
         <section class="main-section" id="What_can_JavaScript_do">
-            <header>What can JavaScript do?</header>
+            <header class="margin-from-top">What can JavaScript do?</header>
 
             <article>
                 <ul>
@@ -95,7 +116,7 @@
 
         <!-- What_can_In-Browser_JavaScript_do -->
         <section class="main-section" id="What_can_In-Browser_JavaScript_do">
-            <header>What can In-Browser JavaScript do?</header>
+            <header class="margin-from-top">What can In-Browser JavaScript do?</header>
 
             <article>
                 <ul>
@@ -110,7 +131,7 @@
 
         <!-- What_make_JavaScript_unique -->
         <section class="main-section" id="What_make_JavaScript_unique">
-            <header>What make JavaScript unique?</header>
+            <header class="margin-from-top">What make JavaScript unique?</header>
 
             <article>
                 <ul>
@@ -124,7 +145,7 @@
 
         <!-- JavaScript_versions -->
         <section class="main-section" id="JavaScript_versions">
-            <header>JavaScript versions</header>
+            <header class="margin-from-top">JavaScript versions</header>
 
             <article>
                 <p>JavaScript was invented by Brendan Eich in 1995. It was developed for Netscape 2, and became the ECMA-262 standard in 1997. After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop JavaScript for the Firefox browser. Mozilla's latest version was 1.8.5. (Identical to ES5). Internet Explorer (IE4) was the first browser to support ECMA-262 Edition 1 (ES1).</p>
@@ -143,7 +164,7 @@
         
         <!-- What you should already know -->
         <section class="main-section" id="What_you_should_already_know">
-            <header>What you should already know</header>
+            <header class="margin-from-top">What you should already know</header>
             
             <article>
                 <p>This guide assumes you have the following basic background:</p>
@@ -160,7 +181,7 @@
 
         <!-- JavaScript and Java -->
         <section class="main-section" id="JavaScript_and_Java">
-            <header>JavaScript and Java</header>
+            <header class="margin-from-top">JavaScript and Java</header>
             
             <article>
                 <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
@@ -174,7 +195,7 @@
 
         <!-- Hello world -->
         <section class="main-section" id="Hello_world">
-            <header>Hello World</header>
+            <header class="margin-from-top">Hello World</header>
 
             <article>
                 <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
@@ -191,7 +212,7 @@
 
         <!-- Variables -->
         <section class="main-section" id="Variables">
-            <header>Variables</header>
+            <header class="margin-from-top">Variables</header>
 
             <article>
                 <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
@@ -205,7 +226,7 @@
 
         <!-- Declaring variables -->
         <section class="main-section" id="Declaring_variables">
-            <header>Declaring variables</header>
+            <header class="margin-from-top">Declaring variables</header>
 
             <article>
                 <p>You can declare a variable in three ways:</p>
@@ -239,7 +260,7 @@
 
         <!-- Variable Scope -->
         <section class="main-section" id="Variable_scope">
-            <header>Variable scope</header>
+            <header class="margin-from-top">Variable scope</header>
 
             <article>
                 <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
@@ -262,7 +283,7 @@
 
         <!-- Global variables -->
         <section class="main-section" id="Global_variables">
-            <header>Global variables</header>
+            <header class="margin-from-top">Global variables</header>
 
             <article>
                 <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
@@ -271,14 +292,10 @@
             </article>
         </section>
 
-        <!-- <section class="main-section" id="constants">
-            <header>Constants</header>
-        </section> -->
-
 
         <!-- Constants -->
         <section class="main-section" id="Constants">
-            <header>Constants</header>
+            <header class="margin-from-top">Constants</header>
 
             <article>
                 <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
@@ -311,7 +328,7 @@
 
         <!-- Data types -->
         <section class="main-section" id="Data_types">
-            <header>Data types</header>
+            <header class="margin-from-top">Data types</header>
 
             <article>
                 <p>The latest ECMAScript standard defines seven data types:</p>
@@ -338,9 +355,253 @@
         </section>
 
 
+        <!-- Expressions and Operators -->
+        <section class="main-section" id="expressions_and_operators">
+            <header class="margin-from-top">Expressions and Operators</header>
+            
+            <article>
+                <ol>
+                    <li>Primary expressions</li>
+                    <p>Basic keywords and general expression in JS. These expression have the highest precedence (higher than operators).</p>
+                    <dl>
+                        <dt>
+                            <code>this</code>
+                        </dt>
+                        <dd>
+                            The 
+                            <code>this</code>
+                             keyword refers to a special property of an execution context.
+                        </dd>
+                        
+                        <dt><code>Literals</code></dt>
+                        <dd>
+                            Basic
+                            <code>null</code>
+                            , boolean, number, and string literals.
+                        </dd>
+                        
+                        <dt><code>[]</code></dt>
+                        <dd>Array initializer/literal syntax.</dd>
+                        
+                        <dt><code>{}</code></dt>
+                        <dd>Object initializer/literal syntax.</dd>
+                        
+                        <dt><code>function</code></dt>
+                        <dd>
+                            defines a function expression.
+                        </dd>
+                        
+                        <dt><code>class</code></dt>
+                        <dd>defines a class expression.</dd>
+                        
+                        <dt><code>function*</code></dt>
+                        <dd>defines a generator function expression.</dd>
+                        
+                        <dt><code>async function</code></dt>
+                        <dd>defines an async function expression.</dd>
+                        
+                        <dt><code>async function*</code></dt>
+                        <dd>defines an async generator function expression.</dd>
+                        
+                        <dt><code>/ab+c/i</code></dt>
+                        <dd>RegExp => Regular Expression</dd>
+                        
+                        <dt><code>`string`</code></dt>
+                        <dd>template literal syntax (``)</dd>
+                        
+                        <dt><code>( )</code></dt>
+                        <dd>grouping operator</dd>
+                    </dl>
+                    
+
+                    <li class="margin-from-top">Left-hand-side expressions</li>
+                    <p>Left values are the destination of an assignment.</p>
+                    <dl>
+                        <dt>Property accessors</dt>
+                        <dd>
+                            member operators provide access to a property or method of an object (
+                                <code>object.property</code>
+                                and
+                                <code>object["property"]</code>
+                            ).
+                        </dd>
+                        
+                        <dt>
+                            <code>?.</code>
+                        </dt>
+                        <dd>
+                            optimal chaining operator returns 
+                            <code>undefined</code>
+                            instead of causing an error if a reference is 
+                            <code>nullish</code>
+                            .
+                <pre>
+                    <code>
+                        const adventurer = {
+                            name: 'Alice',
+                            cat: {
+                                name: 'Bob',
+                            },
+                        };
+
+                        const dogName = adventurer.dog?.name;
+                        console.log(dogName);
+                    </code>
+                </pre>
+                        </dd>
+                        
+                        <dt>
+                            <code>new</code>
+                        </dt>
+                        <dd>
+                            creates an instance of a constructor.
+                        </dd>
+                        
+                        <dt>
+                            <code>new.target</code>
+                        </dt>
+                        <dd>
+                            In constructors,
+                            <code>new.target</code>
+                            refers to the constructor that was invoked by 
+                            <code>new</code>
+                            .
+                        </dd>
+                        
+                        <dt>
+                            <code>import.meta</code>
+                        </dt>
+                        <dd>an object exposing context-specific metadata to a JS module.</dd>
+                        
+                        <dt>
+                            <code>super</code>
+                        </dt>
+                        <dd>
+                            the
+                            <code>super</code>
+                            keyword calls the parent constructor or allows accessing properties of the parent object.
+                        </dd>
+                        
+                        <dt>
+                            <code>import</code>
+                        </dt>
+                        <dd>
+                            the 
+                            <code>import()</code>
+                            syntax allows loading a module asynchronously and dynamically into a potentially non-module environment.
+                        </dd>
+                    </dl>
+                    
+
+                    <li class="margin-from-top">Increment and Decrement</li>
+                    <p>Postfix/prefix increment and postfix/prefix decrement.</p>
+                    <dl>
+                        <dt>
+                            <code>A++</code>
+                        </dt>
+                        <dd>Postfix increment operator</dd>
+                        
+                        <dt>
+                            <code>++A</code>
+                        </dt>
+                        <dd>Prefix increment operator</dd>
+                        
+                        <dt>
+                            <code>--A</code>
+                        </dt>
+                        <dd>Prefix decrement operator</dd>
+                        
+                        <dt>
+                            <code>A--</code>
+                        </dt>
+                        <dd>Postfix decrement operator</dd>
+                    </dl>
+                    
+
+                    <li class="margin-from-top">Unary operators</li>
+                    <p>A unary operation is an operation with only one operand.</p>
+                    <dl>
+                        <dt>
+                            <code>delete</code>
+                        </dt>
+                        <dd>deletes a property from an object.</dd>
+                        
+                        <dt>
+                            <code>void</code>
+                        </dt>
+                        <dd>evaluates an expression and discards its return value.</dd>
+                        
+                        <dt>
+                            <code>typeof</code>
+                        </dt>
+                        <dd>determines the type of a given object.</dd>
+                        
+                        <dt>
+                            <code>+</code>
+                        </dt>
+                        <dd>the unary plus operator converts its operand to Number type.</dd>
+                        
+                        <dt>
+                            <code>-</code>
+                        </dt>
+                        <dd>the unary negation operator converts its operand to Number type and then negates it.</dd>
+                        
+                        <dt>
+                            <code>~</code>
+                        </dt>
+                        <dd>Bitwise NOT operator.</dd>
+                        
+                        <dt>
+                            <code>!</code>
+                        </dt>
+                        <dd>Logical NOT operator.</dd>
+                        
+                        <dt>
+                            <code>await</code>
+                        </dt>
+                        <dd>pause and resume an async function and wait for the promise' fulfillment/rejection.</dd>
+                    </dl>
+                    
+
+                    <li class="margin-from-top">Arithmetic operators</li>
+                    
+
+                    <li class="margin-from-top">Relational operators</li>
+                    
+                    
+                    <li class="margin-from-top">Equality operators</li>
+                    
+                    
+                    <li class="margin-from-top">Bitwise shift operators</li>
+                    
+                    
+                    <li class="margin-from-top">Binary bitwise operators</li>
+                    
+                    
+                    <li class="margin-from-top">Binary logical operators</li>
+                    
+                    
+                    <li class="margin-from-top">Conditional (ternary) operator</li>
+                    
+                    
+                    <li class="margin-from-top">Assignment operators</li>
+                    
+                    
+                    <li class="margin-from-top">Yield operators</li>
+                    
+                    
+                    <li class="margin-from-top">Spread syntax</li>
+                    
+                    
+                    <li class="margin-from-top">Comma operator</li>
+                </ol>
+            </article>
+        </section>
+
+
         <!-- if...else statement -->
         <section class="main-section" id="if...else_statement">
-            <header>if...else statement</header>
+            <header class="margin-from-top">if...else statement</header>
 
             <article>
                 <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:</p>
@@ -386,7 +647,7 @@
 
         <!-- white statement -->
         <section class="main-section" id="while_statement">
-            <header>while statement</header>
+            <header class="margin-from-top">while statement</header>
 
             <article>
                 <p>A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
@@ -422,9 +683,25 @@
         </section>
 
 
+        <!-- do...while statement -->
+        <section class="main-section" id="do...while_statement">
+            <header class="margin-from-top">do...while statement</header>
+            
+            <article></article>
+        </section>
+
+
+        <!-- for loop -->
+        <section class="main-section" id="for_loop">
+            <header class="margin-from-top">for loop</header>
+            
+            <article></article>
+        </section>
+
+
         <!-- function declarations -->
         <section class="main-section" id="Function_declarations">
-            <header>Function declarations</header>
+            <header class="margin-from-top">Function declarations</header>
 
             <article>
                 <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
@@ -455,7 +732,7 @@
         
         <!-- reference -->
         <section class="main-section" id="Reference">
-            <header>Reference</header>
+            <header class="margin-from-top">Reference</header>
 
             <article>
                 <ul>

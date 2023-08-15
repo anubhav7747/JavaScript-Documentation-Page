@@ -19,7 +19,7 @@ br {
     left: 0px;
     /* z-index: 1; */
     /* background-color: #f0f0f0; */
-    width: 340px;
+    width: 350px;
     height: 100%;
     /* font-size: large; */
     border-right: solid;
@@ -31,7 +31,8 @@ br {
     font-size: 2rem;
     text-align: center;
     padding-top: 1rem;
-    
+    /* margin-top: 1em; */
+    margin-bottom: 1em;
 }
 
 #navbar ul {
@@ -44,6 +45,7 @@ br {
 #navbar li {
     /* color: #4d4e53; */
     border-top: 1px solid;
+    /* margin-top: 1em; */
     list-style: none;
     position: relative;
     width: 100%;
@@ -52,7 +54,8 @@ br {
 .nav-link {
     /* margin-top: 2rem; */
     margin-left: 2rem;
-    
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 /* #border {
@@ -82,15 +85,6 @@ br {
 }
 
 
-pre{
-    /* border-radius: 5px solid #f1f1f1; */
-    width: 100%;
-    background-color: #f1f1f1;
-    /* margin-top: 5vw; */
-    padding-top: 10px;  
-    font-size: 15px;
-}
-
 #main-doc {
     /* position: relative; */
     position: absolute;
@@ -107,6 +101,10 @@ pre{
     margin-left: 15px;
 }
 
+.main-section header:hover {
+    text-decoration: underline;
+}
+
 section article{
     margin-left: 35px;
     color: #7c7474;
@@ -119,6 +117,70 @@ section article{
 article ul li {
     margin-bottom: 1rem;
 }
+
+
+/* inside introduction */
+.h3-span {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid seagreen; */
+}
+
+.h3-right {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+}
+
+
+/* inside expressions_and_operators */
+#expressions_and_operators > article > ol > li {
+    color: rgb(15, 26, 39);
+    font-size: 1.5em;
+    list-style: none;
+}
+
+#expressions_and_operators > article > ol > li:hover {
+    text-decoration: underline;
+}
+
+ol > dl > dt > code, ol > dl > dd > code {
+    background-color: #f1f1f1;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+ol > dl > dt {
+    margin-top: 2.5em;
+    color: rgb(52, 52, 147);
+}
+
+ol > dl > dd {
+    margin-top: 1em;
+}
+
+
+
+pre{
+    /* border-radius: 5px solid #f1f1f1; */
+    width: 100%;
+    background-color: #f1f1f1;
+    /* margin-top: 5vw; */
+    padding-top: 10px;  
+    font-size: 15px;
+}
+
+#expressions_and_operators > article > ol > dl > dd > pre {
+    width: 100%;
+    background-color: #f1f1f1;
+    /* border: 2px solid orange; */
+    padding: 0;
+}
+
+.margin-from-top {
+    margin-top: 4rem;
+}
+
 
 /* section article a{
 } */
