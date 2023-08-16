@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Documentation | Loops</title>
+    <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center">JavaScript Documentation</h1>
+    </header>
+
+
+    <!-- nav -->
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="/html/introduction.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/html/Basics.html">Basics</a>
+            </li>
+            <li>
+                <a href="/html/expressionAndOperators.html">Expressions and Operators</a>
+            </li>
+            <li>
+                <a href="/html/statements.html">Statements</a>
+            </li>
+            <li>
+                <a href="/html/loops.html">Loops</a>
+            </li>
+            <li>
+                <a href="/html/functions.html">Function</a>
+            </li>
+            <li>
+                <a href="/html/strings.html">Strings</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- main -->
+    <main id="main-doc">
+        <!-- white statement -->
+        <section>
+            <header>while statement</header>
+
+            <article>
+                <p>A while statement executes its statements as long as a specified condition evaluates to true. A while
+                    statement looks as follows:</p>
+
+                <pre><code>
+                    while (condition) statement
+                </code></pre>
+
+                <p>If the condition becomes false, statement within the loop stops executing and control passes to the
+                    statement following the loop.</p>
+
+                <p>The condition test occurs before statement in the loop is executed. If the condition returns true,
+                    statement is executed and the condition is tested again. If the condition returns false, execution
+                    stops and control is passed to the statement following while.</p>
+
+                <p>To execute multiple statements, use a block statement ({ ... }) to group those statements.</p>
+
+                <p>Example:</p>
+
+                <p>The following while loop iterates as long as n is less than three:</p>
+
+                <pre><code>
+                    var n = 0;
+                    var x = 0;
+                    
+                    while (n < 3) {
+                        n++;
+                        x += n;
+                    }
+                </code></pre>
+
+                <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the
+                    following values:</p>
+
+                <ul>
+                    <li>After the first pass: n = 1 and x = 1</li>
+                    <li>After the second pass: n = 2 and x = 3</li>
+                    <li>After the third pass: n = 3 and x = 6</li>
+                </ul>
+
+                <p>After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.</p>
+            </article>
+        </section>
+
+
+        <!-- do...while statement -->
+        <section>
+            <header class="margin-from-top">do...while statement</header>
+
+            <article></article>
+        </section>
+
+
+        <!-- for loop -->
+        <section>
+            <header class="margin-from-top">for loop</header>
+
+            <article></article>
+        </section>
+
+        <button value="next"><a href="/html/functions.html">NEXT</a></button>
+        <button value="prev"><a href="/html/statements.html">PREV</a></button>
+    </main>
+
+</body>
+
+</html>

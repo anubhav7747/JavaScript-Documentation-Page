@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Documentation | Expression and Operators</title>
+    <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center">JavaScript Documentation</h1>
+    </header>
+
+
+    <!-- nav -->
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="/html/introduction.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/html/Basics.html">Basics</a>
+            </li>
+            <li>
+                <a href="/html/expressionAndOperators.html">Expressions and Operators</a>
+            </li>
+            <li>
+                <a href="/html/statements.html">Statements</a>
+            </li>
+            <li>
+                <a href="/html/loops.html">Loops</a>
+            </li>
+            <li>
+                <a href="/html/functions.html">Function</a>
+            </li>
+            <li>
+                <a href="/html/strings.html">Strings</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- main -->
+    <main id="main-doc">
+        <!-- Expressions and Operators -->
+        <section>
+            <header>Expressions and Operators</header>
+            
+            <article>
+                <ol>
+                    <li>Primary expressions</li>
+                    <p>Basic keywords and general expression in JS. These expression have the highest precedence (higher than operators).</p>
+                    <dl>
+                        <dt>
+                            <code>this</code>
+                        </dt>
+                        <dd>
+                            The 
+                            <code>this</code>
+                             keyword refers to a special property of an execution context.
+                        </dd>
+                        
+                        <dt><code>Literals</code></dt>
+                        <dd>
+                            Basic
+                            <code>null</code>
+                            , boolean, number, and string literals.
+                        </dd>
+                        
+                        <dt><code>[]</code></dt>
+                        <dd>Array initializer/literal syntax.</dd>
+                        
+                        <dt><code>{}</code></dt>
+                        <dd>Object initializer/literal syntax.</dd>
+                        
+                        <dt><code>function</code></dt>
+                        <dd>
+                            defines a function expression.
+                        </dd>
+                        
+                        <dt><code>class</code></dt>
+                        <dd>defines a class expression.</dd>
+                        
+                        <dt><code>function*</code></dt>
+                        <dd>defines a generator function expression.</dd>
+                        
+                        <dt><code>async function</code></dt>
+                        <dd>defines an async function expression.</dd>
+                        
+                        <dt><code>async function*</code></dt>
+                        <dd>defines an async generator function expression.</dd>
+                        
+                        <dt><code>/ab+c/i</code></dt>
+                        <dd>RegExp => Regular Expression</dd>
+                        
+                        <dt><code>`string`</code></dt>
+                        <dd>template literal syntax (``)</dd>
+                        
+                        <dt><code>( )</code></dt>
+                        <dd>grouping operator</dd>
+                    </dl>
+                    
+
+                    <li class="margin-from-top">Left-hand-side expressions</li>
+                    <p>Left values are the destination of an assignment.</p>
+                    <dl>
+                        <dt>Property accessors</dt>
+                        <dd>
+                            member operators provide access to a property or method of an object (
+                                <code>object.property</code>
+                                and
+                                <code>object["property"]</code>
+                            ).
+                        </dd>
+                        
+                        <dt>
+                            <code>?.</code>
+                        </dt>
+                        <dd>
+                            optimal chaining operator returns 
+                            <code>undefined</code>
+                            instead of causing an error if a reference is 
+                            <code>nullish</code>
+                            .
+                <pre><code>
+                    const adventurer = {
+                        name: 'Alice',
+                        cat: {
+                            name: 'Bob',
+                        },
+                    };
+
+                    const dogName = adventurer.dog?.name;
+                    console.log(dogName);
+                </code></pre>
+                        </dd>
+                        
+                        <dt>
+                            <code>new</code>
+                        </dt>
+                        <dd>
+                            creates an instance of a constructor.
+                        </dd>
+                        
+                        <dt>
+                            <code>new.target</code>
+                        </dt>
+                        <dd>
+                            In constructors,
+                            <code>new.target</code>
+                            refers to the constructor that was invoked by 
+                            <code>new</code>
+                            .
+                        </dd>
+                        
+                        <dt>
+                            <code>import.meta</code>
+                        </dt>
+                        <dd>an object exposing context-specific metadata to a JS module.</dd>
+                        
+                        <dt>
+                            <code>super</code>
+                        </dt>
+                        <dd>
+                            the
+                            <code>super</code>
+                            keyword calls the parent constructor or allows accessing properties of the parent object.
+                        </dd>
+                        
+                        <dt>
+                            <code>import</code>
+                        </dt>
+                        <dd>
+                            the 
+                            <code>import()</code>
+                            syntax allows loading a module asynchronously and dynamically into a potentially non-module environment.
+                        </dd>
+                    </dl>
+                    
+
+                    <li class="margin-from-top">Increment and Decrement</li>
+                    <p>Postfix/prefix increment and postfix/prefix decrement.</p>
+                    <dl>
+                        <dt>
+                            <code>A++</code>
+                        </dt>
+                        <dd>Postfix increment operator</dd>
+                        
+                        <dt>
+                            <code>++A</code>
+                        </dt>
+                        <dd>Prefix increment operator</dd>
+                        
+                        <dt>
+                            <code>--A</code>
+                        </dt>
+                        <dd>Prefix decrement operator</dd>
+                        
+                        <dt>
+                            <code>A--</code>
+                        </dt>
+                        <dd>Postfix decrement operator</dd>
+                    </dl>
+                    
+
+                    <li class="margin-from-top">Unary operators</li>
+                    <p>A unary operation is an operation with only one operand.</p>
+                    <dl>
+                        <dt>
+                            <code>delete</code>
+                        </dt>
+                        <dd>deletes a property from an object.</dd>
+                        
+                        <dt>
+                            <code>void</code>
+                        </dt>
+                        <dd>evaluates an expression and discards its return value.</dd>
+                        
+                        <dt>
+                            <code>typeof</code>
+                        </dt>
+                        <dd>determines the type of a given object.</dd>
+                        
+                        <dt>
+                            <code>+</code>
+                        </dt>
+                        <dd>the unary plus operator converts its operand to Number type.</dd>
+                        
+                        <dt>
+                            <code>-</code>
+                        </dt>
+                        <dd>the unary negation operator converts its operand to Number type and then negates it.</dd>
+                        
+                        <dt>
+                            <code>~</code>
+                        </dt>
+                        <dd>Bitwise NOT operator.</dd>
+                        
+                        <dt>
+                            <code>!</code>
+                        </dt>
+                        <dd>Logical NOT operator.</dd>
+                        
+                        <dt>
+                            <code>await</code>
+                        </dt>
+                        <dd>pause and resume an async function and wait for the promise' fulfillment/rejection.</dd>
+                    </dl>
+                    
+
+                    <li class="margin-from-top">Arithmetic operators</li>
+                    
+
+                    <li class="margin-from-top">Relational operators</li>
+                    
+                    
+                    <li class="margin-from-top">Equality operators</li>
+                    
+                    
+                    <li class="margin-from-top">Bitwise shift operators</li>
+                    
+                    
+                    <li class="margin-from-top">Binary bitwise operators</li>
+                    
+                    
+                    <li class="margin-from-top">Binary logical operators</li>
+                    
+                    
+                    <li class="margin-from-top">Conditional (ternary) operator</li>
+                    
+                    
+                    <li class="margin-from-top">Assignment operators</li>
+                    
+                    
+                    <li class="margin-from-top">Yield operators</li>
+                    
+                    
+                    <li class="margin-from-top">Spread syntax</li>
+                    
+                    
+                    <li class="margin-from-top">Comma operator</li>
+                </ol>
+            </article>
+        </section>
+
+        <button value="next"><a href="/html/statements.html">NEXT</a></button>
+        <button value="prev"><a href="/html/Basics.html">PREV</a></button>
+    </main>
+</body>
+
+</html>

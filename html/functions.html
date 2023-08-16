@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Documentation | Functions</title>
+    <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center">JavaScript Documentation</h1>
+    </header>
+
+
+    <!-- nav -->
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="/html/introduction.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/html/Basics.html">Basics</a>
+            </li>
+            <li>
+                <a href="/html/expressionAndOperators.html">Expressions and Operators</a>
+            </li>
+            <li>
+                <a href="/html/statements.html">Statements</a>
+            </li>
+            <li>
+                <a href="/html/loops.html">Loops</a>
+            </li>
+            <li>
+                <a href="/html/functions.html">Function</a>
+            </li>
+            <li>
+                <a href="/html/strings.html">Strings</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- main -->
+    <main id="main-doc">
+        <!-- function declarations -->
+        <section>
+            <header>Function declarations</header>
+
+            <article>
+                <p>A function definition (also called a function declaration, or function statement) consists of the
+                    function keyword, followed by:</p>
+
+                <ul>
+                    <li>The name of the function.</li>
+                    <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+                    <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+                </ul>
+
+                <p>For example, the following code defines a simple function named square:</p>
+
+                <pre><code>
+                    function square(number) { return number * number; }
+                </code></pre>
+
+                <p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.</p>
+
+                <pre><code>
+                    return number * number;
+                </code></pre>
+
+                <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+
+            </article>
+        </section>
+
+        <button value="next"><a href="/html/strings.html">NEXT</a></button>
+        <button value="prev"><a href="/html/loops.html">PREV</a></button>
+    </main>
+
+</body>
+
+</html>

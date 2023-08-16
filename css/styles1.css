@@ -1,0 +1,157 @@
+html, body {
+    /* font-family: 'Rajdhani', sans-serif; */
+    font-family: 'Reenie Beanie', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #D9D9D9;
+}
+
+
+/* header */
+.header {
+    display: flex;
+    /* border: 2px solid orange; */
+}
+
+.left {
+    position: fixed;
+    margin-top: 3.5em;
+    margin-left: 1em;
+}
+
+.center {
+    position: absolute;
+    /* right: 30%; */
+    left: 35%;
+    font-size: 4rem;
+}
+
+.center:hover {
+    text-decoration: underline;
+    color: rgb(55, 214, 11);
+    cursor: pointer;
+}
+
+
+/* nav */
+#navbar {
+    /* border: 2px solid orange; */
+    position: fixed;
+    width: 21vw;
+    margin-top: 8.5em;
+}
+
+#navbar > ul > li {
+    list-style: none;
+    margin-left: -1em;
+    margin-bottom: 1em;
+}
+
+#navbar > ul > li > a {
+    font-size: 2em;
+    text-decoration: none;
+    color: rgb(136, 0, 255);
+}
+
+#navbar > ul > li > a:hover {
+    color: rgb(136, 150, 255);
+    text-decoration: underline;
+}
+
+#navbar > ul > li > a:active {
+    color: black;
+}
+
+
+/* main */
+#main-doc {
+    position: absolute;
+    margin-left: 21em;
+    margin-top: 8.5em;
+    margin-right: 1em;
+    background-color: #efefef;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+section > header {
+    font-size: 3em;
+}
+
+section > header:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+section > article {
+    font-size: 1.5em;
+    word-spacing: 5px;
+}
+
+.margin-from-top {
+    margin-top: 3rem;
+}
+
+
+/* #hello_world {
+    background-color: #b4b0b0;
+    border-radius: 10px;
+    padding-top: 1em;
+} */
+
+pre {
+    background-color: #b4b0b0;
+    border-radius: 10px;
+    /* padding-top: 1em; */
+}
+
+
+
+button[value="next"], button[value="prev"] {
+    position: relative;
+    left: 80%;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    width: 5rem;
+    font-size: 1em;
+}
+
+button[value="next"]:hover, button[value="prev"]:hover {
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+}
+
+button a {
+    text-decoration: none;
+    color: #f0f8ff;
+}
+
+button a:hover {
+    color: #8b0b8b;
+}
+
+
+/* expression and operators */
+ol li {
+    font-size: 2.25rem;
+}
+
+ol li:hover {
+    text-decoration: underline;
+}
+
+dt {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+dl dt code, dl dd code {
+    background-color: #b4b0b0;
+    border-radius: 5px;
+    padding: 2.5px;
+}
