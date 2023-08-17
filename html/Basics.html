@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Basics</title>
     <link rel="stylesheet" href="/css/styles1.css">
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/prism.css">
+    <script src="/prism.js"></script>
+    <title>JavaScript Documentation | Basics</title>
 </head>
 
 <body>
@@ -42,13 +45,15 @@
             <li>
                 <a href="/html/strings.html">Strings</a>
             </li>
+            <li>
+                <a href="/html/arrays.html">Arrays</a>
+            </li>
         </ul>
     </nav>
 
 
     <!-- main -->
     <main id="main-doc">
-        <!-- Variables -->
         <section>
             <header>Variables</header>
 
@@ -71,25 +76,19 @@
 
                 <p>With the keyword var. For example,</p>
 
-                <pre><code>
-                    var x = 42
-                </code></pre>
+                <pre class="language-js"><code>var x = 42</code></pre>
 
                 <p>This syntax can be used to declare both local and global variables.</p>
 
                 <p>By simply assigning it a value. For example,</p>
 
-                <pre><code>
-                    x = 42
-                </code></pre>
+                <pre class="language-js"><code>x = 42</code></pre>
 
                 <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.</p>
 
                 <p>With the keyword let. For example,</p>
 
-                <pre><code>
-                    let y = 13
-                </code></pre>
+                <pre class="language-js"><code>let y = 13</code></pre>
 
                 <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
             </article>
@@ -105,21 +104,17 @@
 
                 <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
 
-                <pre><code>
-                    if (true) {
-                        var x = 5;
-                    }
-                    console.log(x); // 5
-                </code></pre>
+                <pre class="language-js"><code>if (true) {
+    var x = 5;
+}
+console.log(x); // 5</code></pre>
 
                 <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
 
-                <pre><code>
-                    if (true) {
-                        let y = 5;
-                    }
-                    console.log(y); // ReferenceError: y is not defined
-                </code></pre>
+                <pre class="language-js"><code>if (true) {
+    let y = 5;
+}
+console.log(y); // ReferenceError: y is not defined</code></pre>
             </article>
         </section>
 
@@ -143,9 +138,7 @@
             <article>
                 <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
 
-                <pre><code>
-                    const PI = 3.14;
-                </code></pre>
+                <pre class="language-js"><code>const PI = 3.14;</code></pre>
 
                 <p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
 
@@ -153,27 +146,23 @@
 
                 <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
 
-                <pre><code>
-                    const PI = 3.141592653589793;
-                    PI = 3.14;      // This will give an error
-                    PI = PI + 10;   // This will also give an error                        
-                </code></pre>
+                <pre class="language-js"><code>const PI = 3.141592653589793;
+PI = 3.14;      // This will give an error
+PI = PI + 10;   // This will also give an error</code></pre>
 
                 <p>However, object attributes are not protected, so the following statement is executed without problems.</p>
 
-                <pre><code>
-                    // You can create a const object:
-                    const car = {type:"Fiat", model:"500", color:"white"};
+                <pre class="language-js"><code>// You can create a const object:
+const car = {type:"Fiat", model:"500", color:"white"};
 
-                    // You can change a property:
-                    car.color = "red";
+// You can change a property:
+car.color = "red";
 
-                    // You can add a property:
-                    car.owner = "Johnson";
-                    const car = {type:"Fiat", model:"500", color:"white"};
-
-                    car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
-                </code></pre>
+// You can add a property:
+car.owner = "Johnson";
+const car = {type:"Fiat", model:"500", color:"white"};
+ 
+car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR</code></pre>
             </article>
         </section>
 
@@ -207,8 +196,8 @@
             </article>
         </section>
 
-        <button value="next"><a href="/html/expressionAndOperators.html">NEXT</a></button>
         <button value="prev"><a href="/html/introduction.html">PREV</a></button>
+        <button value="next"><a href="/html/expressionAndOperators.html">NEXT</a></button>
     </main>
 
 </body>

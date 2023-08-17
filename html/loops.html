@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/prism.css">
+    <script src="/prism.js"></script>
 </head>
 
 <body>
@@ -42,6 +44,9 @@
             <li>
                 <a href="/html/strings.html">Strings</a>
             </li>
+            <li>
+                <a href="/html/arrays.html">Arrays</a>
+            </li>
         </ul>
     </nav>
 
@@ -56,9 +61,7 @@
                 <p>A while statement executes its statements as long as a specified condition evaluates to true. A while
                     statement looks as follows:</p>
 
-                <pre><code>
-                    while (condition) statement
-                </code></pre>
+                <pre class="language-js"><code>while (condition) statement</code></pre>
 
                 <p>If the condition becomes false, statement within the loop stops executing and control passes to the
                     statement following the loop.</p>
@@ -73,15 +76,13 @@
 
                 <p>The following while loop iterates as long as n is less than three:</p>
 
-                <pre><code>
-                    var n = 0;
-                    var x = 0;
+                <pre class="language-js"><code>var n = 0;
+var x = 0;
                     
-                    while (n < 3) {
-                        n++;
-                        x += n;
-                    }
-                </code></pre>
+while (n < 3) {
+    n++;
+    x += n;
+}</code></pre>
 
                 <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the
                     following values:</p>
@@ -101,7 +102,17 @@
         <section>
             <header class="margin-from-top">do...while statement</header>
 
-            <article></article>
+            <article>
+                <pre class="language-js"><code>let result = '';
+let i = 0;
+
+do {
+    i++;
+    result += i;
+} while (i < 5);
+
+console.log(result);    // 12345</code></pre>
+            </article>
         </section>
 
 
@@ -109,11 +120,49 @@
         <section>
             <header class="margin-from-top">for loop</header>
 
-            <article></article>
+            <article>
+                <pre class="language-js"><code>for (i = 0; i < 5; i++)
+console.log(i);
+
+
+// for...in loop
+const obj = {
+    anubhav: 38,
+    rohit: 45,
+    aditya: 38,
+    raj: 45
+};
+
+for (let a in obj) {
+    console.log(a);     // returns a key value
+    console.log(obj[a]);    // returns the value of key
+}
+
+   
+// for...of loop
+for (let a of "Anubhav") {
+    console.log(a);
+}
+
+// A
+// n
+// u
+// b
+// h
+// a
+// v
+
+
+const array1 = ['a', 'b', 'c'];
+
+for (let element of array1) {
+    console.log(element);
+}</code></pre>
+            </article>
         </section>
 
-        <button value="next"><a href="/html/functions.html">NEXT</a></button>
         <button value="prev"><a href="/html/statements.html">PREV</a></button>
+        <button value="next"><a href="/html/functions.html">NEXT</a></button>
     </main>
 
 </body>

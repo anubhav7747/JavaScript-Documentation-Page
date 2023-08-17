@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/prism.css">
+    <script src="/prism.js"></script>
 </head>
 
 <body>
@@ -42,6 +44,9 @@
             <li>
                 <a href="/html/strings.html">Strings</a>
             </li>
+            <li>
+                <a href="/html/arrays.html">Arrays</a>
+            </li>
         </ul>
     </nav>
 
@@ -64,23 +69,68 @@
 
                 <p>For example, the following code defines a simple function named square:</p>
 
-                <pre><code>
-                    function square(number) { return number * number; }
-                </code></pre>
+                <pre class="language-js"><code>function square(number) { return number * number; }</code></pre>
 
                 <p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.</p>
 
-                <pre><code>
-                    return number * number;
-                </code></pre>
+                <pre class="language-js"><code>return number * number;</code></pre>
 
                 <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
-
             </article>
         </section>
 
-        <button value="next"><a href="/html/strings.html">NEXT</a></button>
+
+        <!-- defining functions -->
+        <section class="margin-from-top">
+            <header>Defining functions</header>
+            
+            <article>
+                <p>JS has 4 kinds of functions:</p>
+
+                <ul>
+                    <li>Regular function: can return anything; always runs to completion after invocation.</li>
+                    
+                    <li class="margin-1less-top">Generator function: returns a <code>Generator</code> object; can be paused and resumed with the <code>yield</code> operator</li>
+                    
+                    <li class="margin-1less-top">Async function: returns a <code>Promise</code>; can be paused and resumed with the <code>await</code> operator</li>
+                    
+                    <li class="margin-1less-top">Async generator function: returns an <code>AsyncGenerator</code> object; both the <code>await</code> and <code>yield</code> operators can be used</li>
+                </ul>
+
+                <p>Classes are conceptually not functions (because they throw an error when called without <code>new</code>), but they also inherit from <code>Function.prototype</code> and have <code>typeof MyClass === "function"</code>.</p>
+
+                <pre class="language-js"><code>// Constructor
+const multiply = new Function("x", "y", "return x * y");
+
+// Declaration
+function multiply(x, y) {
+    return x * y;
+}
+
+// Expression; the function is anonymous but assigned to a variable
+const multiply = function (x, y) {
+    return x * y;
+};
+
+// Expression; the function has its own name
+const multiply = function funcName(x, y) {
+    return x * y;
+};
+                    
+// Arrow function
+const multiply = (x, y) => x * y;
+                    
+// Method
+const obj = {
+    multiply(x, y) {
+        return x * y;
+    },
+};</code></pre>
+            </article>
+        </section>
+
         <button value="prev"><a href="/html/loops.html">PREV</a></button>
+        <button value="next"><a href="/html/strings.html">NEXT</a></button>
     </main>
 
 </body>

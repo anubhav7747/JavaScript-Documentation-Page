@@ -75,6 +75,7 @@ html {
     background-color: #efefef;
     padding: 1em;
     border-radius: 20px;
+    padding-bottom: 2em;
 }
 
 section > header {
@@ -102,17 +103,23 @@ section > article {
     padding-top: 1em;
 } */
 
-pre {
+/* pre {
     background-color: #b4b0b0;
     border-radius: 10px;
-    /* padding-top: 1em; */
+} */
+
+.language-js {
+    border-radius: 1em;
 }
 
+.toolbar-item > .copy-to-clipboard-button {
+    cursor: pointer;
+}
 
 
 button[value="next"], button[value="prev"] {
     position: relative;
-    left: 80%;
+    left: 85%;
     background-color: orangered;
     border: 1px solid orangered;
     border-radius: 10px;
@@ -147,11 +154,52 @@ ol li:hover {
 
 dt {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-dl dt code, dl dd code {
-    background-color: #b4b0b0;
+dl dt code, dl dd code, ul li code, p code {
+    background-color: #dbd7d7;
     border-radius: 5px;
     padding: 2.5px;
+}
+
+.note {
+    background-color: #abd5f6;
+    height: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid #abd5f6;
+    box-shadow: -3px 0px blue;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+}
+
+.note p {
+    margin-top: auto;
+}
+
+.note p a {
+    color: black;
+}
+
+.note p a:hover {
+    text-decoration: none;
+}
+
+.margin-top {
+    margin-top: 2rem;
+}
+
+.margin-1less-top {
+    margin-top: 1rem;
+}
+
+
+/* strings */
+article > h3 {
+    text-decoration: underline;
+}
+
+.margin-1more-top {
+    margin-top: 3rem;
 }

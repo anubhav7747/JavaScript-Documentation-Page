@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/prism.css">
+    <script src="/prism.js"></script>
 </head>
 
 <body>
@@ -42,6 +44,9 @@
             <li>
                 <a href="/html/strings.html">Strings</a>
             </li>
+            <li>
+                <a href="/html/arrays.html">Arrays</a>
+            </li>
         </ul>
     </nav>
 
@@ -66,43 +71,43 @@
                              keyword refers to a special property of an execution context.
                         </dd>
                         
-                        <dt><code>Literals</code></dt>
+                        <dt class="margin-top"><code>Literals</code></dt>
                         <dd>
                             Basic
                             <code>null</code>
                             , boolean, number, and string literals.
                         </dd>
                         
-                        <dt><code>[]</code></dt>
+                        <dt class="margin-top"><code>[]</code></dt>
                         <dd>Array initializer/literal syntax.</dd>
                         
-                        <dt><code>{}</code></dt>
+                        <dt class="margin-top"><code>{}</code></dt>
                         <dd>Object initializer/literal syntax.</dd>
                         
-                        <dt><code>function</code></dt>
+                        <dt class="margin-top"><code>function</code></dt>
                         <dd>
                             defines a function expression.
                         </dd>
                         
-                        <dt><code>class</code></dt>
+                        <dt class="margin-top"><code>class</code></dt>
                         <dd>defines a class expression.</dd>
                         
-                        <dt><code>function*</code></dt>
+                        <dt class="margin-top"><code>function*</code></dt>
                         <dd>defines a generator function expression.</dd>
                         
-                        <dt><code>async function</code></dt>
+                        <dt class="margin-top"><code>async function</code></dt>
                         <dd>defines an async function expression.</dd>
                         
-                        <dt><code>async function*</code></dt>
+                        <dt class="margin-top"><code>async function*</code></dt>
                         <dd>defines an async generator function expression.</dd>
                         
-                        <dt><code>/ab+c/i</code></dt>
+                        <dt class="margin-top"><code>/ab+c/i</code></dt>
                         <dd>RegExp => Regular Expression</dd>
                         
-                        <dt><code>`string`</code></dt>
+                        <dt class="margin-top"><code>`string`</code></dt>
                         <dd>template literal syntax (``)</dd>
                         
-                        <dt><code>( )</code></dt>
+                        <dt class="margin-top"><code>( )</code></dt>
                         <dd>grouping operator</dd>
                     </dl>
                     
@@ -113,13 +118,13 @@
                         <dt>Property accessors</dt>
                         <dd>
                             member operators provide access to a property or method of an object (
-                                <code>object.property</code>
-                                and
-                                <code>object["property"]</code>
+                            <code>object.property</code>
+                            and
+                            <code>object["property"]</code>
                             ).
                         </dd>
                         
-                        <dt>
+                        <dt class="margin-top">
                             <code>?.</code>
                         </dt>
                         <dd>
@@ -128,27 +133,25 @@
                             instead of causing an error if a reference is 
                             <code>nullish</code>
                             .
-                <pre><code>
-                    const adventurer = {
-                        name: 'Alice',
-                        cat: {
-                            name: 'Bob',
-                        },
-                    };
+                            <pre class="language-js"><code>const adventurer = {
+    name: 'Alice',
+    cat: {
+        name: 'Bob',
+    },
+};
 
-                    const dogName = adventurer.dog?.name;
-                    console.log(dogName);
-                </code></pre>
+const dogName = adventurer.dog?.name;
+console.log(dogName);</code></pre>
                         </dd>
                         
-                        <dt>
+                        <dt class="margin-top">
                             <code>new</code>
                         </dt>
                         <dd>
                             creates an instance of a constructor.
                         </dd>
                         
-                        <dt>
+                        <dt class="margin-top">
                             <code>new.target</code>
                         </dt>
                         <dd>
@@ -159,12 +162,12 @@
                             .
                         </dd>
                         
-                        <dt>
+                        <dt class="margin-top">
                             <code>import.meta</code>
                         </dt>
                         <dd>an object exposing context-specific metadata to a JS module.</dd>
                         
-                        <dt>
+                        <dt class="margin-top">
                             <code>super</code>
                         </dt>
                         <dd>
@@ -173,7 +176,7 @@
                             keyword calls the parent constructor or allows accessing properties of the parent object.
                         </dd>
                         
-                        <dt>
+                        <dt class="margin-top">
                             <code>import</code>
                         </dt>
                         <dd>
@@ -255,42 +258,204 @@
                     
 
                     <li class="margin-from-top">Arithmetic operators</li>
+                    <p>Take numerical values (either literals or variables) as their operands and return a single numerical value.</p>
+                    <dl>
+                        <dt><code>**</code></dt>
+                        <dd>the exponential (<code>**</code>) operator returns the result of raising the first operand to the power of the second operand. It is equivalent to <code>Math.pow()</code>, except it also accepts BigInts as operands.</dd>
+
+                        <dt class="margin-top"><code>*</code></dt>
+                        <dd>multiplication operator</dd>
+                        
+                        <dt class="margin-top"><code>/</code></dt>
+                        <dd>division operator</dd>
+                        
+                        <dt class="margin-top"><code>%</code></dt>
+                        <dd>remainder operator</dd>
+                        
+                        <dt class="margin-top"><code>+</code></dt>
+                        <dd>addition operato</dd>
+                        
+                        <dt class="margin-top"><code>-</code></dt>
+                        <dd>subtraction operator</dd>
+                    </dl>
                     
 
                     <li class="margin-from-top">Relational operators</li>
+                    <p>A comparison operator compares its operands and returns a boolean value based on whether the comparison is true.</p>
+                    <dl>
+                        <dt><code><</code> (less than)</dt>
+                        <dd>Less than operator</dd>
+                        
+                        <dt class="margin-top"><code>></code> (greater than)</dt>
+                        <dd>Greater than operator</dd>
+                        
+                        <dt class="margin-top"><code><=</code></dt>
+                        <dd>Less than or equal operator</dd>
+                        
+                        <dt class="margin-top"><code>>=</code></dt>
+                        <dd>Greater than or equal operator</dd>
+                        
+                        <dt class="margin-top"><code>instanceof</code></dt>
+                        <dd>The <code>instanceof</code> operator determines whether an object is an instance of another object.</dd>
+                        
+                        <dt class="margin-top"><code>in</code></dt>
+                        <dd>The <code>in</code> operator determines whether an object has a given property.</dd>
+                    </dl>
                     
+                    <div class="note">
+                        <p><strong>Note:</strong> <code>=></code> is not an operator, but the notation for <a href="/html/functions.html">Arrow functions</a>.</p>
+                    </div>
+
                     
                     <li class="margin-from-top">Equality operators</li>
+                    <p>The result of evaluating an equality operator is always of type boolean based on whether the comparison is true.</p>
+                    <dl>
+                        <dt><code>==</code></dt>
+                        <dd>Equality operator</dd>
+                        
+                        <dt class="margin-top"><code>!=</code></dt>
+                        <dd>Inequality operator</dd>
+                        
+                        <dt class="margin-top"><code>===</code></dt>
+                        <dd>Strict equality operator</dd>
+                        
+                        <dt class="margin-top"><code>!==</code></dt>
+                        <dd>Strict inequality operator</dd>
+                    </dl>
                     
                     
                     <li class="margin-from-top">Bitwise shift operators</li>
+                    <p>Operations to shift all bits of the operand.</p>
+                    <dl>
+                        <dt><code><<</code></dt>
+                        <dd>Bitwise left shift operator</dd>
+                        
+                        <dt class="margin-top"><code>>></code></dt>
+                        <dd>Bitwise right shift operator</dd>
+                        
+                        <dt class="margin-top"><code>>>></code></dt>
+                        <dd>Bitwise unsigned right shift operator</dd>
+                    </dl>
                     
                     
                     <li class="margin-from-top">Binary bitwise operators</li>
+                    <p>Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and return standard JavaScript numerical values.</p>
+                    <dl>
+                        <dt><code>&</code></dt>
+                        <dd>Bitwise AND</dd>
+                        
+                        <dt class="margin-top"><code>|</code></dt>
+                        <dd>Bitwise OR</dd>
+                        
+                        <dt class="margin-top"><code>^</code></dt>
+                        <dd>Bitwise XOR</dd>
+                    </dl>
                     
                     
                     <li class="margin-from-top">Binary logical operators</li>
+                    <p>Logical operators implement boolean (logical) values and have short-circuiting behavior.</p>
+                    <dl>
+                        <dt><code>&&</code></dt>
+                        <dd>Logical AND</dd>
+
+                        <dt class="margin-top"><code>||</code></dt>
+                        <dd>Logical OR</dd>
+
+                        <dt class="margin-top"><code>??</code></dt>
+                        <dd>Nullish coalescing operator</dd>
+                    </dl>
                     
                     
                     <li class="margin-from-top">Conditional (ternary) operator</li>
+                    <dl>
+                        <dt><code>(condition ? ifTrue : ifFalse)</code></dt>
+                        <dd>the conditional operator returns one of two values based on the logical value of the condition.</dd>
+                    </dl>
                     
                     
                     <li class="margin-from-top">Assignment operators</li>
+                    <p>An assignment operator assigns a value to its left operand based on the value of its right operand.</p>
+                    <dl>
+                        <dt><code>=</code></dt>
+                        <dd>Assignment operator</dd>
+                        
+                        <dt class="margin-top"><code>*=</code></dt>
+                        <dd>Multiplication assignment</dd>
+                        
+                        <dt class="margin-top"><code>/=</code></dt>
+                        <dd>Division assignment</dd>
+                        
+                        <dt class="margin-top"><code>%=</code></dt>
+                        <dd>Remainder assignment</dd>
+                        
+                        <dt class="margin-top"><code>+=</code></dt>
+                        <dd>Addition assignment</dd>
+                        
+                        <dt class="margin-top"><code>-=</code></dt>
+                        <dd>Subtraction assignment</dd>
+                        
+                        <dt class="margin-top"><code><<=</code></dt>
+                        <dd>Left shift assignment</dd>
+                        
+                        <dt class="margin-top"><code>>>=</code></dt>
+                        <dd>Right shift assignment</dd>
+                        
+                        <dt class="margin-top"><code>>>>=</code></dt>
+                        <dd>Unsigned right shift assignment</dd>
+                        
+                        <dt class="margin-top"><code>&=</code></dt>
+                        <dd>Bitwise AND assignment</dd>
+                        
+                        <dt class="margin-top"><code>^=</code></dt>
+                        <dd>Bitwise XOR assignment</dd>
+                        
+                        <dt class="margin-top"><code>|=</code></dt>
+                        <dd>Bitwise OR assignment</dd>
+                        
+                        <dt class="margin-top"><code>**=</code></dt>
+                        <dd>Exponentiation assignment</dd>
+                        
+                        <dt class="margin-top"><code>&&=</code></dt>
+                        <dd>Logical AND assignment</dd>
+                        
+                        <dt class="margin-top"><code>||=</code></dt>
+                        <dd>Logical OR assignment</dd>
+                        
+                        <dt class="margin-top"><code>??=</code></dt>
+                        <dd>Nullish coalescing assignment</dd>
+                        
+                        <dt class="margin-top"><code>[a, b] = arr</code>, <code>{a, b} = obj</code></dt>
+                        <dd>Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.</dd>
+                    </dl>
                     
                     
                     <li class="margin-from-top">Yield operators</li>
-                    
+                    <dl>
+                        <dt><code>yield</code></dt>
+                        <dd>Pause and resume a generator function.</dd>
+                        
+                        <dt class="margin-top"><code>yield*</code></dt>
+                        <dd>Delegate to another generator function or iterable object.</dd>
+                    </dl>
                     
                     <li class="margin-from-top">Spread syntax</li>
+                    <dl>
+                        <dt><code>...obj</code></dt>
+                        <dd>Spread syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.</dd>
+                    </dl>
                     
                     
                     <li class="margin-from-top">Comma operator</li>
+                    <dl>
+                        <dt><code>,</code></dt>
+                        <dd>The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.</dd>
+                    </dl>
                 </ol>
             </article>
         </section>
 
-        <button value="next"><a href="/html/statements.html">NEXT</a></button>
         <button value="prev"><a href="/html/Basics.html">PREV</a></button>
+        <button value="next"><a href="/html/statements.html">NEXT</a></button>
     </main>
 </body>
 

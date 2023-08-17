@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/prism.css">
+    <script src="/prism.js"></script>
 </head>
 
 <body>
@@ -42,6 +44,9 @@
             <li>
                 <a href="/html/strings.html">Strings</a>
             </li>
+            <li>
+                <a href="/html/arrays.html">Arrays</a>
+            </li>
         </ul>
     </nav>
 
@@ -52,11 +57,59 @@
         <section>
             <header>Strings</header>
 
-            <article></article>
+            <article>
+                <!-- template literal or string interpolation -->
+                <h3>template literal or string interpolation</h3>
+                <pre class="language-js"><code>const rollNo16 = "Anubhav Tiwari";
+const rollNo05 = "Aditya Sir";
+
+const result = `${rollNo05} comes before ${rollNo16}`;
+console.log(result);    // Aditya Sir comes before Anubhav Tiwari</code></pre>
+
+                
+                <!-- uppercase and lowercase -->
+                <h3 class="margin-1more-top">uppercase and lowercase</h3>
+                <pre class="language-js"><code>
+console.log(rollNo16.toUpperCase());    // toUpperCase -> ANUBHAV TIWARI
+console.log(rollNo05.toLowerCase());    // toLowerCase -> aditya sir
+                </code></pre>
+                
+
+                <!-- slice -->
+                <h3 class="margin-1more-top">slice</h3>
+                <p>the slice() method extracts a section of the string and returns it as a new string, without modifying the original string.</p>
+                <pre class="language-js"><code>console.log(rollNo05.slice(2, 4));   // it
+console.log(rollNo05.slice());  // itya Sir</code></pre>
+
+
+                <!-- replace -->
+                <!-- concat -->
+                <!-- trim -->
+                <!-- for...in loop -->
+                <!-- at -->
+                <!-- endsWith -->
+                <!-- startsWith -->
+
+
+                <!-- repeat -->
+                <h3 class="margin-1more-top">repeat</h3>
+                <pre class="language-js"><code>const word="happy! ";
+console.log(`i am ${word.repeat(3)}`);  // i am happy! happy! happy!</code></pre>
+                
+                
+                <!-- valueof -->
+                <h3 class="margin-1more-top">valueOf</h3>
+                <pre class="language-js"><code>const str = new String("fruit");
+console.log(str);   // [String: 'fruit']
+console.log(str.valueOf()); // fruit</code></pre>
+
+
+                <!-- split -->
+            </article>
         </section>
 
-        <button value="next"><a href="">NEXT</a></button>
         <button value="prev"><a href="/html/functions.html">PREV</a></button>
+        <button value="next"><a href="/html/arrays.html">NEXT</a></button>
     </main>
 
 </body>

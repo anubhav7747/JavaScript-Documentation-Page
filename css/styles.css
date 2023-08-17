@@ -1,0 +1,11 @@
+#main-doc {
+    position: absolute;
+    margin-left: 21em;
+    margin-top: 8.5em;
+    margin-right: 1em;
+    background-color: #efefef;
+    padding: 1em;
+    border-radius: 20px;
+    padding-bottom: 2em;
+    width: 74vw;
+}
