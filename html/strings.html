@@ -47,6 +47,18 @@
             <li>
                 <a href="/html/arrays.html">Arrays</a>
             </li>
+            <li>
+                <a href="/html/scriptTag.html">Script Tag</a>
+            </li>
+            <li>
+                <a href="/html/console.html">Console</a>
+            </li>
+            <li>
+                <a href="/html/alertPromptConfirm.html">Alert, Prompt, Confirm</a>
+            </li>
+            <li>
+                <a href="/html/BOM_DOM.html">BOM & DOM</a>
+            </li>
         </ul>
     </nav>
 
@@ -56,10 +68,15 @@
         <!-- Strings -->
         <section>
             <header>Strings</header>
+            <p class="para line-height-para">The <code>String</code> object is used to represent and manipulate a sequence of characters. Strings are useful for holding data that can be represented in text form. Some of the most-used operations on strings are to check their <code>length</code>, to build and concatenate them using the + and += string operators, checking for the existence or location of substrings with the <code>indexOf()</code> method, or extracting substrings with the <code>substring()</code> method.</p>
+            <pre class="language-js"><code>const string1 = "A string primitive";
+const string2 = 'Also a string primitive';
+const string3 = `Yet another string primitive`;
+const string4 = new String("A String object");</code></pre>
 
             <article>
                 <!-- template literal or string interpolation -->
-                <h3>template literal or string interpolation</h3>
+                <h3 class="margin-1more-top">template literal or string interpolation</h3>
                 <pre class="language-js"><code>const rollNo16 = "Anubhav Tiwari";
 const rollNo05 = "Aditya Sir";
 
@@ -69,42 +86,140 @@ console.log(result);    // Aditya Sir comes before Anubhav Tiwari</code></pre>
                 
                 <!-- uppercase and lowercase -->
                 <h3 class="margin-1more-top">uppercase and lowercase</h3>
-                <pre class="language-js"><code>
-console.log(rollNo16.toUpperCase());    // toUpperCase -> ANUBHAV TIWARI
-console.log(rollNo05.toLowerCase());    // toLowerCase -> aditya sir
-                </code></pre>
+                <pre class="language-js"><code>console.log(rollNo16.toUpperCase());    // toUpperCase -> ANUBHAV TIWARI
+console.log(rollNo05.toLowerCase());    // toLowerCase -> aditya sir</code></pre>
                 
 
                 <!-- slice -->
-                <h3 class="margin-1more-top">slice</h3>
+                <h3 class="margin-1more-top">slice()</h3>
                 <p>the slice() method extracts a section of the string and returns it as a new string, without modifying the original string.</p>
                 <pre class="language-js"><code>console.log(rollNo05.slice(2, 4));   // it
 console.log(rollNo05.slice());  // itya Sir</code></pre>
 
 
-                <!-- replace -->
+                <!-- replace and replaceAll -->
+                <h3 class="margin-1more-top">replace() and replaceAll()</h3>
+                <p class="line-height-para">The <code>replace()</code> method of <code>String</code> values returns a new string with one, some, or all matches of a <code>pattern</code> replaced by a <code>replacement</code>. The <code>pattern</code> can be a string or a <code>RegExp</code>, and the <code>replacement</code> can be a string or a function called for each match. If <code>pattern</code> is a string, only the first occurrence will be replaced. The original string is left unchanged.</p>
+                <p class="line-height-para">The <code>replaceAll()</code> method of <code>String</code> values returns a new string with all matches of a <code>pattern</code> replaced by a <code>replacement</code>. The <code>pattern</code> can be a string or a <code>RegExp</code>, and the <code>replacement</code> can be a string or a function to be called for each match. The original string is left unchanged.</p>
+                <pre class="language-js"><code>console.log(rollNo05.replace("Sir", "Gautam"));  // Aditya Gautam
+
+const str = "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?"
+console.log(str.replaceAll("the", "THE"));
+// The quick brown fox jumps over THE lazy dog. If THE dog reacted, was it really lazy?
+
+console.log(str.replaceAll("dog", "DOG"));
+// The quick brown fox jumps over the lazy DOG. If the DOG reacted, was it really lazy?</code></pre>
+
+
                 <!-- concat -->
-                <!-- trim -->
+                <h3 class="margin-1more-top">concat()</h3>
+                <p>The <code>concat()</code> method of <code>String</code> values concatenates the string arguments to this string and returns a new string.</p>
+                <pre class="language-js"><code>console.log(rollNo05.concat(rollNo16));
+// Aditya SirAnubhav Tiwari</code></pre>
+
+
+                <!-- trim, trimEnd and trimStart -->
+                <h3 class="margin-1more-top">trim(), trimEnd() and trimStart()</h3>
+                <p class="line-height-para">The <code>trim()</code> method of <code>String</code> values removes whitespace from both ends of this string and returns a new string, without modifying the original string. To return a new string with whitespace trimmed from just one end, use <code>trimStart()</code> or <code>trimEnd()</code>.</p>
+
+                <p class="line-height-para">The <code>trimEnd()</code> method of <code>String</code> values removes whitespace from the end of this string and returns a new string, without modifying the original string. <code>trimRight()</code> is an alias of this method.</p>
+
+                <p class="line-height-para">The <code>trimStart()</code> method of <code>String</code> values removes whitespace from the beginning of this string and returns a new string, without modifying the original string. <code>trimLeft()</code> is an alias of this method.</p>
+                <pre class="language-js"><code>const greeting = '   Hello world!   ';
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+                    
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+
+console.log(greeting.trimStart());
+// Expected output: "Hello world!   ";</code></pre>
+
+
                 <!-- for...in loop -->
+                <h3 class="margin-1more-top">for...in loop</h3>
+                <pre class="language-js"><code>// for...in loop accessing character from string
+for (let key in rollNo05) {
+    console.log(rollNo05[key]);
+}</code></pre>
+
+
                 <!-- at -->
+                <h3 class="margin-1more-top">at()</h3>
+                <p class="line-height-para">The <code>at()</code> method of <code>String</code> values takes an integer value and returns a new <code>String</code> consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.</p>
+                <pre class="language-js"><code>at => use at instead of charAt()
+let index1 = 5;
+let index2 = -5
+console.log(`character at index 5 and -5 of "Aditya Sir" are  ${rollNo05.at(index1)} and ${rollNo05.at(index2)} respectively.`);
+//character at index 5 and -5 of "Aditya Sir" are a and a respectively.</code></pre>
+
+
                 <!-- endsWith -->
+                <h3 class="margin-1more-top">endsWith()</h3>
+                <p class="line-height-para">The <code>endsWith()</code> method of <code>String</code> values determines whether a string ends with the characters of this string, returning <code>true</code> or <code>false</code> as appropriate.</p>
+                <pre class="language-js"><code>console.log(rollNo16.endsWith("Tiwari"));
+console.log(rollNo16.endsWith("ari"));
+console.log(rollNo16.endsWith("ar", 13));
+console.log(rollNo16.endsWith("wa", 13));</code></pre>
+                    
+                    
                 <!-- startsWith -->
+                <h3 class="margin-1more-top">startsWith()</h3>
+                <p class="line-height-para">The <code>startsWith()</code> method of <code>String</code> values determines whether a string begins with the characters of a specified string, returning <code>true</code> or <code>false</code> as appropriate.</p>
+<pre class="language-js"><code>console.log(rollNo16.endsWith("Tiwari"));
+console.log(rollNo16.endsWith("ari"));
+console.log(rollNo16.endsWith("ar", 13));
+console.log(rollNo16.endsWith("wa", 13));</code></pre>
 
 
                 <!-- repeat -->
-                <h3 class="margin-1more-top">repeat</h3>
+                <h3 class="margin-1more-top">repeat()</h3>
+                <p class="line-height-para">The <code>repeat()</code> method of <code>String</code> values constructs and returns a new string which contains the specified number of copies of this string, concatenated together.</p>
                 <pre class="language-js"><code>const word="happy! ";
 console.log(`i am ${word.repeat(3)}`);  // i am happy! happy! happy!</code></pre>
                 
                 
                 <!-- valueof -->
-                <h3 class="margin-1more-top">valueOf</h3>
+                <h3 class="margin-1more-top">valueOf()</h3>
                 <pre class="language-js"><code>const str = new String("fruit");
 console.log(str);   // [String: 'fruit']
 console.log(str.valueOf()); // fruit</code></pre>
 
 
                 <!-- split -->
+                <h3 class="margin-1more-top">split()</h3>
+                <p class="line-height-para">The <code>split()</code> method of <code>String</code> values takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.</p>
+                <pre class="language-js"><code>const str = 'The quick brown fox jumps over the lazy dog.';
+console.log(str);
+
+const strCopy = str.split();
+console.log(typeof strCopy);    // object
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+
+const chars = str.split('');
+console.log(typeof str.split(''));  // object
+console.log(chars[8]);
+// Expected output: "k"
+
+const words = str.split(' ');
+console.log(typeof str.split(' '));     // object
+console.log(words[3]);
+// Expected output: "fox"</code></pre>
+
+
+                <!-- includes -->
+                <h3 class="margin-1more-top">includes()</h3>
+                <p class="line-height-para">The <code>includes()</code> method of <code>String</code> values performs a case-sensitive search to determine whether a given string may be found within this string, returning <code>true</code> or <code>false</code> as appropriate.</p>
+                <pre class="language-js width"><code>const word1 = "ari";
+console.log(`the word "${word1}" ${rollNo16.includes(word1) ? 'is' : 'is not'} in the ${rollNo16}`);    // is
+
+const word2 = "vT";
+console.log(`the word "${word2}" ${rollNo16.includes(word2) ? 'is' : 'is not'} in the ${rollNo16}`);    // is not</code></pre>
             </article>
         </section>
 
