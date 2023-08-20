@@ -10,6 +10,14 @@ html {
 }
 
 
+/* span */
+#time {
+    color: #8e5f5f;
+    font-size: 1.75em;
+    margin-left: 0.80em;
+}
+
+
 /* header */
 .header {
     display: flex;
@@ -46,7 +54,7 @@ html {
     /* border: 2px solid orange; */
     position: fixed;
     width: 21vw;
-    margin-top: 8.5em;
+    margin-top: 7.5em;
     height: 100%;
 }
 
@@ -67,7 +75,7 @@ html {
 }
 
 #navbar ul {
-    height: 80%;
+    height: 78%;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -75,11 +83,11 @@ html {
 #navbar > ul > li {
     list-style: none;
     margin-left: -1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
 }
 
 #navbar > ul > li > a {
-    font-size: 1.75em;
+    font-size: 1.6em;
     text-decoration: none;
     color: rgb(170, 3, 153);
 }
