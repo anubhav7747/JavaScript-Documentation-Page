@@ -15,8 +15,8 @@
 
 <body>
     <header class="header">
-        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
-        <h1 class="center">JavaScript Documentation</h1>
+        <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center"><a href="/html/introduction.html">JavaScript Documentation</a></h1>
     </header>
 
 
@@ -59,17 +59,25 @@
             <li>
                 <a href="/html/BOM_DOM.html">BOM & DOM</a>
             </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
         </ul>
     </nav>
 
 
     <!-- main -->
     <main id="main-doc">
+        <header>Statement</header>
+        
         <section>
             <header>if...else statement</header>
 
             <article>
-                <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:</p>
+                <p class="line-height-para">Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:</p>
 
                 <pre class="language-js"><code>if (condition) {
     statement_1;
@@ -77,7 +85,7 @@
     statement_2;
 }</code></pre>
 
-                <p>condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.</p>
+                <p class="line-height-para">condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.</p>
 
                 <p>You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:</p>
 
@@ -91,7 +99,7 @@
     statement_last;
 }</code></pre>
 
-                <p>In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:</p>
+                <p class="line-height-para">In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:</p>
 
                 <pre class="language-js"><code>if (condition) {
     statement_1_runs_if_condition_is_true;
@@ -101,13 +109,13 @@
     statement_4_runs_if_condition_is_false;
 }</code></pre>
 
-                <p>It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:</p>
+                <p class="line-height-para">It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:</p>
 
                 <pre class="language-js"><code>if (x = y) {
     /* statements here */
 }</code></pre>
 
-                <p>If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:</p>
+                <p class="line-height-para">If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:</p>
                 
                 <pre class="language-js"><code>if ((x = y)) {
     /* statements here */

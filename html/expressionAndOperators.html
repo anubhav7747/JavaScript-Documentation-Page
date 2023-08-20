@@ -15,8 +15,8 @@
 
 <body>
     <header class="header">
-        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
-        <h1 class="center">JavaScript Documentation</h1>
+        <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center"><a href="/html/introduction.html">JavaScript Documentation</a></h1>
     </header>
 
 
@@ -59,6 +59,12 @@
             <li>
                 <a href="/html/BOM_DOM.html">BOM & DOM</a>
             </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
         </ul>
     </nav>
 
@@ -66,11 +72,13 @@
     <!-- main -->
     <main id="main-doc">
         <!-- Expressions and Operators -->
+        <header>Expressions and Operators</header>
+        
         <section>
-            <header>Expressions and Operators</header>
             
             <article>
                 <ol>
+                    <!-- primary expressions -->
                     <li>Primary expressions</li>
                     <p>Basic keywords and general expression in JS. These expression have the highest precedence (higher than operators).</p>
                     <dl>
@@ -124,6 +132,7 @@
                     </dl>
                     
 
+                    <!-- Left-hand-side expressions -->
                     <li class="margin-from-top">Left-hand-side expressions</li>
                     <p>Left values are the destination of an assignment.</p>
                     <dl>
@@ -199,6 +208,7 @@ console.log(dogName);</code></pre>
                     </dl>
                     
 
+                    <!-- increment and decrement -->
                     <li class="margin-from-top">Increment and Decrement</li>
                     <p>Postfix/prefix increment and postfix/prefix decrement.</p>
                     <dl>
@@ -224,6 +234,7 @@ console.log(dogName);</code></pre>
                     </dl>
                     
 
+                    <!-- unary operators -->
                     <li class="margin-from-top">Unary operators</li>
                     <p>A unary operation is an operation with only one operand.</p>
                     <dl>
@@ -269,11 +280,12 @@ console.log(dogName);</code></pre>
                     </dl>
                     
 
+                    <!-- arithmetic operators -->
                     <li class="margin-from-top">Arithmetic operators</li>
                     <p>Take numerical values (either literals or variables) as their operands and return a single numerical value.</p>
                     <dl>
                         <dt><code>**</code></dt>
-                        <dd>the exponential (<code>**</code>) operator returns the result of raising the first operand to the power of the second operand. It is equivalent to <code>Math.pow()</code>, except it also accepts BigInts as operands.</dd>
+                        <dd class="line-height-li">the exponential (<code>**</code>) operator returns the result of raising the first operand to the power of the second operand. It is equivalent to <code>Math.pow()</code>, except it also accepts BigInts as operands.</dd>
 
                         <dt class="margin-top"><code>*</code></dt>
                         <dd>multiplication operator</dd>
@@ -292,6 +304,7 @@ console.log(dogName);</code></pre>
                     </dl>
                     
 
+                    <!-- relational operators -->
                     <li class="margin-from-top">Relational operators</li>
                     <p>A comparison operator compares its operands and returns a boolean value based on whether the comparison is true.</p>
                     <dl>
@@ -319,6 +332,7 @@ console.log(dogName);</code></pre>
                     </div>
 
                     
+                    <!-- equality operators -->
                     <li class="margin-from-top">Equality operators</li>
                     <p>The result of evaluating an equality operator is always of type boolean based on whether the comparison is true.</p>
                     <dl>
@@ -336,6 +350,7 @@ console.log(dogName);</code></pre>
                     </dl>
                     
                     
+                    <!-- Bitwise shift operators -->
                     <li class="margin-from-top">Bitwise shift operators</li>
                     <p>Operations to shift all bits of the operand.</p>
                     <dl>
@@ -350,6 +365,7 @@ console.log(dogName);</code></pre>
                     </dl>
                     
                     
+                    <!-- Binary bitwise operators -->
                     <li class="margin-from-top">Binary bitwise operators</li>
                     <p>Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and return standard JavaScript numerical values.</p>
                     <dl>
@@ -364,6 +380,7 @@ console.log(dogName);</code></pre>
                     </dl>
                     
                     
+                    <!-- Binary logical operators -->
                     <li class="margin-from-top">Binary logical operators</li>
                     <p>Logical operators implement boolean (logical) values and have short-circuiting behavior.</p>
                     <dl>
@@ -378,6 +395,7 @@ console.log(dogName);</code></pre>
                     </dl>
                     
                     
+                    <!-- Conditional (ternary) operator -->
                     <li class="margin-from-top">Conditional (ternary) operator</li>
                     <dl>
                         <dt><code>(condition ? ifTrue : ifFalse)</code></dt>
@@ -385,6 +403,7 @@ console.log(dogName);</code></pre>
                     </dl>
                     
                     
+                    <!-- Assignment operators -->
                     <li class="margin-from-top">Assignment operators</li>
                     <p>An assignment operator assigns a value to its left operand based on the value of its right operand.</p>
                     <dl>
@@ -437,10 +456,11 @@ console.log(dogName);</code></pre>
                         <dd>Nullish coalescing assignment</dd>
                         
                         <dt class="margin-top"><code>[a, b] = arr</code>, <code>{a, b} = obj</code></dt>
-                        <dd>Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.</dd>
+                        <dd class="line-height-li">Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.</dd>
                     </dl>
                     
                     
+                    <!-- yield operators -->
                     <li class="margin-from-top">Yield operators</li>
                     <dl>
                         <dt><code>yield</code></dt>
@@ -450,17 +470,20 @@ console.log(dogName);</code></pre>
                         <dd>Delegate to another generator function or iterable object.</dd>
                     </dl>
                     
+
+                    <!-- spread syntax -->
                     <li class="margin-from-top">Spread syntax</li>
                     <dl>
                         <dt><code>...obj</code></dt>
-                        <dd>Spread syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.</dd>
+                        <dd class="line-height-li">Spread syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.</dd>
                     </dl>
                     
                     
+                    <!-- comma operator -->
                     <li class="margin-from-top">Comma operator</li>
                     <dl>
                         <dt><code>,</code></dt>
-                        <dd>The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.</dd>
+                        <dd class="line-height-li">The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.</dd>
                     </dl>
                 </ol>
             </article>

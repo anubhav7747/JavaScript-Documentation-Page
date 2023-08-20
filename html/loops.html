@@ -15,8 +15,8 @@
 
 <body>
     <header class="header">
-        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
-        <h1 class="center">JavaScript Documentation</h1>
+        <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center"><a href="/html/introduction.html">JavaScript Documentation</a></h1>
     </header>
 
 
@@ -59,28 +59,32 @@
             <li>
                 <a href="/html/BOM_DOM.html">BOM & DOM</a>
             </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
         </ul>
     </nav>
 
 
     <!-- main -->
     <main id="main-doc">
+        <header>Loops</header>
+
         <!-- white statement -->
         <section>
             <header>while statement</header>
 
             <article>
-                <p>A while statement executes its statements as long as a specified condition evaluates to true. A while
-                    statement looks as follows:</p>
+                <p class="line-height-para">A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:</p>
 
                 <pre class="language-js"><code>while (condition) statement</code></pre>
 
-                <p>If the condition becomes false, statement within the loop stops executing and control passes to the
-                    statement following the loop.</p>
+                <p class="line-height-para">If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.</p>
 
-                <p>The condition test occurs before statement in the loop is executed. If the condition returns true,
-                    statement is executed and the condition is tested again. If the condition returns false, execution
-                    stops and control is passed to the statement following while.</p>
+                <p class="line-height-para">The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.</p>
 
                 <p>To execute multiple statements, use a block statement ({ ... }) to group those statements.</p>
 
@@ -96,8 +100,7 @@ while (n < 3) {
     x += n;
 }</code></pre>
 
-                <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the
-                    following values:</p>
+                <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
 
                 <ul>
                     <li>After the first pass: n = 1 and x = 1</li>

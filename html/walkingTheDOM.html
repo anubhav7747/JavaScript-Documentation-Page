@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Documentation | Walking the DOM</title>
+    <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/prism.css">
+    <script src="/prism.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center"><a href="/html/introduction.html">JavaScript Documentation</a></h1>
+    </header>
+
+
+    <!-- nav -->
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="/html/introduction.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/html/Basics.html">Basics</a>
+            </li>
+            <li>
+                <a href="/html/expressionAndOperators.html">Expressions and Operators</a>
+            </li>
+            <li>
+                <a href="/html/statements.html">Statements</a>
+            </li>
+            <li>
+                <a href="/html/loops.html">Loops</a>
+            </li>
+            <li>
+                <a href="/html/functions.html">Function</a>
+            </li>
+            <li>
+                <a href="/html/strings.html">Strings</a>
+            </li>
+            <li>
+                <a href="/html/arrays.html">Arrays</a>
+            </li>
+            <li>
+                <a href="/html/scriptTag.html">Script Tag</a>
+            </li>
+            <li>
+                <a href="/html/console.html">Console</a>
+            </li>
+            <li>
+                <a href="/html/alertPromptConfirm.html">Alert, Prompt, Confirm</a>
+            </li>
+            <li>
+                <a href="/html/BOM_DOM.html">BOM & DOM</a>
+            </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- main -->
+    <main id="main-doc">
+        <!-- walking the DOM -->
+        <header>Walking the DOM</header>
+
+        <section>
+            <article>
+                <p class="line-height-para">The DOM allows us to do anything with elements and their contents, but first we need to reach the corresponding DOM object. All operations on the DOM start with the <code>document</code> object. That’s the main “entry point” to DOM. From it we can access any node. DOM tree refers to the HTML page where all the nodes are objects. There can be 3 main types of nodes in the DOM tree:</p>
+                <ol type="a">
+                    <li>text nodes</li>
+                    <li>element nodes</li>
+                    <li>comment nodes</li>
+                </ol>
+
+                <img src="/images/DOM-Tree.gif" alt="DOM tree" style="border-radius: 15px; " class="center-image">
+                <p>According to the W3C HTML DOM standard, everything in an HTML document is a node:</p>
+                <ol type="a">
+                    <li>The entire document is a document node</li>
+                    <li>Every HTML element is an element node</li>
+                    <li>The text inside HTML elements are text nodes</li>
+                    <li>Every HTML attribute is an attribute node (deprecated)</li>
+                    <li>All comments are comment nodes</li>
+                </ol>
+                <p class="line-height-para">With the HTML DOM, all nodes in the node tree can be accessed by JavaScript. New nodes can be created, and all nodes can be modified or deleted.</p>
+                
+                
+                <img src="/images/domtree.png" alt="DOM tree" style="border-radius: 15px;" class="center-image">
+                <p>The topmost tree nodes are available directly as document properties:</p>
+
+                <p class="line-height-para"><code>&lt;html&gt;</code> = <code>document.documentElement</code><br>The topmost document node is <code>document.documentElement</code>. That’s the DOM node of the <code>&lt;html&gt;</code> tag.</p>
+                <p class="line-height-para"><code>&lt;body&gt;</code> = <code>document.body</code><br>Another widely used DOM node is the <code>&lt;body&gt;</code> element – <code>document.body</code>.</p>
+                <p class="line-height-para"><code>&lt;head&gt;</code> = <code>document.head</code><br>The <code>&lt;head&gt;</code> tag is available as <code>document.head</code>.</p>
+
+                <div class="note">
+                    <p><strong>Note:</strong> A text node is always a leaf of the tree.</p>
+                </div>
+
+                <div class="note margin-1less-top">
+                    <p><strong>Note:</strong> In the DOM world <code>null</code> means “doesn’t exist” or “no such node”.</p>
+                </div>
+
+
+                <!-- auto correction -->
+                <h2 class="margin-2_5em-top">Auto correction</h2>
+                
+                
+                <!-- children of an element -->
+                <h2 class="margin-2_5em-top">Children of an element</h2>
+            </article>
+        </section>
+
+        <button value="prev"><a href="/html/BOM_DOM.html">PREV</a></button>
+        <button value="next"><a href="/html/eventsAndOtherDOMProperties.html">NEXT</a></button>
+    </main>
+
+</body>
+
+</html>

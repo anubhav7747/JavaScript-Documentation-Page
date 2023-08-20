@@ -29,9 +29,14 @@ html {
     font-size: 4rem;
 }
 
-.center:hover {
+.center a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.center a:hover {
     text-decoration: underline;
-    color: rgb(55, 214, 11);
+    color: rgb(11, 92, 214);
     cursor: pointer;
 }
 
@@ -61,11 +66,11 @@ html {
     background-color: #555;
 }
 
-/* #navbar ul {
-    height: 75%;
+#navbar ul {
+    height: 80%;
     overflow-x: hidden;
     overflow-y: auto;
-} */
+}
 
 #navbar > ul > li {
     list-style: none;
@@ -74,18 +79,18 @@ html {
 }
 
 #navbar > ul > li > a {
-    font-size: 2em;
+    font-size: 1.75em;
     text-decoration: none;
-    color: rgb(136, 0, 255);
+    color: rgb(170, 3, 153);
 }
 
 #navbar > ul > li > a:hover {
-    color: rgb(136, 150, 255);
+    color: rgb(79, 100, 255);
     text-decoration: underline;
 }
 
-#navbar > ul > li > a:active {
-    color: black;
+#navbar ul li a:active {
+    color: rgb(253, 2, 2);
 }
 
 
@@ -166,6 +171,19 @@ button a:hover {
 }
 
 
+/* basics */
+#main-doc > header {
+    font-size: 4em;
+    text-align: center;
+    color: #a52a2a;
+    text-decoration: underline;
+}
+
+#main-doc > header:hover {
+    text-decoration: none;
+}
+
+
 /* expression and operators */
 ol li {
     font-size: 2.25rem;
@@ -180,7 +198,7 @@ dt {
     margin-bottom: 1rem;
 }
 
-dl dt code, dl dd code, ul li code, p code {
+dl dt code, dl dd code, ul li code, p code, li code {
     background-color: #dbd7d7;
     border-radius: 5px;
     padding: 2.5px;
@@ -227,8 +245,13 @@ article > h3 {
 .para {
     font-size: 1.5em;
 }
+
 .line-height-para {
     line-height: 40px;
+}
+
+.line-height-li {
+    line-height: 32px;
 }
 
 .margin-1more-top {
@@ -243,4 +266,30 @@ article code[class*=language-], article pre[class*=language-] {
     /* color: #efefef; */
     /* height: 5px; */
     border: 1px solid #efefef;
+}
+
+
+/* BOM_DOM */
+.margin-2_5em-top {
+    margin-top: 2.5em;
+}
+
+
+/* walking the DOM */
+ol[type="a"] li {
+    font-size: larger;
+    text-decoration: none;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+article > h2 {
+    text-decoration: underline;
 }

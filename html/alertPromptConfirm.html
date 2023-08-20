@@ -15,8 +15,8 @@
 
 <body>
     <header class="header">
-        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
-        <h1 class="center">JavaScript Documentation</h1>
+        <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center"><a href="/html/introduction.html">JavaScript Documentation</a></h1>
     </header>
 
 
@@ -59,6 +59,12 @@
             <li>
                 <a href="/html/BOM_DOM.html">BOM & DOM</a>
             </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
         </ul>
     </nav>
 
@@ -66,10 +72,89 @@
     <!-- main -->
     <main id="main-doc">
         <!-- alert, prompt, confirm -->
-        <section>
-            <header>Alert, Prompt, Confirm</header>
+        <header>Alert, Prompt, Confirm</header>
 
-            <article></article>
+        <section>
+            <article>
+                <!-- window.alert -->
+                <h3>window.alert()</h3>
+                <p class="line-height-para"><code>window.alert()</code> instructs the browser to display a dialog with an optional message, and to wait until the user dismisses the dialog.</p>
+
+                <p class="line-height-para">Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to dismiss the dialog.</p>
+
+                <pre class="language-js"><code>window.alert("Hello world!");
+alert("Hello world!");</code></pre>
+
+                <p>Both produce:</p>
+                <img src="/images/alerthelloworld.png" alt="output">
+
+                <p class="line-height-para">The alert dialog should be used for messages which do not require any response on the part of the user, other than the acknowledgement of the message.</p>
+
+                <p class="line-height-para">Dialog boxes are modal windows - they prevent the user from accessing the rest of the program's interface until the dialog box is closed. For this reason, you should not overuse any function that creates a dialog box (or modal window).</p>
+
+
+                <!-- window.prompt() -->
+                <h3 class="margin-2_5em-top">window.prompt()</h3>
+                <p class="line-height-para"><code>window.prompt()</code> instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.</p>
+
+                <p class="line-height-para">Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to submit text or to cancel the dialog.</p>
+
+                <pre class="language-js"><code>let sign = prompt("What's your sign?");
+
+if (sign.toLowerCase() === "scorpio") {
+    alert("Wow! I'm a Scorpio too!");
+}
+
+// there are many ways to use the prompt feature
+sign = window.prompt(); // open the blank prompt window
+sign = prompt(); //  open the blank prompt window
+sign = window.prompt("Are you feeling lucky"); // open the window with Text "Are you feeling lucky"
+sign = window.prompt("Are you feeling lucky", "sure"); // open the window with Text "Are you feeling lucky" &s default value "sure"</code></pre>
+
+                <p class="line-height-para">When the user clicks the OK button, text entered in the input field is returned. If the user clicks OK without entering any text, an empty string is returned. If the user clicks the Cancel button, this function returns <code>null</code>.</p>
+                <img src="/images/prompt.png" alt="output" width="700">
+
+                <p class="line-height-para">A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and returns the (possibly empty) text the user entered into that textbox.</p>
+
+                <p class="line-height-para">Please note that result is a string. That means you should sometimes cast the value given by the user. For example, if their answer should be a Number, you should cast the value to Number.</p>
+
+                <pre class="language-js"><code>const aNumber = Number(window.prompt("Type a number", ""));</code></pre>
+
+
+                <!-- window.confirm() -->
+                <h3 class="margin-2_5em-top">window.confirm()</h3>
+                <p class="line-height-para"><code>window.confirm()</code> instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels the dialog.</p>
+
+                <p class="line-height-para">Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to confirm or cancel the dialog.</p>
+
+                <pre class="language-js"><code>if (window.confirm("Do you really want to leave?")) {
+    window.open("exit.html", "Thanks for Visiting!");
+}</code></pre>
+                
+                <p class="margin-1more-top">Produces:</p>
+                <img src="/images/firefox_confirm_dialog.png" alt="output" width="600" height="250">
+
+                <h3 class="margin-2_5em-top">Proper code:</h3>
+                <pre class="language-js"><code>alert(`enter the number`);
+const a = prompt("enter here");
+document.write(a);
+                    
+alert(`the type of number is "${typeof a}".`);
+                    
+a = Number.parseInt(a);
+alert("the typeof number is " + (typeof a));
+                    
+const num = prompt(`enter the number`, 47);
+alert( `entered number is ${num}.`);
+// document.write(num);
+                    
+const write = confirm(`are you sure you want to print this number.`);
+if (write) {
+    document.write(num);
+} else {
+    document.write(`please allow to print the number.`);
+}</code></pre>
+            </article>
         </section>
 
         <button value="prev"><a href="/html/console.html">PREV</a></button>

@@ -16,8 +16,8 @@
 
 <body>
     <header class="header">
-        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
-        <h1 class="center">JavaScript Documentation</h1>
+        <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center"><a href="/html/introduction.html">JavaScript Documentation</a></h1>
     </header>
 
 
@@ -60,21 +60,29 @@
             <li>
                 <a href="/html/BOM_DOM.html">BOM & DOM</a>
             </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
         </ul>
     </nav>
 
 
     <!-- main -->
     <main id="main-doc">
+        <header>Basics</header>
+        
         <section>
             <header>Variables</header>
 
             <article>
-                <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+                <p class="line-height-para">You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
 
-                <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+                <p class="line-height-para">A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
 
-                <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+                <p class="line-height-para">You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
             </article>
         </section>
 
@@ -112,9 +120,9 @@
             <header class="margin-from-top">Variable scope</header>
 
             <article>
-                <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+                <p class="line-height-para">When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
 
-                <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+                <p class="line-height-para">JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
 
                 <pre class="language-js"><code>if (true) {
     var x = 5;
@@ -136,9 +144,9 @@ console.log(y); // ReferenceError: y is not defined</code></pre>
             <header class="margin-from-top">Global variables</header>
 
             <article>
-                <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+                <p class="line-height-para">Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
 
-                <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+                <p class="line-height-para">Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
             </article>
         </section>
 
@@ -148,13 +156,13 @@ console.log(y); // ReferenceError: y is not defined</code></pre>
             <header class="margin-from-top">Constants</header>
 
             <article>
-                <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+                <p class="line-height-para">You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
 
                 <pre class="language-js"><code>const PI = 3.14;</code></pre>
 
-                <p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
+                <p class="line-height-para">A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
 
-                <p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
+                <p class="line-height-para">The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
 
                 <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
 
@@ -191,7 +199,7 @@ car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR</code></pre>
                         Six data types that are primitives:
                         <ul>
                             <li>Boolean. true and false.</li>
-                            <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive,
+                            <li class="line-height-li">null. A special keyword denoting a null value. Because JavaScript is case-sensitive,
                                 null is not the same as Null, NULL, or any other variant.</li>
                             <li>undefined. A top-level property whose value is undefined.</li>
                             <li>Number. 42 or 3.14159.</li>
@@ -204,7 +212,7 @@ car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR</code></pre>
                     <li>and Object</li>
                 </ul>
 
-                <p>Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.</p>
+                <p class="line-height-para">Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.</p>
             </article>
         </section>
 

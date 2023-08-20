@@ -15,8 +15,8 @@
 
 <body>
     <header class="header">
-        <img src="/logo.png" alt="logo" width="150" height="60" class="left">
-        <h1 class="center">JavaScript Documentation</h1>
+        <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center"><a href="/html/introduction.html">JavaScript Documentation</a></h1>
     </header>
 
 
@@ -59,6 +59,12 @@
             <li>
                 <a href="/html/BOM_DOM.html">BOM & DOM</a>
             </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
         </ul>
     </nav>
 
@@ -66,8 +72,9 @@
     <!-- main -->
     <main id="main-doc">
         <!-- Strings -->
+        <header>Strings</header>
+        
         <section>
-            <header>Strings</header>
             <p class="para line-height-para">The <code>String</code> object is used to represent and manipulate a sequence of characters. Strings are useful for holding data that can be represented in text form. Some of the most-used operations on strings are to check their <code>length</code>, to build and concatenate them using the + and += string operators, checking for the existence or location of substrings with the <code>indexOf()</code> method, or extracting substrings with the <code>substring()</code> method.</p>
             <pre class="language-js"><code>const string1 = "A string primitive";
 const string2 = 'Also a string primitive';
