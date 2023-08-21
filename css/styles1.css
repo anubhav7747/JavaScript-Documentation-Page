@@ -14,8 +14,9 @@ html {
 #time {
     text-align: center;
     color: #8e5f5f;
-    font-size: 2em;
+    font-size: 1.75em;
     margin-top: 0.25em;
+    /* background-color: #000000; */
 }
 
 
@@ -26,16 +27,18 @@ html {
 }
 
 .left {
+    /* border: 2px solid orange; */
     position: fixed;
-    margin-top: 3.5em;
+    margin-top: 1em;
     margin-left: 1em;
 }
 
 .center {
+    /* border: 2px solid orange; */
     position: absolute;
-    /* right: 30%; */
+    top: -3%;
     left: 35%;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .center a {
@@ -55,7 +58,7 @@ html {
     /* border: 2px solid orange; */
     position: fixed;
     width: 21vw;
-    margin-top: 7.5em;
+    margin-top: 4.5em;
     height: 100%;
 }
 
@@ -76,6 +79,7 @@ html {
 }
 
 #navbar ul {
+    /* height: 78%; */
     height: 78%;
     overflow-x: hidden;
     overflow-y: auto;
@@ -107,7 +111,7 @@ html {
 #main-doc {
     position: absolute;
     margin-left: 21em;
-    margin-top: 8.5em;
+    margin-top: 5.5em;
     margin-right: 1em;
     background-color: #efefef;
     padding: 1em;
@@ -182,10 +186,11 @@ button a:hover {
 
 /* basics */
 #main-doc > header {
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
     color: #a52a2a;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #main-doc > header:hover {
@@ -288,6 +293,10 @@ article code[class*=language-], article pre[class*=language-] {
 ol[type="a"] li {
     font-size: larger;
     text-decoration: none;
+}
+
+.margin-2em-top {
+    margin-top: 2em;
 }
 
 .center-image {

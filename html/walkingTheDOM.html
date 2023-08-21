@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id="time"></div>
+    <!-- <div id="time"></div> -->
 
     <header class="header">
         <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
@@ -69,6 +69,7 @@
                 <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
             </li>
         </ul>
+        <div id="time"></div>
     </nav>
 
 
@@ -106,20 +107,289 @@
                 <p class="line-height-para"><code>&lt;head&gt;</code> = <code>document.head</code><br>The <code>&lt;head&gt;</code> tag is available as <code>document.head</code>.</p>
 
                 <div class="note">
-                    <p><strong>Note:</strong> A text node is always a leaf of the tree.</p>
+                    <p><strong><u>Note</u>:</strong> A text node is always a leaf of the tree.</p>
                 </div>
 
                 <div class="note margin-1less-top">
-                    <p><strong>Note:</strong> In the DOM world <code>null</code> means “doesn’t exist” or “no such node”.</p>
+                    <p><strong><u>Note</u>:</strong> In the DOM world <code>null</code> means “doesn’t exist” or “no such node”.</p>
+                </div>
+
+                <pre class="language-html"><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                
+                <pre class="language-js"><code>&lt;script&gt;
+    console.log(document.title); // hello
+    console.log(document.documentElement);  // html tag
+    console.log(document.head); // head tag
+    console.log(document.body); // body tag
+    console.log(document);  // complete html file
+&lt;/script&gt;</code></pre>
+                
+                <!-- auto correction -->
+                <h2 class="margin-2em-top">Auto correction</h2>
+                <p class="line-height-para">If an erroneous HTML is encountered by the browser it tends to correct it. For example, if we put something after the body, it is automatically moved inside the body. Another example is <code>&lt;table&gt;</code> tag which must contain <code>&lt;tbody&gt;</code>.</p>
+                
+                <div class="note margin-1less-top">
+                    <p><strong><u>Note</u>:</strong> <code>document.body</code> can sometimes be <code>null</code> if the JavaScript is written before the <code>&lt;body&gt;</code> tag.</p>
                 </div>
 
 
-                <!-- auto correction -->
-                <h2 class="margin-2_5em-top">Auto correction</h2>
-                
-                
                 <!-- children of an element -->
-                <h2 class="margin-2_5em-top">Children of an element</h2>
+                <h2 class="margin-2em-top">Children of an element</h2>
+                <p>Direct as well as deeply nested elements of an element are called its children.</p>
+                <p>Child nodes => Elements that are direct children. For example, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tag are children of <code>&lt;html&gt;</code>.</p>
+                <p>Descendant nodes => All nested elements, children, their children and so on.</p>
+
+                
+                <!-- firstChild, lastChild and childNodes -->
+                <h2 class="margin-2em-top">firstChild, lastChild and childNodes</h2>
+                <p><code>element.firstChild</code> => first child element</p>
+                <p><code>element.lastChild</code> => last child element</p>
+                <p><code>element.childNodes</code> => all child element</p>
+                
+                <p>Following is always true:</p>
+                <p><code>element.childNodes[0]</code> === <code>element.firstChild</code></p>
+                <p><code>element.childNodes[element.childNodes.length-1]</code> === <code>element.lastChild</code></p>
+                
+                <p>There is also a method <code>element.hasChildNodes()</code> to check whether there are any child nodes.</p>
+
+                <div class="note margin-1less-top" style="height: 100px;">
+                    <p class="line-height-para"><strong><u>Note</u>:</strong> <code>childNodes</code> looks like an array. But its not actually an array but a collection. We can use <code>Array.from(collection)</code> to convert it into an Array.</p>
+                </div>
+
+                <pre class="language-html"><code>&lt;body&gt;&lt;div&gt;
+        &lt;p&gt;this is a paragraph&lt;/p&gt;
+        &lt;span&gt;Span&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+
+                <pre class="language-js"><code>&lt;script&gt;
+    console.log(document.body.firstChild);  // div tag and inside div contents
+    console.log(document.body.lastChild);   // script tag and inside script contents
+    console.log(document.body.childNodes);
+                    
+    let arr = Array.from(document.body.childNodes);
+    console.log(arr);
+    // (3) [div, text, script]
+        // 0: div
+        // 1: text
+        // 2: script
+        //  length: 3
+        //  [[Prototype]]: Array(0)
+&lt;/script&gt;</code></pre>
+
+            <div class="note margin-1less-top" style="height: 155px;">
+                <strong><u>Notes on DOM collections</u>:</strong>
+                <li>they are read-only.</li>
+                <li>they are live <code>element.childNodes</code> variable (reference) will automatically update if childNodes of element is changed.</li>
+                <li>they are iterable using for...of loop.</li>
+            </div>
+
+
+            <!-- Siblings and the parent -->
+            <h2 class="margin-2em-top">Siblings and the parent</h2>
+            <p class="line-height-para">Siblings are nodes that are children of the same parent. For example, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are siblings. Siblings have same parent. In the above example its <code>&lt;html&gt;</code>.</p>
+            <p><code>&lt;body&gt;</code> is said to be the <q>next</q> or <q>right</q> sibling of <code>&lt;head&gt;</code>.</p>
+            <p><code>&lt;head&gt;</code> is said to be the <q>previous</q> or <q>left</q> sibling of <code>&lt;body&gt;</code>.</p>
+            <p class="line-height-para">The next sibling is in <code>nextSibling</code> property and the previous one in <code>previousSibling</code>. The parent is available as <code>parentNode</code>.</p>
+
+            <pre class="language-html"><code>&lt;body&gt;&lt;div&gt;&lt;div&gt; class="first"&gt;first&lt;/div&gt;&lt;div&gt; class="second"&gt;second&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</code></pre>
+            
+            <pre class="language-js"><code>&lt;script&gt;
+    console.log(document.body.firstChild);   // div tag
+
+    let a = document.body.firstChild;
+    console.log(a.parentNode);  // body tag
+    console.log(a.parentElement);   // body tag
+    console.log(a.firstChild.nextSibling);  // div.second
+                
+    console.log(document.documentElement.parentNode);  // document
+    console.log(document.documentElement.parentElement);  // null
+&lt;/script&gt;</code></pre>
+
+
+                <!-- element only navigation -->
+                <h2 class="margin-2em-top">Element only Navigation</h2>
+                <p>Sometimes we don't want text or comment nodes. Some links only take element nodes into account. For example,</p>
+                <p><code>document.previousElementSibling</code> => previous sibling which is an element</p>
+                <p><code>document.nextElementSibling</code> => next sibling (element)</p>
+                <p><code>document.firstElementChild</code> => first element child</p>
+                <p><code>document.lastElementChild</code> => last element child</p>
+
+                <pre class="language-html"><code>&lt;body&gt;&lt;!-- this is a comment --&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Home&lt;/li&gt;
+            &lt;li&gt;About&lt;/li&gt;
+            &lt;li&gt;Hire Me&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/body&gt;</code></pre>
+
+                <pre class="language-js"><code>&lt;script&gt;
+    const b = document.body;
+    console.log(b.firstChild);  // comment
+    console.log(b.firstElementChild);   // nav tag 
+&lt;/script&gt;</code></pre>
+
+
+                <!-- table links -->
+                <h2 class="margin-2em-top">Table links</h2>
+                <p class="line-height-para">certain DOM elements may provide additional properties specific to their type for convenience. Table element supports the following properties:</p>
+                <p><code>table.rows</code> => collection of <code>&lt;tr&gt;</code> elements</p>
+                <p><code>table.caption</code> => reference to <code>&lt;caption&gt;</code></p>
+                <p><code>table.tHead</code> => reference to <code>&lt;thead&gt;</code></p>
+                <p><code>table.tFoot</code> => reference to <code>&lt;tfoot&gt;</code></p>
+                <p><code>table.tBodies</code> => collection of <code>&lt;tbody&gt;</code> elements</p>
+                <p><code>tbody.rows</code> => collection of <code>&lt;tr&gt;</code> inside</p>
+                <p><code>tr.cells</code> => collection of <code>&lt;td&gt;</code> and <code>&lt;th&gt;</code></p>
+                <p><code>tr.sectionRowIndex</code> => index of <code>&lt;tr&gt;</code> inside enclosing element</p>
+                <p><code>tr.rowIndex</code> => row number starting from 0</p>
+                <p><code>td.cellIndex</code> => number of cells inside enclosing <code>&lt;tr&gt;</code></p>
+                
+                <pre class="language-html"><code>&lt;body&gt;
+    &lt;div class="container my-4"&gt;
+        &lt;table class="table"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt; scope="col"&gt;#&lt;/th&gt;
+                    &lt;th&gt; scope="col"&gt;First&lt;/th&gt;
+                    &lt;th&gt; scope="col"&gt;Last&lt;/th&gt;
+                    &lt;th&gt; scope="col"&gt;Handle&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;th&gt; scope="row"&gt;1&lt;/th&gt;
+                    &lt;td&gt;Mark&lt;/td&gt;
+                    &lt;td&gt;Otto&lt;/td&gt;
+                    &lt;t&gt;&gt;@mdo&lt;/t&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt; scope="row"&gt;2&lt;/th&gt;
+                    &lt;td&gt;Jacob&lt;/td&gt;
+                    &lt;td&gt;Thornton&lt;/td&gt;
+                    &lt;td&gt;@fat&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th&gt; scope="row"&gt;3&lt;/th&gt;
+                    &lt;td&gt; colspan="2"&gt;Larry the Bird&lt;/td&gt;
+                    &lt;td&gt;@twitter&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+                
+                <pre class="language-js"><code>&lt;script&gt;
+    const t = document.body.firstElementChild.firstElementChild;
+    console.log(t); // table tag
+                    
+    console.log(t.rows);    // HTMLCollection(4)0: tr1: tr2: tr3: trlength: 4[[Prototype]]: HTMLCollection
+    console.log(t.caption); // null
+    console.log(t.thead);   // undefined
+    console.log(t.tHead.firstElementChild); // tr tag
+    console.log(t.tBodies); // HTMLCollection [tbody]0: tbodylength: 1[[Prototype]]: HTMLCollection
+    console.log(t.tFoot);   // null
+    console.log(t.tbody.rows);
+    console.log(t.rows[0].rowIndex);    // 0
+                    
+    console.log(typeof document);  // object
+    console.log(typeof window);  // object
+&lt;/script&gt;</code></pre>
+
+
+                <!-- searching the DOM -->
+                <h2 class="margin-2em-top">Searching the DOM</h2>
+                <p class="line-height-para">DOM navigation properties are helpful when the elements are close to each other. If they are not close to each other, we have some more methods to search the DOM.</p>
+                <dl>
+                    <dt><code>document.getElementById</code></dt>
+                    <dd>this method is used to get the element with a given <q>id</q> attribute.</dd>
+                    <pre class="language-js"><code>let span = document.getElementById('span');
+span.style.color = 'orange';</code></pre>
+                    
+                    <dt class="margin-top"><code>document.querySelectorAll</code></dt>
+                    <dd>returns all elements inside an element matching the given CSS selector.</dd>
+                    
+                    <dt class="margin-top"><code>document.querySelector</code></dt>
+                    <dd>returns the first element for the given CSS selector. A efficient version of <code>element.querySelectorAll(CSS)[0]</code></dd>
+                    
+                    <dt class="margin-top"><code>document.getElementsByTagName</code></dt>
+                    <dd>returns elements with the given tag name</dd>
+                    
+                    <dt class="margin-top"><code>document.getElementsByClassName</code></dt>
+                    <dd>returns elements that have the given CSS class. Don't forget the <q>s</q> letter</dd>
+                    
+                    <dt class="margin-top"><code>document.getElementsByName</code></dt>
+                    <dd>searches elements by the name attribute</dd>
+                </dl>
+
+                <pre class="language-js"><code>&lt;script&gt;
+    // change card title to orange
+    let cartTitle = document.getElementsByClassName('card-title')[0];
+    cartTitle.style.color = "orange";
+                    
+    let cardText = document.getElementById('cardText');
+    cardText.style.color = "blue";
+                    
+    let query = document.querySelectorAll('.card-title');
+    console.log(query);
+    query[0].style.color = 'orange';
+    query[1].style.color = 'orangered';
+    query[2].style.color = 'red';
+                    
+    document.querySelector('.button').style.color = 'brown';
+    document.querySelector('.button').style.fontFamily = 'cursive';
+                    
+    console.log(document.getElementsByTagName('a'));
+    console.log(document.querySelector('.card-title').getElementsByTagName('a'));
+    console.log(document.querySelector('.card').getElementsByTagName('a'));
+                    
+    console.log(document.getElementsByName('search'));
+&lt;/script&gt;</code></pre>
+
+
+                <!-- matches, closest and contains methods -->
+                <h2 class="margin-2em-top">matches, closest and contains methods</h2>
+                <p>There are three important methods to search the DOM:</p>
+                <dl>
+                    <dt><code>elem.matches(CSS)</code></dt>
+                    <dd>to check if element matches the given CSS selector.</dd>
+                    
+                    <dt class="margin-top"><code>elem.closest(CSS)</code></dt>
+                    <dd>to look for the nearest ancestor that matches the given CSS selector. The elem itself is also checked.</dd>
+                    
+                    <dt class="margin-top"><code>elemA.contains(elemB)</code></dt>
+                    <dd>returns true if elemB is inside elemA (a descendant of elemA) or when elemA == elemB</dd>
+                </dl>
+
+                <pre class="language-html"><code>&lt;body&gt;
+    &lt;div class="box" id="id1"&gt;this is an element 1.
+        &lt;span&gt; id="sp1"&gt;this is a span&lt;/span&gt;
+    &lt;/div&gt;                
+    &lt;div&gt; class="box" id="id2"&gt;this is an element 2.&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+                
+                <pre class="language-js"><code>&lt;script&gt;
+    const id = document.getElementById('id1');
+    console.log(id);  // div.box#id1
+
+    console.log(id.matches('.class'));  // false
+    console.log(id.matches('.box'));  // true
+
+    const sp = document.getElementById('sp1');
+    console.log(sp.closest('.box'));  // div.box#id1
+
+    console.log(sp.contains(id));  // false
+    console.log(id.contains(sp));  // true
+    console.log(sp.contains(sp));  // true
+&lt;/script&gt;</code></pre>
             </article>
         </section>
 
