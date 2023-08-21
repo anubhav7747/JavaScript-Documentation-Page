@@ -10,11 +10,12 @@ html {
 }
 
 
-/* span */
+/* div#time */
 #time {
+    text-align: center;
     color: #8e5f5f;
-    font-size: 1.75em;
-    margin-left: 0.80em;
+    font-size: 2em;
+    margin-top: 0.25em;
 }
 
 
