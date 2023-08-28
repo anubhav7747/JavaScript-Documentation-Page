@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Arrays</title>
+    <title>JavaScript Documentation | Events and Other DOM Properties</title>
     <link rel="stylesheet" href="/css/styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,16 +78,23 @@
 
     <!-- main -->
     <main id="main-doc">
-        <!-- Arrays -->
-        <header>Arrays</header>
-        
+        <!-- Problem 8 -->
+        <h1><u>Problem 8</u>. Write a JavaScript program to find whether a number is divisible by 2 and 3.</h1>
+
         <section>
+            <article>
+                <pre class="language-js"><code>let num = 12;
 
-            <article></article>
+if (((num % 2) == 0) && ((num%3) == 0))
+    console.log("divisible by both");   // this will print
+else if (num % 2 == 0)
+    console.log("divisible by 2");
+else if (num % 3 == 0)
+    console.log("divisible by 3");
+else
+    console.log("divisible by some other number.");</code></pre>
+            </article>
         </section>
-
-        <button value="prev"><a href="/html/strings.html">PREV</a></button>
-        <button value="next"><a href="/html/scriptTag.html">NEXT</a></button>
     </main>
 
 </body>

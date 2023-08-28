@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Arrays</title>
+    <title>JavaScript Documentation | Events and Other DOM Properties</title>
     <link rel="stylesheet" href="/css/styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,16 +78,25 @@
 
     <!-- main -->
     <main id="main-doc">
-        <!-- Arrays -->
-        <header>Arrays</header>
-        
+        <!-- Problem 10 -->
+        <h1><u>Problem 10</u>. Print "You can drive" or "You cannot drive" based on age being greater than 18 using ternary operator.</h1>
+
         <section>
+            <article>
+                <pre class="language-js"><code>let age = prompt("Enter your age: ");    // 19
+age = Number.parseInt(age);
 
-            <article></article>
+/*
+if (age >= 18)
+    console.log("you can drive");
+else
+    console.log("you cannot drive");
+*/
+
+let res = age>=18 ? "you can drive" : "you cannot drive";
+console.log(res);   // you can drive</code></pre>
+            </article>
         </section>
-
-        <button value="prev"><a href="/html/strings.html">PREV</a></button>
-        <button value="next"><a href="/html/scriptTag.html">NEXT</a></button>
     </main>
 
 </body>

@@ -92,7 +92,7 @@ html {
 }
 
 #navbar > ul > li > a {
-    font-size: 1.6em;
+    font-size: 1.5em;
     text-decoration: none;
     color: rgb(170, 3, 153);
 }
@@ -159,12 +159,13 @@ section > article {
 
 
 button[value="next"], button[value="prev"] {
+    cursor: pointer;
     position: relative;
-    left: 85%;
+    left: 86%;
     background-color: orangered;
     border: 1px solid orangered;
     border-radius: 10px;
-    width: 5rem;
+    width: 75px;
     font-size: 1em;
 }
 
@@ -177,6 +178,7 @@ button[value="next"]:hover, button[value="prev"]:hover {
 button a {
     text-decoration: none;
     color: #f0f8ff;
+    display: block;
 }
 
 button a:hover {
@@ -310,4 +312,27 @@ ol[type="a"] li {
 
 article > h2 {
     text-decoration: underline;
+}
+
+
+
+/* practice problems */
+.questions li {
+    font-size: 30px;
+}
+
+.questions li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.btn {
+    left: 92% !important;
+}
+
+
+/* problem 1 */
+#main-doc > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
 }
