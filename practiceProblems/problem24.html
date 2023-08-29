@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Documentation | Events and Other DOM Properties</title>
+    <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/prism.css">
+    <script src="/js/prism.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+
+<body>
+    <!-- <div id="time"></div> -->
+
+    <header class="header">
+        <img src="/images/logo.png" alt="logo" width="150" height="60" class="left">
+        <h1 class="center"><a href="/html/introduction.html">JavaScript Documentation</a></h1>
+    </header>
+
+
+    <!-- nav -->
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="/html/introduction.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/html/Basics.html">Basics</a>
+            </li>
+            <li>
+                <a href="/html/expressionAndOperators.html">Expressions and Operators</a>
+            </li>
+            <li>
+                <a href="/html/statements.html">Statements</a>
+            </li>
+            <li>
+                <a href="/html/loops.html">Loops</a>
+            </li>
+            <li>
+                <a href="/html/functions.html">Function</a>
+            </li>
+            <li>
+                <a href="/html/strings.html">Strings</a>
+            </li>
+            <li>
+                <a href="/html/arrays.html">Arrays</a>
+            </li>
+            <li>
+                <a href="/html/scriptTag.html">Script Tag</a>
+            </li>
+            <li>
+                <a href="/html/console.html">Console</a>
+            </li>
+            <li>
+                <a href="/html/alertPromptConfirm.html">Alert, Prompt, Confirm</a>
+            </li>
+            <li>
+                <a href="/html/BOM_DOM.html">BOM & DOM</a>
+            </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
+            <li>
+                <a href="/html/practiceProblems.html">Practice Problems</a>
+            </li>
+        </ul>
+        <div id="time"></div>
+    </nav>
+
+
+    <!-- main -->
+    <main id="main-doc">
+        <!-- Problem 24 -->
+        <h1><u>Problem 24</u>. Use reduce to calculate factorial of a given number from an array of first n natural numbers (n being the number whose factorial needs to be calculated).</h1>
+
+        <section>
+            <article>
+                <pre class="language-js"><code>let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+let val = arr.reduce((val1, val2)=>{
+    return val1*val2;
+});
+
+console.log(val);   // 40320</code></pre>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>
