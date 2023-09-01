@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Problem 9</title>
+    <title>JavaScript Documentation | Problem 31</title>
     <link rel="stylesheet" href="/css/styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,17 +78,66 @@
 
     <!-- main -->
     <main id="main-doc">
-        <!-- Problem 9 -->
-        <h1><u>Problem 9</u>. Write a JavaScript program to find whether a number is divisible by 2 or 3.</h1>
+        <!-- Problem 31 -->
+        <h1><u>Problem 31</u>. Create a table without tbody. Now use 'view page source' button to check whether it has a tbody or not.</h1>
 
         <section>
             <article>
-                <pre class="language-js"><code>let num = 10;
+                <pre class="language-html"><code>&lt;body&gt;                              
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Middle Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Anubhav&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;Tiwari&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Happy&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;Tiwari&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;</code></pre>
 
-if (((num % 2) == 0) || ((num%3) == 0))
-    console.log("divisible by 2 or 3");     // this will print
-else
-    console.log("divisible by some other number.");</code></pre>
+                <pre class="language-css"><code>&lt;style&gt;
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #efefef;
+    }
+                  
+    table {
+        margin-top: 25px;
+        /* margin-left: 25px; */
+        width: 100%;
+    }
+                  
+    tr {
+        text-align: center;
+    }
+                  
+    th {
+        border-top: 3px solid #fefefe;
+        border-bottom: 3px solid #fefefe;
+        font-size: 1.5em;
+        padding: 5px;
+    }
+                  
+    td {
+        font-size: 1.5em;
+        border-bottom: 3px solid #fefefe;
+        padding: 5px;
+    }
+&lt;/style&gt;</code></pre>
+                
+                <h1>Output:</h1>
+                <p>No, view page source shows raw source code. But in inspect it shows tbody.</p>
             </article>
         </section>
     </main>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Events and Other DOM Properties</title>
+    <title>JavaScript Documentation | Problem 30</title>
     <link rel="stylesheet" href="/css/styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,18 +79,59 @@
     <!-- main -->
     <main id="main-doc">
         <!-- Problem 30 -->
-        <h1><u>Problem 30</u>. Use logical operator to find whether the age of a person lies between 10 and 20.</h1>
+        <h1><u>Problem 30</u>. Create a navbar and change the color of its first element to red.</h1>
 
         <section>
             <article>
-                <pre class="language-js"><code>// const age = prompt("Enter your age: ");
-let age = prompt("Enter your age: ");   // 20
-age = Number.parseInt(age);
+                <pre class="language-html"><code>&lt;body&gt;
+    &lt;nav id="navbar"&gt;
+        &lt;li&gt;home&lt;/li&gt;
+        &lt;li&gt;about us&lt;/li&gt;
+        &lt;li&gt;contact us&lt;/li&gt;
+    &lt;/nav&gt;
+&lt;/body&gt;</code></pre>
+
+                <pre class="language-css"><code>&lt;style&gt;
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #efefef;
+    }
+                  
+    #navbar {
+        background-color: #fefefe;
+        display: flex;
+        height: 2rem;
+    }
+                  
+    li {
+        margin: 0 20px;
+        font-size: 1.5em;
+        list-style: none;
+    }
+&lt;/style&gt;</code></pre>
+
+                <pre class="language-js"><code>&lt;script&gt;
+    // console.log(document.body.firstElementChild);
+    // &lt;nav id="navbar"&gt;
+        // &lt;li&gt;home&lt;/li&gt;
+        // &lt;li&gt;about us&lt;/li&gt;
+        // &lt;li&gt;contact us&lt;/li&gt;
+    // &lt;/nav&gt;
+    
+    // console.log(document.body.firstElementChild.firstElementChild);  // <li>home</li>
+    // console.log(document.body.firstElementChild.firstElementChild.firstElementChild);    // null
                     
-if (age>10 && age<20)
-    console.log("between");
-else
-    console.log("NOPE");    // this will print</code></pre>
+    // const firstElementColor = document.body.firstElementChild.firstElementChild.firstElementChild;
+                    
+    const firstElementColor = document.body.firstElementChild.firstElementChild;
+    firstElementColor.style.color = "orange";
+&lt;/script&gt;</code></pre>
+                
+                <h1>Output:</h1>
+                <img src="/images/problem30.png" alt="output" style="border-radius: 15px;">
             </article>
         </section>
     </main>

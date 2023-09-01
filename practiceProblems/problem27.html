@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Events and Other DOM Properties</title>
+    <title>JavaScript Documentation | Problem 27</title>
     <link rel="stylesheet" href="/css/styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,18 +79,27 @@
     <!-- main -->
     <main id="main-doc">
         <!-- Problem 27 -->
-        <h1><u>Problem 27</u>. Use logical operator to find whether the age of a person lies between 10 and 20.</h1>
+        <h1><u>Problem 27</u>. Write a program using prompt function to take input of age as a value from the user and use alert to tell him whether he can drive! Use confirm to ask the user if he wants to see prompt again. Use console.error to log error if the age entered is negative.</h1>
 
         <section>
             <article>
-                <pre class="language-js"><code>// const age = prompt("Enter your age: ");
-let age = prompt("Enter your age: ");   // 20
+                <pre class="language-js"><code>const canDrive = (age)=> {
+    return age&gt;=18?true:false;
+}
+                  
+let age = prompt(`Enter age`);
 age = Number.parseInt(age);
-                    
-if (age>10 && age<20)
-    console.log("between");
+                  
+if (age &lt; 0)
+    console.error('age is negative');
+else if (canDrive(age))
+    alert(`hey buddy! you can drive`);
 else
-    console.log("NOPE");    // this will print</code></pre>
+    alert(`you cannot drive`);</code></pre>
+                
+                <h1>Output:</h1>
+                <img src="/images/problem27a.png" alt="output" style="border-radius: 15px;">
+                <img src="/images/problem27b.png" alt="output" style="border-radius: 15px;" class="margin-1less-top">
             </article>
         </section>
     </main>

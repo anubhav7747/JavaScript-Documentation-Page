@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Events and Other DOM Properties</title>
+    <title>JavaScript Documentation | Problem 26</title>
     <link rel="stylesheet" href="/css/styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,18 +79,28 @@
     <!-- main -->
     <main id="main-doc">
         <!-- Problem 26 -->
-        <h1><u>Problem 26</u>. Use logical operator to find whether the age of a person lies between 10 and 20.</h1>
+        <h1><u>Problem 26</u>. Write a program using prompt function to take input of age as a value from the user and use alert to tell him whether he can drive! Use confirm to ask the user if he wants to see prompt again.</h1>
 
         <section>
             <article>
-                <pre class="language-js"><code>// const age = prompt("Enter your age: ");
-let age = prompt("Enter your age: ");   // 20
-age = Number.parseInt(age);
+                <pre class="language-js"><code>const canDrive = (age)=> {
+    return age>=18?true:false;
+}
+                  
+let promptAgain = true;
+                  
+while (promptAgain) {
+    let age = prompt(`Enter age`);
+    age = Number.parseInt(age);
                     
-if (age>10 && age<20)
-    console.log("between");
-else
-    console.log("NOPE");    // this will print</code></pre>
+    if (canDrive(age)) {
+        alert(`hey buddy! you can drive`);
+    } else {
+        alert(`oops! you can't drive`);
+    }
+                    
+    promptAgain = confirm(`Do you want to see prompt again.`);
+}</code></pre>
             </article>
         </section>
     </main>
