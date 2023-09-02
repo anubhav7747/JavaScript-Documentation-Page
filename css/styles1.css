@@ -203,10 +203,12 @@ button a:hover {
 /* expression and operators */
 ol li {
     font-size: 2.25rem;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 ol li:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 dt {
@@ -319,11 +321,16 @@ article > h2 {
 /* practice problems */
 .questions li {
     font-size: 30px;
+    text-decoration: none;
 }
 
 .questions li a {
     text-decoration: none;
-    color: #000;
+    color: #a52a2a;
+}
+
+.questions li a:hover {
+    text-decoration: underline;
 }
 
 .btn {

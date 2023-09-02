@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Problem 35</title>
+    <title>JavaScript Documentation | Problem 40</title>
     <link rel="stylesheet" href="/css/styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,17 +78,19 @@
 
     <!-- main -->
     <main id="main-doc">
-        <!-- Problem 35 -->
-        <h1><u>Problem 35</u>. Write a program to show different alerts when different buttons are clicked.</h1>
+        <!-- Problem 40 -->
+        <h1><u>Problem 40</u>. Use logical operator to find whether the age of a person lies between 10 and 20.</h1>
 
         <section>
             <article>
-                <pre class="language-html"><code>&lt;body&gt;
-    &lt;div id="first"&gt;
-        &lt;button onclick="alert('hello');"&gt;click me&lt;/button&gt;
-        &lt;button onclick="alert('world');"&gt;click me&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/body&gt;</code></pre>
+                <pre class="language-js"><code>// const age = prompt("Enter your age: ");
+let age = prompt("Enter your age: ");   // 20
+age = Number.parseInt(age);
+                    
+if (age>10 && age<20)
+    console.log("between");
+else
+    console.log("NOPE");    // this will print</code></pre>
             </article>
         </section>
     </main>

@@ -24,3 +24,9 @@
 .scriptTag a:hover {
     text-decoration: none;
 }
+
+
+/* alertPromptConfirm */
+#main-doc {
+    width: 74vw;
+}

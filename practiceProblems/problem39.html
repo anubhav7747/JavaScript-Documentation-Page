@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Problem 35</title>
+    <title>JavaScript Documentation | Problem 39</title>
     <link rel="stylesheet" href="/css/styles1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,17 +78,22 @@
 
     <!-- main -->
     <main id="main-doc">
-        <!-- Problem 35 -->
-        <h1><u>Problem 35</u>. Write a program to show different alerts when different buttons are clicked.</h1>
+        <!-- Problem 39 -->
+        <h1><u>Problem 39</u>. Create a glowing bulb effect using classlist toggle method in JavaScript.</h1>
 
         <section>
             <article>
                 <pre class="language-html"><code>&lt;body&gt;
-    &lt;div id="first"&gt;
-        &lt;button onclick="alert('hello');"&gt;click me&lt;/button&gt;
-        &lt;button onclick="alert('world');"&gt;click me&lt;/button&gt;
-    &lt;/div&gt;
+    &lt;div id="bulb" class="bulb-color bulb"&gt;&lt;/div&gt;
 &lt;/body&gt;</code></pre>
+
+                <pre class="language-js"><code>&lt;script&gt;
+    let bulb = () => {
+        document.querySelector('#bulb').classList.toggle('bulb-color');
+    }
+                      
+    setInterval(bulb, 500);
+&lt;/script&gt;</code></pre>
             </article>
         </section>
     </main>

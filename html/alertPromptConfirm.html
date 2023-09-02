@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Documentation | Alert, Prompt, Confirm</title>
     <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
@@ -89,8 +90,10 @@
 
                 <p class="line-height-para">Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to dismiss the dialog.</p>
 
-                <pre class="language-js"><code>window.alert("Hello world!");
-alert("Hello world!");</code></pre>
+                <pre class="language-js"><code>&lt;script&gt;
+    window.alert("Hello world!");
+    alert("Hello world!");
+&lt;/script&gt;</code></pre>
 
                 <p>Both produce:</p>
                 <img src="/images/alerthelloworld.png" alt="output">
@@ -106,17 +109,19 @@ alert("Hello world!");</code></pre>
 
                 <p class="line-height-para">Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to submit text or to cancel the dialog.</p>
 
-                <pre class="language-js"><code>let sign = prompt("What's your sign?");
+                <pre class="language-js"><code>&lt;script&gt;
+    let sign = prompt("What's your sign?");
 
-if (sign.toLowerCase() === "scorpio") {
-    alert("Wow! I'm a Scorpio too!");
-}
+    if (sign.toLowerCase() === "scorpio") {
+        alert("Wow! I'm a Scorpio too!");
+    }
 
-// there are many ways to use the prompt feature
-sign = window.prompt(); // open the blank prompt window
-sign = prompt(); //  open the blank prompt window
-sign = window.prompt("Are you feeling lucky"); // open the window with Text "Are you feeling lucky"
-sign = window.prompt("Are you feeling lucky", "sure"); // open the window with Text "Are you feeling lucky" &s default value "sure"</code></pre>
+    // there are many ways to use the prompt feature
+    sign = window.prompt(); // open the blank prompt window
+    sign = prompt(); //  open the blank prompt window
+    sign = window.prompt("Are you feeling lucky"); // open the window with Text "Are you feeling lucky"
+    sign = window.prompt("Are you feeling lucky", "sure"); // open the window with Text "Are you feeling lucky" &s default value "sure"
+&lt;/script&gt;</code></pre>
 
                 <p class="line-height-para">When the user clicks the OK button, text entered in the input field is returned. If the user clicks OK without entering any text, an empty string is returned. If the user clicks the Cancel button, this function returns <code>null</code>.</p>
                 <img src="/images/prompt.png" alt="output" width="700">
@@ -134,33 +139,37 @@ sign = window.prompt("Are you feeling lucky", "sure"); // open the window with T
 
                 <p class="line-height-para">Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to confirm or cancel the dialog.</p>
 
-                <pre class="language-js"><code>if (window.confirm("Do you really want to leave?")) {
-    window.open("exit.html", "Thanks for Visiting!");
-}</code></pre>
+                <pre class="language-js"><code>&lt;script&gt;
+    if (window.confirm("Do you really want to leave?")) {
+        window.open("exit.html", "Thanks for Visiting!");
+    }
+&lt;/script&gt;</code></pre>
                 
                 <p class="margin-1more-top">Produces:</p>
                 <img src="/images/firefox_confirm_dialog.png" alt="output" width="600" height="250">
 
                 <h3 class="margin-2_5em-top">Proper code:</h3>
-                <pre class="language-js"><code>alert(`enter the number`);
-const a = prompt("enter here");
-document.write(a);
+                <pre class="language-js"><code>&lt;script&gt;
+    alert(`enter the number`);
+    const a = prompt("enter here");
+    document.write(a);
                     
-alert(`the type of number is "${typeof a}".`);
+    alert(`the type of number is "${typeof a}".`);
                     
-a = Number.parseInt(a);
-alert("the typeof number is " + (typeof a));
+    a = Number.parseInt(a);
+    alert("the typeof number is " + (typeof a));
                     
-const num = prompt(`enter the number`, 47);
-alert( `entered number is ${num}.`);
-// document.write(num);
+    const num = prompt(`enter the number`, 47);
+    alert( `entered number is ${num}.`);
+    // document.write(num);
                     
-const write = confirm(`are you sure you want to print this number.`);
-if (write) {
-    document.write(num);
-} else {
-    document.write(`please allow to print the number.`);
-}</code></pre>
+    const write = confirm(`are you sure you want to print this number.`);
+    if (write) {
+        document.write(num);
+    } else {
+        document.write(`please allow to print the number.`);
+    }
+&lt;/script&gt;</code></pre>
             </article>
         </section>
 
