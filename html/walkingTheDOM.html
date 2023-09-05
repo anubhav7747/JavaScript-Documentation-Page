@@ -85,19 +85,19 @@
             <article>
                 <p class="line-height-para">The DOM allows us to do anything with elements and their contents, but first we need to reach the corresponding DOM object. All operations on the DOM start with the <code>document</code> object. That’s the main “entry point” to DOM. From it we can access any node. DOM tree refers to the HTML page where all the nodes are objects. There can be 3 main types of nodes in the DOM tree:</p>
                 <ol type="a">
-                    <li>text nodes</li>
-                    <li>element nodes</li>
-                    <li>comment nodes</li>
+                    <li class="line-height-li">text nodes</li>
+                    <li class="line-height-li">element nodes</li>
+                    <li class="line-height-li">comment nodes</li>
                 </ol>
 
                 <img src="/images/DOM-Tree.gif" alt="DOM tree" style="border-radius: 15px; " class="center-image">
                 <p>According to the W3C HTML DOM standard, everything in an HTML document is a node:</p>
                 <ol type="a">
-                    <li>The entire document is a document node</li>
-                    <li>Every HTML element is an element node</li>
-                    <li>The text inside HTML elements are text nodes</li>
-                    <li>Every HTML attribute is an attribute node (deprecated)</li>
-                    <li>All comments are comment nodes</li>
+                    <li class="line-height-li">The entire document is a document node</li>
+                    <li class="line-height-li">Every HTML element is an element node</li>
+                    <li class="line-height-li">The text inside HTML elements are text nodes</li>
+                    <li class="line-height-li">Every HTML attribute is an attribute node (deprecated)</li>
+                    <li class="line-height-li">All comments are comment nodes</li>
                 </ol>
                 <p class="line-height-para">With the HTML DOM, all nodes in the node tree can be accessed by JavaScript. New nodes can be created, and all nodes can be modified or deleted.</p>
                 
@@ -146,7 +146,7 @@
                 <!-- children of an element -->
                 <h2 class="margin-2em-top">Children of an element</h2>
                 <p>Direct as well as deeply nested elements of an element are called its children.</p>
-                <p>Child nodes => Elements that are direct children. For example, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tag are children of <code>&lt;html&gt;</code>.</p>
+                <p class="line-height-para">Child nodes => Elements that are direct children. For example, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tag are children of <code>&lt;html&gt;</code>.</p>
                 <p>Descendant nodes => All nested elements, children, their children and so on.</p>
 
                 
@@ -189,9 +189,9 @@
 
             <div class="note margin-1less-top" style="height: 155px;">
                 <strong><u>Notes on DOM collections</u>:</strong>
-                <li>they are read-only.</li>
-                <li>they are live <code>element.childNodes</code> variable (reference) will automatically update if childNodes of element is changed.</li>
-                <li>they are iterable using for...of loop.</li>
+                <li class="line-height-li">they are read-only.</li>
+                <li class="line-height-li">they are live <code>element.childNodes</code> variable (reference) will automatically update if childNodes of element is changed.</li>
+                <li class="line-height-li">they are iterable using for...of loop.</li>
             </div>
 
 
@@ -321,7 +321,7 @@ span.style.color = 'orange';</code></pre>
                     <dd>returns all elements inside an element matching the given CSS selector.</dd>
                     
                     <dt class="margin-top"><code>document.querySelector</code></dt>
-                    <dd>returns the first element for the given CSS selector. A efficient version of <code>element.querySelectorAll(CSS)[0]</code></dd>
+                    <dd class="line-height-li">returns the first element for the given CSS selector. A efficient version of <code>element.querySelectorAll(CSS)[0]</code></dd>
                     
                     <dt class="margin-top"><code>document.getElementsByTagName</code></dt>
                     <dd>returns elements with the given tag name</dd>
@@ -366,7 +366,7 @@ span.style.color = 'orange';</code></pre>
                     <dd>to check if element matches the given CSS selector.</dd>
                     
                     <dt class="margin-top"><code>elem.closest(CSS)</code></dt>
-                    <dd>to look for the nearest ancestor that matches the given CSS selector. The elem itself is also checked.</dd>
+                    <dd class="line-height-li">to look for the nearest ancestor that matches the given CSS selector. The elem itself is also checked.</dd>
                     
                     <dt class="margin-top"><code>elemA.contains(elemB)</code></dt>
                     <dd>returns true if elemB is inside elemA (a descendant of elemA) or when elemA == elemB</dd>

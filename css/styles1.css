@@ -1,6 +1,7 @@
 html, body {
     /* font-family: 'Rajdhani', sans-serif; */
-    font-family: 'Reenie Beanie', cursive;
+    /* font-family: 'Reenie Beanie', cursive; */
+    font-family: monospace;
     margin: 0;
     padding: 0;
 }
@@ -16,6 +17,7 @@ html {
     color: #8e5f5f;
     font-size: 1.75em;
     margin-top: 0.25em;
+    margin-left: -1em;
     /* background-color: #000000; */
 }
 
@@ -36,7 +38,7 @@ html {
 .center {
     /* border: 2px solid orange; */
     position: absolute;
-    top: -3%;
+    top: -2.5%;
     left: 35%;
     font-size: 3.5rem;
 }
@@ -48,7 +50,7 @@ html {
 
 .center a:hover {
     text-decoration: underline;
-    color: rgb(11, 92, 214);
+    color: rgb(12, 53, 118);
     cursor: pointer;
 }
 
@@ -57,9 +59,10 @@ html {
 #navbar {
     /* border: 2px solid orange; */
     position: fixed;
-    width: 21vw;
-    margin-top: 4.5em;
+    width: 19vw;
+    margin-top: 5em;
     height: 100%;
+    word-wrap: break-word;
 }
 
 #navbar::-webkit-scrollbar {
@@ -87,8 +90,8 @@ html {
 
 #navbar > ul > li {
     list-style: none;
-    margin-left: -1em;
-    margin-bottom: 0.75em;
+    margin-left: -2em;
+    margin-bottom: 1em;
 }
 
 #navbar > ul > li > a {
@@ -110,13 +113,14 @@ html {
 /* main */
 #main-doc {
     position: absolute;
-    margin-left: 21em;
-    margin-top: 5.5em;
+    margin-left: 22.5em;
+    margin-top: 6em;
     margin-right: 1em;
     background-color: #efefef;
     padding: 1em;
     border-radius: 20px;
     padding-bottom: 2em;
+    /* width: 74vw; */
 }
 
 section > header {
@@ -202,9 +206,14 @@ button a:hover {
 
 /* expression and operators */
 ol li {
+    margin-left: 1rem;
     font-size: 2.25rem;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.extra-margin-left{
+    margin-left: 2.15rem;
 }
 
 ol li:hover {
@@ -320,8 +329,12 @@ article > h2 {
 
 /* practice problems */
 .questions li {
-    font-size: 30px;
+    font-size: 1.75rem;
     text-decoration: none;
+}
+
+.extra-margin-half-left{
+    /* margin-left: 1.75rem; */
 }
 
 .questions li a {

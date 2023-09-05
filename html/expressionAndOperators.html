@@ -82,12 +82,11 @@
         <header>Expressions and Operators</header>
         
         <section>
-            
             <article>
                 <ol>
                     <!-- primary expressions -->
                     <li>Primary expressions</li>
-                    <p>Basic keywords and general expression in JS. These expression have the highest precedence (higher than operators).</p>
+                    <p class="line-height-para">Basic keywords and general expression in JS. These expression have the highest precedence (higher than operators).</p>
                     <dl>
                         <dt>
                             <code>this</code>
@@ -144,7 +143,7 @@
                     <p>Left values are the destination of an assignment.</p>
                     <dl>
                         <dt>Property accessors</dt>
-                        <dd>
+                        <dd class="line-height-li">
                             member operators provide access to a property or method of an object (
                             <code>object.property</code>
                             and
@@ -155,7 +154,7 @@
                         <dt class="margin-top">
                             <code>?.</code>
                         </dt>
-                        <dd>
+                        <dd class="line-height-li">
                             optimal chaining operator returns 
                             <code>undefined</code>
                             instead of causing an error if a reference is 
@@ -198,7 +197,7 @@ console.log(dogName);</code></pre>
                         <dt class="margin-top">
                             <code>super</code>
                         </dt>
-                        <dd>
+                        <dd class="line-height-li">
                             the
                             <code>super</code>
                             keyword calls the parent constructor or allows accessing properties of the parent object.
@@ -207,7 +206,7 @@ console.log(dogName);</code></pre>
                         <dt class="margin-top">
                             <code>import</code>
                         </dt>
-                        <dd>
+                        <dd class="line-height-li">
                             the 
                             <code>import()</code>
                             syntax allows loading a module asynchronously and dynamically into a potentially non-module environment.
@@ -289,7 +288,7 @@ console.log(dogName);</code></pre>
 
                     <!-- arithmetic operators -->
                     <li class="margin-from-top">Arithmetic operators</li>
-                    <p>Take numerical values (either literals or variables) as their operands and return a single numerical value.</p>
+                    <p class="line-height-para">Take numerical values (either literals or variables) as their operands and return a single numerical value.</p>
                     <dl>
                         <dt><code>**</code></dt>
                         <dd class="line-height-li">the exponential (<code>**</code>) operator returns the result of raising the first operand to the power of the second operand. It is equivalent to <code>Math.pow()</code>, except it also accepts BigInts as operands.</dd>
@@ -313,7 +312,7 @@ console.log(dogName);</code></pre>
 
                     <!-- relational operators -->
                     <li class="margin-from-top">Relational operators</li>
-                    <p>A comparison operator compares its operands and returns a boolean value based on whether the comparison is true.</p>
+                    <p class="line-height-para">A comparison operator compares its operands and returns a boolean value based on whether the comparison is true.</p>
                     <dl>
                         <dt><code><</code> (less than)</dt>
                         <dd>Less than operator</dd>
@@ -341,7 +340,7 @@ console.log(dogName);</code></pre>
                     
                     <!-- equality operators -->
                     <li class="margin-from-top">Equality operators</li>
-                    <p>The result of evaluating an equality operator is always of type boolean based on whether the comparison is true.</p>
+                    <p class="line-height-para">The result of evaluating an equality operator is always of type boolean based on whether the comparison is true.</p>
                     <dl>
                         <dt><code>==</code></dt>
                         <dd>Equality operator</dd>
@@ -374,7 +373,7 @@ console.log(dogName);</code></pre>
                     
                     <!-- Binary bitwise operators -->
                     <li class="margin-from-top">Binary bitwise operators</li>
-                    <p>Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and return standard JavaScript numerical values.</p>
+                    <p class="line-height-para">Bitwise operators treat their operands as a set of 32 bits (zeros and ones) and return standard JavaScript numerical values.</p>
                     <dl>
                         <dt><code>&</code></dt>
                         <dd>Bitwise AND</dd>
@@ -388,7 +387,7 @@ console.log(dogName);</code></pre>
                     
                     
                     <!-- Binary logical operators -->
-                    <li class="margin-from-top">Binary logical operators</li>
+                    <li class="margin-from-top extra-margin-left">Binary logical operators</li>
                     <p>Logical operators implement boolean (logical) values and have short-circuiting behavior.</p>
                     <dl>
                         <dt><code>&&</code></dt>
@@ -403,7 +402,7 @@ console.log(dogName);</code></pre>
                     
                     
                     <!-- Conditional (ternary) operator -->
-                    <li class="margin-from-top">Conditional (ternary) operator</li>
+                    <li class="margin-from-top extra-margin-left">Conditional (ternary) operator</li>
                     <dl>
                         <dt><code>(condition ? ifTrue : ifFalse)</code></dt>
                         <dd>the conditional operator returns one of two values based on the logical value of the condition.</dd>
@@ -411,7 +410,7 @@ console.log(dogName);</code></pre>
                     
                     
                     <!-- Assignment operators -->
-                    <li class="margin-from-top">Assignment operators</li>
+                    <li class="margin-from-top extra-margin-left">Assignment operators</li>
                     <p>An assignment operator assigns a value to its left operand based on the value of its right operand.</p>
                     <dl>
                         <dt><code>=</code></dt>
@@ -468,7 +467,7 @@ console.log(dogName);</code></pre>
                     
                     
                     <!-- yield operators -->
-                    <li class="margin-from-top">Yield operators</li>
+                    <li class="margin-from-top extra-margin-left">Yield operators</li>
                     <dl>
                         <dt><code>yield</code></dt>
                         <dd>Pause and resume a generator function.</dd>
@@ -479,7 +478,7 @@ console.log(dogName);</code></pre>
                     
 
                     <!-- spread syntax -->
-                    <li class="margin-from-top">Spread syntax</li>
+                    <li class="margin-from-top extra-margin-left">Spread syntax</li>
                     <dl>
                         <dt><code>...obj</code></dt>
                         <dd class="line-height-li">Spread syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.</dd>
@@ -487,7 +486,7 @@ console.log(dogName);</code></pre>
                     
                     
                     <!-- comma operator -->
-                    <li class="margin-from-top">Comma operator</li>
+                    <li class="margin-from-top extra-margin-left">Comma operator</li>
                     <dl>
                         <dt><code>,</code></dt>
                         <dd class="line-height-li">The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.</dd>

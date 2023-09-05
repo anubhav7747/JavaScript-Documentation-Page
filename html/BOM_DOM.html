@@ -96,8 +96,8 @@
                 <img src="/images/windowObjects.svg" alt="window Objects" width="500" height="400">
 
                 <p>There’s a “root” object called <code>window</code>. It has two roles:</p>
-                <li>First, it is a global object for JavaScript code</li>
-                <li>Second, it represents the “browser window” and provides methods to control it.</li>
+                <li class="line-height-li">First, it is a global object for JavaScript code</li>
+                <li class="line-height-li">Second, it represents the “browser window” and provides methods to control it.</li>
                 
                 <p>For instance, we can use it as a global object:</p>
                 <pre class="language-js"><code>function sayHi() {
@@ -113,9 +113,9 @@ window.sayHi();</code></pre>
 
                 <!-- DOM (Document Object Model) -->
                 <h3 class="margin-2_5em-top">DOM (Document Object Model)</h3>
-                <p>The Document Object Model, or DOM for short, represents all page content as objects that can be modified.</p>
+                <p class="line-height-para">The Document Object Model, or DOM for short, represents all page content as objects that can be modified.</p>
 
-                <p>The <code>document</code> object is the main “entry point” to the page. We can change or create anything on the page using it.</p>
+                <p class="line-height-para">The <code>document</code> object is the main “entry point” to the page. We can change or create anything on the page using it.</p>
 
                 <p>For instance</p>
                 <pre class="language-js"><code>// change the background color to red
@@ -132,8 +132,8 @@ setTimeout(() => document.body.style.background = "", 1000);</code></pre>
                 <p class="line-height-para">The Browser Object Model (BOM) represents additional objects provided by the browser (host environment) for working with everything except the document.</p>
 
                 <p>For instance:</p>
-                <li class="line-height-para">The navigator object provides background information about the browser and the operating system. There are many properties, but the two most widely known are: <code>navigator.userAgent</code> – about the current browser, and <code>navigator.platform</code> – about the platform (can help to differentiate between Windows/Linux/Mac etc).</li>
-                <li>The location object allows us to read the current URL and can redirect the browser to a new one.</li>
+                <li class="line-height-li">The navigator object provides background information about the browser and the operating system. There are many properties, but the two most widely known are: <code>navigator.userAgent</code> – about the current browser, and <code>navigator.platform</code> – about the platform (can help to differentiate between Windows/Linux/Mac etc).</li>
+                <li class="line-height-li">The location object allows us to read the current URL and can redirect the browser to a new one.</li>
 
                 <p>Here’s how we can use the <code>location</code> object:</p>
                 <pre class="language-js"><code>alert(location.href); // shows current URL
