@@ -364,3 +364,45 @@ article > h2 {
     color: blue;
     font-size: 2rem;
 }
+
+
+/* arrays */
+.margin-5em-top {
+    margin-top: 5em;
+}
+
+.examples {
+    font-size: 30px;
+}
+
+.light-weight{
+    font-size: 25px;
+    word-spacing: normal;
+}
+
+.light-weight, .examples {
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.font-size-20px {
+    font-size: 16px;
+    word-spacing: normal;
+}
+
+.light-weight:hover, .examples:hover {
+    text-decoration: underline;
+}
+
+h3 a, h2 a, header a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* h3 a[href^="#"]::before {
+    content: "#";
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--text-inactive);
+} */

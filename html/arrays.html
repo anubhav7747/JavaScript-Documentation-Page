@@ -82,8 +82,607 @@
         <header>Arrays</header>
         
         <section>
+            <article>
+                <p class="line-height-para">The <code>Array</code> object, as with arrays in other programming languages, enables storing a collection of multiple items under a single variable name, and has members for performing common array operations. In JavaScript, arrays aren't primitives but are instead <code>Array</code> objects with the following core characteristics:</p>
 
-            <article></article>
+                <ul>
+                    <li class="line-height-li">JavaScript arrays are resizable and can contain a mix of different data types. (When those characteristics are undesirable, use typed arrays instead.)</li>
+                    <li class="line-height-li margin-1less-top">JavaScript arrays are not associative arrays and so, array elements cannot be accessed using arbitrary strings as indexes, but must be accessed using nonnegative integers (or their respective string form) as indexes.</li>
+                    <li class="line-height-li margin-1less-top">JavaScript arrays are zero-indexed: the first element of an array is at index 0, the second is at index 1, and so on — and the last element is at the value of the array's length property minus 1.</li>
+                    <li class="line-height-li margin-1less-top">JavaScript array-copy operations create shallow copies. (All standard built-in copy operations with any JavaScript objects create shallow copies, rather than deep copies).</li>
+                </ul>
+
+                <pre class="language-js"><code>let minorMarks_MCA = [16, 18, 15, null, "Not Present", true];
+console.log(minorMarks_MCA);
+
+console.log(minorMarks_MCA[0]);
+// Expected output: 16
+
+console.log(minorMarks_MCA[1]);
+// Expected output: 18
+
+console.log(minorMarks_MCA[2]);
+// Expected output: 15
+
+console.log(minorMarks_MCA[3]);
+// Expected output: null
+
+console.log(minorMarks_MCA[4]);
+// Expected output: Not Present
+
+console.log(minorMarks_MCA[5]);
+// Expected output: true
+
+console.log(minorMarks_MCA[6]);
+// Expected output: undefined
+
+console.log(minorMarks_MCA[7]);
+// Expected output: undefined
+                    
+console.log(minorMarks_MCA.length);
+// Expected output: 6
+                    
+minorMarks_MCA[6] = 17;
+console.log(minorMarks_MCA);
+                    
+minorMarks_MCA[1] = 17.5;
+console.log(minorMarks_MCA);
+
+console.log(typeof minorMarks_MCA);
+// Expected output: object
+                    
+for (let i = 0; i&lt;minorMarks_MCA.length; i++)
+    console.log(minorMarks_MCA[i]);</code></pre>
+            </article>
+        </section>
+
+
+        <!-- Array Methods -->
+        <section class="margin-5em-top">
+            <header id="Array_Methods"><a href="#Array_Methods">Array Methods</a></header>
+            
+            <article>
+                <h3 class="margin-1less-top"></h3>
+                <pre class="language-js"><code>let num = [1, 2, 3, 4, 5];
+
+console.log(num, typeof num);
+// Expected output: [1, 2, 3, 4, 5] object</code></pre>
+                
+                
+                <!-- toString() -->
+                <h3 class="margin-2_5em-top">toString()</h3>
+                <p class="line-height-para font-size-20px">The <code>toString()</code> method of <code>Array</code> instances returns a string representing the specified array and its elements.</p>
+                <pre class="language-js"><code>const array1 = [1, 2, 'a', '1a'];
+
+console.log(array1.toString());
+// Expected output: "1,2,a,1a"</code></pre>
+
+                <p class="line-height-para font-size-20px">The <code>Array</code> object overrides the <code>toString</code> method of <code>Object</code>. The <code>toString</code> method of arrays calls <code>join()</code> internally, which joins the array and returns one string containing each array element separated by commas. If the <code>join</code> method is unavailable or is not a function, <code>Object.prototype.toString</code> is used instead, returning <code>[object Array]</code>.</p>
+                <pre class="language-js"><code>const arr = [];
+arr.join = 1; // re-assign `join` with a non-function
+console.log(arr.toString()); // [object Array]
+                    
+console.log(Array.prototype.toString.call({ join: () => 1 })); // 1</code></pre>
+                
+                <p class="line-height-para font-size-20px">JavaScript calls the <code>toString</code> method automatically when an array is to be represented as a text value or when an array is referred to in a string concatenation. <code>Array.prototype.toString</code> recursively converts each element, including other arrays, to strings. Because the string returned by <code>Array.prototype.toString</code> does not have delimiters, nested arrays look like they are flattened.</p>
+                <pre class="language-js"><code>const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+                  
+console.log(matrix.toString()); // 1,2,3,4,5,6,7,8,9</code></pre>
+                
+                <p class="line-height-para font-size-20px">When an array is cyclic (it contains an element that is itself), browsers avoid infinite recursion by ignoring the cyclic reference.</p>
+                <pre class="language-js"><code>const arr = [];
+arr.push(1, [3, arr, 4], 2);
+console.log(arr.toString()); // 1,3,,4,2</code></pre>
+                
+
+                <!-- join() -->
+                <h3 class="margin-2_5em-top">join()</h3>
+                <p class="line-height-para font-size-20px">The <code>join()</code> method of <code>Array</code> instances creates and returns a new string by concatenating all of the elements in this array, separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.</p>
+                <pre class="language-js"><code>const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+                    
+console.log(elements.join(''));
+// Expected output: "FireAirWater"
+                    
+console.log(elements.join('-'));
+// Expected output: "Fire-Air-Water"</code></pre>
+                
+
+                <!-- delete() -->
+                <h3 class="margin-2_5em-top">delete()</h3>
+                <pre class="language-js"><code>let num = [1, 2, 3, 4, 5];
+
+console.log(num.length);
+// Expected output: 5
+
+delete num[0];
+
+console.log(num);
+// Expected output: [ &lt;1 empty item&gt;, 2, 3, 4, 5 ]
+
+console.log(num.length);
+// Expected output: 5</code></pre>
+                
+
+                <!-- concat() -->
+                <h3 class="margin-2_5em-top">concat()</h3>
+                <p class="line-height-para font-size-20px">The <code>concat()</code> method of <code>Array</code> instances is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
+                <pre class="language-js"><code>const array1 = ['a', 'b', 'c'];
+const array2 = ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+                    
+console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]</code></pre>
+                
+                <h2 class=" margin-1more-top examples" id="Examples"><a href="#Examples">Examples</a></h2>
+                
+                <h3 class="light-weight" id="Concatenating_two_arrays"><a href="#Concatenating_two_arrays">Concatenating two arrays</a></h3>
+                <pre class="language-js"><code>const letters = ["a", "b", "c"];
+const numbers = [1, 2, 3];
+                    
+const alphaNumeric = letters.concat(numbers);
+console.log(alphaNumeric);
+// results in ['a', 'b', 'c', 1, 2, 3]</code></pre>
+                    
+                <h3 class="light-weight margin-1more-top" id="Concatenating_three_arrays"><a href="#Concatenating_three_arrays">Concatenating three arrays</a></h3>
+                <pre class="language-js"><code>const num1 = [1, 2, 3];
+const num2 = [4, 5, 6];
+const num3 = [7, 8, 9];
+                    
+const numbers = num1.concat(num2, num3);
+                    
+console.log(numbers);
+// results in [1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Concatenating_values_to_an_array"><a href="#Concatenating_values_to_an_array">Concatenating values to an array</a></h3>
+                <pre class="language-js"><code>const letters = ["a", "b", "c"];
+
+const alphaNumeric = letters.concat(1, [2, 3]);
+                    
+console.log(alphaNumeric);
+// results in ['a', 'b', 'c', 1, 2, 3]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Concatenating_nested_arrays"><a href="#Concatenating_nested_arrays">Concatenating nested arrays</a></h3>
+                <pre class="language-js"><code>const num1 = [[1]];
+const num2 = [2, [3]];
+                    
+const numbers = num1.concat(num2);
+                    
+console.log(numbers);
+// results in [[1], 2, [3]]
+                    
+// modify the first element of num1
+num1[0].push(4);
+                    
+console.log(numbers);
+// results in [[1, 4], 2, [3]]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Concatenating_array-like_objects_with_Symbol-isConcatSpreadable"><a href="#Concatenating_array-like_objects_with_Symbol-isConcatSpreadable">Concatenating array-like objects with Symbol.isConcatSpreadable</a></h3>
+                <p class="line-height-para font-size-20px"><code>concat</code> does not treat all array-like objects as arrays by default — only if <code>Symbol.isConcatSpreadable</code> is set to a truthy value (e.g. <code>true</code>).</p>
+                <pre class="language-js"><code>const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };
+const obj2 = { 0: 1, 1: 2, 2: 3, length: 3, [Symbol.isConcatSpreadable]: true };
+console.log([0].concat(obj1, obj2));
+// [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Using_concat()_on_sparse_arrays"><a href="#Using_concat()_on_sparse_arrays">Using concat() on sparse arrays</a></h3>
+                <p class="line-height-para font-size-20px">If any of the source arrays is sparse, the resulting array will also be sparse:</p>
+                <pre class="language-js"><code>console.log([1, , 3].concat([4, 5])); // [1, empty, 3, 4, 5]
+console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Calling_concat()_on_non-array_objects"><a href="#Calling_concat()_on_non-array_objects">Calling concat() on non-array objects</a></h3>
+                <p class="line-height-para font-size-20px">If the <code>this</code> value is not an array, it is converted to an object and then treated in the same way as the arguments for <code>concat()</code>. In this case the return value is always a plain new array.</p>
+                <pre class="language-js"><code>console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
+console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
+const arrayLike = {
+    [Symbol.isConcatSpreadable]: true,
+    length: 2,
+    0: 1,
+    1: 2,
+    2: 99, // ignored by concat() since length is 2
+};
+console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]</code></pre>
+
+
+                <!-- sort() -->
+                <h3 class="margin-2_5em-top">sort()</h3>
+                <p class="line-height-para font-size-20px">The <code>sort()</code> method of <code>Array</code> instances sorts the elements of an array in place and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values. The time and space complexity of the sort cannot be guaranteed as it depends on the implementation. To sort the elements in an array without mutating the original array, use <code>toSorted()</code>.</p>
+                <pre class="language-js"><code>const months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+                    
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]</code></pre>
+                
+
+                <!-- toSorted() -->
+                <h3 class="margin-2_5em-top">toSorted()</h3>
+                <p class="line-height-para font-size-20px">The <code>toSorted()</code> method of <code>Array</code> instances is the copying version of the <code>sort()</code> method. It returns a new array with the elements sorted in ascending order. When used on sparse arrays, the <code>toSorted()</code> method iterates empty slots as if they have the value <code>undefined</code>. The <code>toSorted()</code> method is generic. It only expects the <code>this</code> value to have a <code>length</code> property and integer-keyed properties.</p>
+
+                <h2 class=" margin-1more-top examples" id="Example"><a href="#Example">Examples</a></h2>
+                
+                <h3 class="light-weight" id="Sorting_an_array"><a href="#Sorting_an_array">Sorting an array</a></h3>
+                <pre class="language-js"><code>const months = ["Mar", "Jan", "Feb", "Dec"];
+const sortedMonths = months.toSorted();
+console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
+console.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']
+                    
+const values = [1, 10, 21, 2];
+const sortedValues = values.toSorted((a, b) => a - b);
+console.log(sortedValues); // [1, 2, 10, 21]
+console.log(values); // [1, 10, 21, 2]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Using_toSorted()_on_sparse_arrays"><a href="#Using_toSorted()_on_sparse_arrays">Using toSorted() on sparse arrays</a></h3>
+                <p class="line-height-para font-size-20px">Empty slots are sorted as if they have the value <code>undefined</code>. They are always sorted to the end of the array and <code>compareFn</code> is not called for them.</p>
+                <pre class="language-js"><code>console.log(["a", "c", , "b"].toSorted()); // ['a', 'b', 'c', undefined]
+console.log([, undefined, "a", "b"].toSorted()); // ["a", "b", undefined, undefined]</code></pre>
+                
+                <h3 class="light-weight margin-1more-top" id="Calling_toSorted()_on_non-array_objects"><a href="#Calling_toSorted()_on_non-array_objects">Calling toSorted() on non-array objects</a></h3>
+                <p class="line-height-para font-size-20px">The <code>toSorted()</code> method reads the <code>length</code> property of <code>this</code>. It then collects all existing integer-keyed properties in the range of <code>0</code> to <code>length - 1</code>, sorts them, and writes them into a new array.</p>
+                <pre class="language-js"><code>const arrayLike = {
+    length: 3,
+    unrelated: "foo",
+    0: 5,
+    2: 4,
+    3: 3, // ignored by toSorted() since length is 3
+};
+console.log(Array.prototype.toSorted.call(arrayLike));
+// [4, 5, undefined]</code></pre>
+                
+                
+                <!-- reverse() -->
+                <h3 class="margin-2_5em-top">reverse()</h3>
+                <p class="line-height-para font-size-20px">The <code>reverse()</code> method of <code>Array</code> instances reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated. To reverse the elements in an array without mutating the original array, use <code>toReversed()</code>.</p>
+                <pre class="language-js"><code>const array1 = ['one', 'two', 'three'];
+console.log('array1:', array1);
+// Expected output: "array1:" Array ["one", "two", "three"]
+                    
+const reversed = array1.reverse();
+console.log('reversed:', reversed);
+// Expected output: "reversed:" Array ["three", "two", "one"]
+                    
+// Careful: reverse is destructive -- it changes the original array.
+console.log('array1:', array1);
+// Expected output: "array1:" Array ["three", "two", "one"]</code></pre>
+
+                <p class="line-height-para font-size-20px">The <code>reverse()</code> method transposes the elements of the calling array object in place, mutating the array, and returning a reference to the array.</p>
+
+                <p class="line-height-para font-size-20px">The <code>reverse()</code> method preserves empty slots. If the source array is sparse, the empty slots' corresponding new indices are deleted and also become empty slots.</p>
+                    
+                <p class="line-height-para font-size-20px">The <code>reverse()</code> method is generic. It only expects the <code>this</code> value to have a <code>length</code> property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.</p>
+
+                <h2 class=" margin-1more-top examples" id="Exampl"><a href="#Exampl">Examples</a></h2>
+                
+                <h3 class="light-weight">Reversing the elements in an array</h3>
+                <p class="line-height-para font-size-20px">The following example creates an array <code>items</code>, containing three elements, then reverses the array. The call to <code>reverse()</code> returns a reference to the reversed array <code>items</code>.</p>
+                <pre class="language-js"><code>const items = [1, 2, 3];
+console.log(items); // [1, 2, 3]
+                    
+items.reverse();
+console.log(items); // [3, 2, 1]</code></pre>
+                
+                <h3 class="light-weight margin-1more-top">The reverse() method returns the reference to the same array</h3>
+                <p class="line-height-para font-size-20px">The <code>reverse()</code> method returns reference to the original array, so mutating the returned array will mutate the original array as well.</p>
+                <pre class="language-js"><code>const numbers = [3, 2, 4, 1, 5];
+const reversed = numbers.reverse();
+// numbers and reversed are both in reversed order [5, 1, 4, 2, 3]
+reversed[0] = 5;
+console.log(numbers[0]); // 5</code></pre>
+
+                <p class="line-height-para font-size-20px">In case you want <code>reverse()</code> to not mutate the original array, but return a shallow-copied array like other array methods (e.g. <code>map()</code>) do, use the <code>toReversed()</code> method. Alternatively, you can do a shallow copy before calling <code>reverse()</code>, using the spread syntax or <code>Array.from()</code>.</p>
+                <pre class="language-js"><code>const numbers = [3, 2, 4, 1, 5];
+// [...numbers] creates a shallow copy, so reverse() does not mutate the original
+const reverted = [...numbers].reverse();
+reverted[0] = 5;
+console.log(numbers[0]); // 3</code></pre>
+
+                <h3 class="light-weight margin-1more-top">Using reverse() on sparse arrays</h3>
+                <p class="line-height-para font-size-20px">Sparse arrays remain sparse after calling <code>reverse()</code>. Empty slots are copied over to their respective new indices as empty slots.</p>
+                <pre class="language-js"><code>console.log([1, , 3].reverse()); // [3, empty, 1]
+console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]</code></pre>
+
+                <h3 class="light-weight margin-1more-top">Calling reverse() on non-array objects</h3>
+                <p class="line-height-para font-size-20px">The <code>reverse()</code> method reads the <code>length</code> property of <code>this</code>. It then visits each property having an integer key between <code>0</code> and <code>length / 2</code>, and swaps the two corresponding indices on both ends, deleting any destination property for which the source property did not exist.</p>
+                <pre class="language-js"><code>const arrayLike = {
+    length: 3,
+    unrelated: "foo",
+    2: 4,
+    3: 33, // ignored by reverse() since length is 3
+};
+console.log(Array.prototype.reverse.call(arrayLike));
+// { 0: 4, 3: 33, length: 3, unrelated: 'foo' }
+// The index 2 is deleted because there was no index 0 present originally
+// The index 3 is unchanged since the length is 3</code></pre>
+
+
+                <!-- toReversed() -->
+                <h3 class="margin-2_5em-top">toReversed()</h3>
+                <p class="line-height-para font-size-20px">The <code>toReversed()</code> method of <code>Array</code> instances is the copying counterpart of the <code>reverse()</code> method. It returns a new array with the elements in reversed order.</p>
+
+                <h2 class=" margin-1more-top examples" id="Examp"><a href="#Examp">Examples</a></h2>
+                
+                <h3 class="light-weight" id="Reversing_the_elements_in_an_array"><a href="#Reversing_the_elements_in_an_array">Reversing the elements in an array</a></h3>
+                <p class="line-height-para font-size-20px">The following example creates an array <code>items</code>, containing three elements, then creates a new array that's the reverse of <code>items</code>. The <code>items</code> array remains unchanged.</p>
+                <pre class="language-js"><code>const items = [1, 2, 3];
+console.log(items); // [1, 2, 3]
+                    
+const reversedItems = items.toReversed();
+console.log(reversedItems); // [3, 2, 1]
+console.log(items); // [1, 2, 3]</code></pre>
+                
+                <h3 class="light-weight margin-1more-top" id="Using_toReversed()_on_sparse_arrays"><a href="#Using_toReversed()_on_sparse_arrays">Using toReversed() on sparse arrays</a></h3>
+                <p class="line-height-para font-size-20px">The return value of <code>toReversed()</code> is never sparse. Empty slots become <code>undefined</code> in the returned array.</p>
+                <pre class="language-js"><code>console.log([1, , 3].toReversed()); // [3, undefined, 1]
+console.log([1, , 3, 4].toReversed()); // [4, 3, undefined, 1]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Calling_toReversed()_on_non-array_objects"><a href="#Calling_toReversed()_on_non-array_objects">Calling toReversed() on non-array objects</a></h3>
+                <p class="line-height-para font-size-20px">The <code>toReversed()</code> method reads the <code>length</code> property of <code>this</code>. It then visits each property having an integer key between <code>length - 1</code> and <code>0</code> in descending order, adding the value of the current property to the end of the array to be returned.</p>
+                <pre class="language-js"><code>const arrayLike = {
+    length: 3,
+    unrelated: "foo",
+    2: 4,
+};
+console.log(Array.prototype.toReversed.call(arrayLike));
+// [4, undefined, undefined]
+// The '0' and '1' indices are not present so they become undefined</code></pre>
+
+
+                <!-- splice() -->
+                <h3 class="margin-2_5em-top">splice()</h3>
+                <p class="line-height-para font-size-20px">The <code>splice()</code> method of <code>Array</code> instances changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. To create a new array with a segment removed and/or replaced without mutating the original array, use <code>toSpliced()</code>. To access part of an array without modifying it, see <code>slice()</code>.</p>
+                <pre class="language-js"><code>const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+                    
+months.splice(4, 1, 'May');
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]</code></pre>
+
+                <p class="line-height-para font-size-20px">The <code>splice()</code> method is a mutating method. It may change the content of <code>this</code>. If the specified number of elements to insert differs from the number of elements being removed, the array's <code>length</code> will be changed as well. At the same time, it uses <code>@@species</code> to create a new array instance to be returned.</p>
+                
+                <p class="line-height-para font-size-20px">If the deleted portion is sparse, the array returned by <code>splice()</code> is sparse as well, with those corresponding indices being empty slots.</p>
+                
+                <p class="line-height-para font-size-20px">The <code>splice()</code> method is generic. It only expects the <code>this</code> value to have a <code>length</code> property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.</p>
+
+                <h2 class=" margin-1more-top examples" id="Exam"><a href="#Exam">Examples</a></h2>
+                
+                <h3 class="light-weight" id="Remove_0_(zero)_elements_before_index_2,_and_insert_drum"><a href="#Remove_0_(zero)_elements_before_index_2,_and_insert_drum">Remove 0 (zero) elements before index 2, and insert "drum"</a></h3>
+                <pre class="language-js"><code>const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum");
+                    
+// myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
+// removed is [], no elements removed</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Remove_0_(zero)_elements_before_index 2,_and_insert_drum_and_guitar"><a href="#Remove_0_(zero)_elements_before_index 2,_and_insert_drum_and_guitar">Remove 0 (zero) elements before index 2, and insert "drum" and "guitar"</a></h3>
+                <pre class="language-js"><code>const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum", "guitar");
+                    
+// myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
+// removed is [], no elements removed</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Remove_1_element_at_index_3"><a href="#Remove_1_element_at_index_3">Remove 1 element at index 3</a></h3>
+                <pre class="language-js"><code>const myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
+const removed = myFish.splice(3, 1);
+                    
+// myFish is ["angel", "clown", "drum", "sturgeon"]
+// removed is ["mandarin"]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Remove_1_element_at_index_2,_and_insert_trumpet"><a href="#Remove_1_element_at_index_2,_and_insert_trumpet">Remove 1 element at index 2, and insert "trumpet"</a></h3>
+                <pre class="language-js"><code>const myFish = ["angel", "clown", "drum", "sturgeon"];
+const removed = myFish.splice(2, 1, "trumpet");
+                    
+// myFish is ["angel", "clown", "trumpet", "sturgeon"]
+// removed is ["drum"]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Remove_2_elements_from_index_0,_and_insert_parrot,_anemone_and_blue"><a href="#Remove_2_elements_from_index_0,_and_insert_parrot,_anemone_and_blue">Remove 2 elements from index 0, and insert "parrot", "anemone" and "blue"</a></h3>
+                <pre class="language-js"><code>const myFish = ["angel", "clown", "trumpet", "sturgeon"];
+const removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
+                    
+// myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
+// removed is ["angel", "clown"]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Remove_2_elements,_starting_from_index_2"><a href="#Remove_2_elements,_starting_from_index_2">Remove 2 elements, starting from index 2</a></h3>
+                <pre class="language-js"><code>const myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
+const removed = myFish.splice(2, 2);
+                    
+// myFish is ["parrot", "anemone", "sturgeon"]
+// removed is ["blue", "trumpet"]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Remove_1_element_from_index_-2"><a href="#Remove_1_element_from_index_-2">Remove 1 element from index -2</a></h3>
+                <p class="line-height-para font-size-20px"></p>
+                <pre class="language-js"><code>const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(-2, 1);
+                    
+// myFish is ["angel", "clown", "sturgeon"]
+// removed is ["mandarin"]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Remove_all_elements,_starting_from_index_2"><a href="#Remove_all_elements,_starting_from_index_2">Remove all elements, starting from index 2</a></h3>
+                <p class="line-height-para font-size-20px"></p>
+                <pre class="language-js"><code>const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2);
+                    
+// myFish is ["angel", "clown"]
+// removed is ["mandarin", "sturgeon"]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Using_splice()_on_sparse_arrays"><a href="#Using_splice()_on_sparse_arrays">Using splice() on sparse arrays</a></h3>
+                <p class="line-height-para font-size-20px">The <code>splice()</code> method preserves the array's sparseness.</p>
+                <pre class="language-js"><code>const arr = [1, , 3, 4, , 6];
+console.log(arr.splice(1, 2)); // [empty, 3]
+console.log(arr); // [1, 4, empty, 6]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Calling_splice()_on_non-array_objects"><a href="#Calling_splice()_on_non-array_objects">Calling splice() on non-array objects</a></h3>
+                <p class="line-height-para font-size-20px">The <code>splice()</code> method reads the <code>length</code> property of <code>this</code>. It then updates the integer-keyed properties and the <code>length</code> property as needed.</p>
+                <pre class="language-js"><code>const arrayLike = {
+    length: 3,
+    unrelated: "foo",
+    0: 5,
+    2: 4,
+};
+console.log(Array.prototype.splice.call(arrayLike, 0, 1, 2, 3));
+// [ 5 ]
+console.log(arrayLike);
+// { '0': 2, '1': 3, '3': 4, length: 4, unrelated: 'foo' }</code></pre>
+                
+
+                <!-- toSpliced() -->
+                <h3 class="margin-2_5em-top">toSpliced()</h3>
+                <p class="line-height-para font-size-20px">The <code>toSpliced()</code> method of <code>Array</code> instances is the copying version of the <code>splice()</code> method. It returns a new array with some elements removed and/or replaced at a given index.</p>
+
+                <p class="line-height-para font-size-20px">The <code>toSpliced()</code> method never produces a sparse array. If the source array is sparse, the empty slots will be replaced with <code>undefined</code> in the new array. The <code>toSpliced()</code> method is generic. It only expects the <code>this</code> value to have a <code>length</code> property and integer-keyed properties.</p>
+
+                <h2 class=" margin-1more-top examples" id="Exa"><a href="#Exa">Examples</a></h2>
+                
+                <h3 class="light-weight" id="Deleting,_adding,_and_replacing_elements"><a href="#Deleting,_adding,_and_replacing_elements">Deleting, adding, and replacing elements</a></h3>
+                <p class="line-height-para font-size-20px">You can use <code>toSpliced()</code> to delete, add, and replace elements in an array and create a new array more efficiently than using <code>slice()</code> and <code>concat()</code>.</p>
+                <pre class="language-js"><code>const months = ["Jan", "Mar", "Apr", "May"];
+
+// Inserting an element at index 1
+const months2 = months.toSpliced(1, 0, "Feb");
+console.log(months2); // ["Jan", "Feb", "Mar", "Apr", "May"]
+                    
+// Deleting two elements starting from index 2
+const months3 = months2.toSpliced(2, 2);
+console.log(months3); // ["Jan", "Feb", "May"]
+                    
+// Replacing one element at index 1 with two new elements
+const months4 = months3.toSpliced(1, 1, "Feb", "Mar");
+console.log(months4); // ["Jan", "Feb", "Mar", "May"]
+                    
+// Original array is not modified
+console.log(months); // ["Jan", "Mar", "Apr", "May"]</code></pre>
+                
+                <h3 class="light-weight margin-1more-top" id="Using_toSpliced()_on_sparse_arrays"><a href="#Using_toSpliced()_on_sparse_arrays">Using toSpliced() on sparse arrays</a></h3>
+                <p class="line-height-para font-size-20px">The <code>toSpliced()</code> method always creates a dense array.</p>
+                <pre class="language-js"><code>const arr = [1, , 3, 4, , 6];
+console.log(arr.toSpliced(1, 2)); // [1, 4, undefined, 6]</code></pre>
+
+                <h3 class="light-weight margin-1more-top" id="Calling_toSpliced()_on_non-array_objects"><a href="#Calling_toSpliced()_on_non-array_objects">Calling toSpliced() on non-array objects</a></h3>
+                <p class="line-height-para font-size-20px">The <code>toSpliced()</code> method reads the <code>length</code> property of <code>this</code>. It then reads the integer-keyed properties needed and writes them into the new array.</p>
+                <pre class="language-js"><code>const arrayLike = {
+    length: 3,
+    unrelated: "foo",
+    0: 5,
+    2: 4,
+};
+console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
+// [2, 3, undefined, 4]</code></pre>
+                
+
+                <!-- slice() -->
+                <h3 class="margin-2_5em-top">slice()</h3>
+                <p class="line-height-para font-size-20px">The <code>slice()</code> method of <code>Array</code> instances returns a shallow copy of a portion of an array into a new array object selected from <code>start</code> to <code>end</code> (<code>end</code> not included) where <code>start</code> and <code>end</code> represent the index of items in that array. The original array will not be modified.</p>
+                <pre class="language-js"><code>const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+                    
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+                    
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+                    
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+                    
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+                    
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]</code></pre>
+
+                <p class="line-height-para font-size-20px">The <code>slice()</code> method is a copying method. It does not alter <code>this</code> but instead returns a shallow copy that contains some of the same elements as the ones from the original array.</p>
+
+                <p class="line-height-para font-size-20px">The <code>slice()</code> method preserves empty slots. If the sliced portion is sparse, the returned array is sparse as well.</p>
+                    
+                <p class="line-height-para font-size-20px">The <code>slice()</code> method is generic. It only expects the <code>this</code> value to have a <code>length</code> property and integer-keyed properties.</p>
+
+                <h2 class=" margin-1more-top examples" id="Ex"><a href="#Ex">Examples</a></h2>
+                
+                <h3 class="light-weight" id="Return_a_portion_of_an_existing_array"><a href="#Return_a_portion_of_an_existing_array">Return a portion of an existing array</a></h3>
+                <pre class="language-js"><code>const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);
+                    
+// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+// citrus contains ['Orange','Lemon']</code></pre>
+                
+                <h3 class="light-weight margin-1more-top" id="Using_slice"><a href="#Using_slice">Using slice</a></h3>
+                <p class="line-height-para font-size-20px">In the following example, <code>slice</code> creates a new array, <code>newCar</code>, from <code>myCar</code>. Both include a reference to the object <code>myHonda</code>. When the color of <code>myHonda</code> is changed to purple, both arrays reflect the change.</p>
+                <pre class="language-js"><code>// Using slice, create newCar from myCar.
+const myHonda = {
+    color: "red",
+    wheels: 4,
+    engine: { cylinders: 4, size: 2.2 },
+};
+const myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
+const newCar = myCar.slice(0, 2);
+                    
+console.log("myCar =", myCar);
+console.log("newCar =", newCar);
+console.log("myCar[0].color =", myCar[0].color);
+console.log("newCar[0].color =", newCar[0].color);
+                    
+// Change the color of myHonda.
+myHonda.color = "purple";
+console.log("The new color of my Honda is", myHonda.color);
+                    
+console.log("myCar[0].color =", myCar[0].color);
+console.log("newCar[0].color =", newCar[0].color);</code></pre>
+                
+                <h3 class="light-weight margin-1more-top" id="Calling_slice()_on_non-array_objects"><a href="#Calling_slice()_on_non-array_objects">Calling slice() on non-array objects</a></h3>
+                <p class="line-height-para font-size-20px">The <code>slice()</code> method reads the <code>length</code> property of <code>this</code>. It then reads the integer-keyed properties from <code>start</code> to <code>end</code> and defines them on a newly created array.</p>
+                <pre class="language-js"><code>const arrayLike = {
+    length: 3,
+    0: 2,
+    1: 3,
+    2: 4,
+    3: 33, // ignored by slice() since length is 3
+};
+console.log(Array.prototype.slice.call(arrayLike, 1, 3));
+// [ 3, 4 ]</code></pre>
+                
+                <h3 class="light-weight margin-1more-top" id="Using_slice()_to_convert_array-like_objects_to_arrays"><a href="#Using_slice()_to_convert_array-like_objects_to_arrays">Using slice() to convert array-like objects to arrays</a></h3>
+                <p class="line-height-para font-size-20px">The <code>slice()</code> method is often used with <code>bind()</code> and <code>call()</code> to create a utility method that converts an array-like object into an array.</p>
+                <pre class="language-js"><code>// slice() is called with `this` passed as the first argument
+const slice = Function.prototype.call.bind(Array.prototype.slice);
+                    
+function list() {
+    return slice(arguments);
+}
+                    
+const list1 = list(1, 2, 3); // [1, 2, 3]</code></pre>
+                
+                <h3 class="light-weight margin-1more-top" id="Using_slice()_on_sparse_arrays"><a href="#Using_slice()_on_sparse_arrays">Using slice() on sparse arrays</a></h3>
+                <p class="line-height-para font-size-20px">The array returned from <code>slice()</code> may be sparse if the source is sparse.</p>
+                <pre class="language-js"><code>console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]</code></pre>
+
+
+                <!-- () -->
+                <!-- <h3 class="margin-2_5em-top">()</h3>
+                <p class="line-height-para font-size-20px"></p>
+                <pre class="language-js"><code></code></pre>
+
+                <h2 class=" margin-1more-top examples" id="E"><a href="#E">Examples</a></h2>
+                
+                <h3 class="light-weight" id=""><a href="#"></a></h3>
+                <p class="line-height-para font-size-20px"></p>
+                <pre class="language-js"><code></code></pre>
+                
+                <h3 class="light-weight margin-1more-top" id=""><a href="#"></a></h3>
+                <p class="line-height-para font-size-20px"></p>
+                <pre class="language-js"><code></code></pre> -->
+            </article>
         </section>
 
         <button value="prev"><a href="/html/strings.html">PREV</a></button>
