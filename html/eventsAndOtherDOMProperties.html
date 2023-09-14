@@ -82,11 +82,270 @@
         <header>Events and Other DOM Properties</header>
 
         <section>
-            <article></article>
+            <article>
+                <p class="line-height-para">The change in the state of an object is known as an Event. In html, there are various events which represents that some activity is performed by the user or by the browser. When <a href="/html/introduction.html" class="link">javascript</a> code is included in <a href="" class="link">HTML</a>, js react over these events and allow the execution. This process of reacting over the events is called Event Handling. Thus, js handles the HTML events via Event Handlers.</p>
+
+                <p class="line-height-para"><u>For example</u>, when a user clicks over the browser, add js code, which will execute the task to be performed on the event. Some of the HTML events and their event handlers are:</p>
+
+                <pre class="language-html"><code>&lt;body&gt;
+    &lt;h2&gt;JS HTML Events&lt;/h2&gt;
+    &lt;button onclick="document.getElementById('demo').innerHTML=Date()"&gt;current time is?&lt;/button&gt;
+    &lt;p id="demo"&gt;&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+                <!-- <pre class="language-js"><code>&lt;script&gt;
+&lt;/script&gt;</code></pre> -->
+
+                <h3 class="margin-2_5em-top word-spacing-normal" id="Mouse_events"><a href="#Mouse_events">Mouse events</a></h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Event Performed</th>
+                            <th>Event Handler</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>click</td>
+                            <td>onclick</td>
+                            <td>When mouse click on an element</td>
+                        </tr>
+                        <tr>
+                            <td>mouseover</td>
+                            <td>onmouseover</td>
+                            <td>When the cursor of the mouse comes over the element</td>
+                        </tr>
+                        <tr>
+                            <td>mouseout</td>
+                            <td>onmouseout</td>
+                            <td>When the cursor of the mouse leaves an element</td>
+                        </tr>
+                        <tr>
+                            <td>mousedown</td>
+                            <td>onmousedown</td>
+                            <td>When the mouse button is pressed over the element</td>
+                        </tr>
+                        <tr>
+                            <td>mouseup</td>
+                            <td>onmouseup</td>
+                            <td>When the mouse button is released over the element</td>
+                        </tr>
+                        <tr>
+                            <td>mousemove</td>
+                            <td>onmousemove</td>
+                            <td>When the mouse movement takes place.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="margin-2_5em-top word-spacing-normal" id="Keyboard_events"><a href="#Keyboard_events">Keyboard events</a></h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Event Performed</th>
+                            <th>Event Handler</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Keydown & Keyup</td>
+                            <td>onkeydown & onkeyup</td>
+                            <td>When the user press and then release the key</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="margin-2_5em-top word-spacing-normal" id="Form_events"><a href="#Form_events">Form events</a></h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Event Performed</th>
+                            <th>Event Handler</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>focus</td>
+                            <td>onfocus</td>
+                            <td>When the user focuses on an element</td>
+                        </tr>
+                        <tr>
+                            <td>submit</td>
+                            <td>onsubmit</td>
+                            <td>When the user submits the form</td>
+                        </tr>
+                        <tr>
+                            <td>blur</td>
+                            <td>onblur</td>
+                            <td>When the focus is away from a form element</td>
+                        </tr>
+                        <tr>
+                            <td>change</td>
+                            <td>onchange</td>
+                            <td>When the user modifies or changes the value of a form element</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 class="margin-2_5em-top word-spacing-normal" id="Window/Document_events"><a href="#Window/Document_events">Window/Document events</a></h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Event Performed</th>
+                            <th>Event Handler</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>load</td>
+                            <td>onload</td>
+                            <td>When the browser finishes the loading of the page</td>
+                        </tr>
+                        <tr>
+                            <td>unload</td>
+                            <td>onunload</td>
+                            <td>When the visitor leaves the current webpage, the browser unloads it</td>
+                        </tr>
+                        <tr>
+                            <td>resize</td>
+                            <td>onresize</td>
+                            <td>When the visitor resizes the window of the browser</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre class="language-html"><code>&lt;body&gt;
+    &lt;button&gt;Change color&lt;/button&gt;
+&lt;/body&gt;</code></pre>
+
+                <pre class="language-css"><code>&lt;style&gt;
+    button {
+        margin: 10px;
+    }
+&lt;/style&gt;</code></pre>
+
+                <pre class="language-js"><code>&lt;script&gt;
+    const btn = document.querySelector("button");
+
+    function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+    }
+                    
+    btn.addEventListener("click", () => {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+    });                    
+&lt;/script&gt;</code></pre>
+                
+            </article>
+        </section>
+
+        <section class="margin-5em-top">
+            <header id="addEventListener()"><a href="#addEventListener()">addEventListener()</a></header>
+            
+            <article>
+                <p>The addEventListener() method is used to attach an event handler to a particular element. It does not override the existing event handlers. Events are said to be an essential part of the JavaScript. A web page responds according to the event that occurred. Events can be user-generated or generated by API's. An event listener is a JavaScript's procedure that waits for the occurrence of an event. </p>
+                
+                <p>The addEventListener() method is an inbuilt function of <a href="/html/introduction.html" class="link">JavaScript</a>. We can add multiple event handlers to a particular element without overwriting the existing event handlers.</p>
+
+                <h3>Example</h3>
+                <p>To see the effect when we click on the button.</p>
+                
+                <pre class="language-html"><code>&lt;body&gt;
+    &lt;p&gt;Example of the addEventListener() method.&lt;/p&gt;
+    &lt;p&gt;Click the following button to see the effect.&lt;/p&gt;
+    &lt;button id="btn"&gt;Click me&lt;/button&gt;
+    &lt;p id="para"&gt;&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+                <pre class="language-js"><code>&lt;script&gt;
+    document.getElementById("btn").addEventListener("click", fun);
+    function fun() {
+        document.getElementById("para").innerHTML = "Namaste" + "&lt;br&gt;" + "Welcome to the JavaScript Documentation";
+    }
+&lt;/script&gt;</code></pre>
+
+                <p>Output:</p>
+                <img src="/images/EventsandOtherDOMProperties1.png" alt="output">
+                <p>After clicking on the button, the output will be-</p>
+                <img src="/images/EventsandOtherDOMProperties2.png" alt="output">
+
+                <h3>Example</h3>
+                <p>Multiple events of a different type to the same element.</p>
+
+                <pre class="language-html"><code>&lt;body&gt;
+    &lt;p&gt;Example of adding multiple events of different type to the same element.&lt;/p&gt;
+    &lt;p&gt;Click the following button to see the effect.&lt;/p&gt;
+    &lt;button id="btn"&gt;Click me&lt;/button&gt;
+    &lt;p id="para"&gt;&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+                
+                <pre class="language-js"><code>&lt;script&gt;
+    function func() {
+        btn.style.width = "50px";
+        btn.style.height = "50px";
+        btn.style.background = "yellow";
+        btn.style.color = "blue";
+    }
+                      
+    function func1() {
+        document.getElementById("para").innerHTML =  "This is second function";
+    }
+                      
+    function func2() {
+        btn.style.width = "";
+        btn.style.height = "";
+        btn.style.background = "";
+        btn.style.color = "";
+    }
+                      
+    var mybtn = document.getElementById("btn");
+    mybtn.addEventListener("mouseover", func);
+    mybtn.addEventListener("click", func1);
+    mybtn.addEventListener("mouseout", func2);
+&lt;/script&gt;</code></pre>
+
+                <p>Output:</p>
+                <img src="/images/EventsandOtherDOMProperties3.png" alt="output">
+                <p>When we hover on the button, the output will be- </p>
+                <img src="/images/EventsandOtherDOMProperties4.png" alt="output">
+                <p>After clicking on the button, the output will be- </p>
+                <img src="/images/EventsandOtherDOMProperties5.png" alt="output">
+
+                <h3 class="margin-2_5em-top">Proper code:</h3>
+                <pre class="language-js"><code>&lt;script&gt;
+    let button = document.getElementById('btn');
+
+    let x = function(e) {
+        // console.log(e);
+        // console.log(e.target);
+        // console.log(e.path);
+        // console.log(e.type, e.clientX, e.clientY);
+        // console.log(e.currentTarget);
+        alert('hello!');
+    };
+
+    let y = function(e) {
+        alert('hey!');
+    };
+
+    button.addEventListener('click', x);
+
+    button.addEventListener('click', y);
+
+    let a = prompt("1 or 2?");
+
+    // below will not work
+    // if (a == '2') {
+    //   button.removeEventListener('click', function(e) {
+    //      alert('hello!');
+    //   });
+    // }
+
+    if (a == '2')
+        button.removeEventListener('click', x);
+&lt;/script&gt;</code></pre>
+            </article>
         </section>
 
         <button value="prev"><a href="/html/walkingTheDOM.html">PREV</a></button>
-        <button value="next"><a href="">NEXT</a></button>
+        <button value="next"><a href="/html/practiceProblems.html">NEXT</a></button>
     </main>
 
 </body>

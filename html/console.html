@@ -139,6 +139,7 @@ console.assert("error" == false);</code></pre>
                     <pre class="language-js"><code>console.warn("warn");</code></pre>
                 </dl>
 
+                <h3 class="margin-2_5em-top">Proper code:</h3>
                 <pre class="language-js"><code>console.log("log");
 console.info("info");
 console.warn("warn");
@@ -150,14 +151,14 @@ console.table(console);
 console.time('P1');
                     
 console.time('forLoop');
-for (let i = 0; i<5; i++) {
+for (let i = 0; i&lt;5; i++) {
     console.log(233);
 }
 console.timeEnd('forLoop');
                     
 console.time('whileLoop');
 let i = 0;
-while (i<5) {
+while (i&lt;5) {
     console.log(233);
     i++;
 }

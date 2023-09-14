@@ -406,3 +406,40 @@ h3 a, h2 a, header a {
     text-decoration: none;
     color: var(--text-inactive);
 } */
+
+
+/* events and other DOM properties */
+.link {
+    color:#888;
+    text-decoration: none;
+}
+
+.link:hover {
+    color:#8e5f5f;
+    text-decoration: underline;
+}
+
+.word-spacing-normal {
+    word-spacing: normal;
+}
+
+.table tr {
+    width: 100%;
+}
+
+.table tr th  {
+    word-spacing: normal;
+    /* border: 1px solid #616161; */
+    /* border-radius: 5px; */
+    text-align: left;
+    padding: 15px 15px;
+    background-color: #616161;
+    color: #abd5f6;
+}
+
+.table tr td {
+    word-spacing: normal;
+    /* border-radius: 5px; */
+    padding: 10px 15px;
+    background-color: #9b9a9a;
+}
