@@ -137,6 +137,25 @@ section > article {
     word-spacing: 5px;
 }
 
+
+/* Official documentation */
+#officialDocumentation {
+    margin-top: 2em;
+}
+
+
+#officialDocumentation > a {
+    font-size: larger;
+    color: #954848;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#officialDocumentation > a:hover {
+    color:rgb(12, 53, 118);
+    text-decoration: none;
+}
+
+
 .margin-from-top {
     margin-top: 3rem;
 }
