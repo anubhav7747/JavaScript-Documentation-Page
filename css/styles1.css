@@ -23,27 +23,27 @@ html {
 
 
 /* header */
-.header {
-    display: flex;
+/* .header {
+    display: flex; */
     /* border: 2px solid orange; */
-}
+/* } */
 
-.left {
+/* .left { */
     /* border: 2px solid orange; */
-    position: fixed;
+    /* position: fixed;
     margin-top: 1em;
     margin-left: 1em;
-}
+} */
 
-.center {
+/* .center { */
     /* border: 2px solid orange; */
-    position: absolute;
+    /* position: absolute;
     top: -2.5%;
     left: 35%;
     font-size: 3.5rem;
-}
+} */
 
-.center a {
+/* .center a {
     color: #000000;
     text-decoration: none;
 }
@@ -52,7 +52,7 @@ html {
     text-decoration: underline;
     color: rgb(12, 53, 118);
     cursor: pointer;
-}
+} */
 
 
 /* nav */
@@ -60,9 +60,17 @@ html {
     /* border: 2px solid orange; */
     position: fixed;
     width: 19vw;
-    margin-top: 5em;
+    /* width: 350px; */
+    /* margin-top: 5em; */
     height: 100%;
     word-wrap: break-word;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+}
+
+#navbar .left {
+    padding-top: 0.75rem;
+    padding-left: 4rem;
 }
 
 #navbar::-webkit-scrollbar {
@@ -83,19 +91,27 @@ html {
 
 #navbar ul {
     /* height: 78%; */
-    height: 78%;
+    height: 79%;
+    padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 #navbar > ul > li {
     list-style: none;
-    margin-left: -2em;
-    margin-bottom: 1em;
+    /* margin-left: -2em; */
+    /* margin-bottom: 1em; */
+    margin-bottom: 0.6rem;
+    border-top: 1px solid;
+    position: relative;
+    width: 100%;
+    font-size: larger;
+    padding-top: 0.6rem;
 }
 
 #navbar > ul > li > a {
-    font-size: 1.5em;
+    margin-left: 1rem;
+    /* font-size: 1.5em; */
     text-decoration: none;
     color: rgb(170, 3, 153);
 }
@@ -113,10 +129,10 @@ html {
 /* main */
 #main-doc {
     position: absolute;
-    margin-left: 22.5em;
-    margin-top: 6em;
+    margin-left: 23em;
+    /* margin-top: 6em; */
     margin-right: 1em;
-    background-color: #efefef;
+    /* background-color: #efefef; */
     padding: 1em;
     border-radius: 20px;
     padding-bottom: 2em;
@@ -242,6 +258,15 @@ ol li:hover {
 dt {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+}
+
+dl > dt {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+dl > dt:hover {
+    text-decoration: none;
 }
 
 dl dt code, dl dd code, ul li code, p code, li code {
