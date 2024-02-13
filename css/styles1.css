@@ -373,26 +373,30 @@ article > h2 {
 
 /* practice problems */
 .questions li {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     text-decoration: none;
+    font-family: sans-serif;
+    color: #b7027e;
 }
 
-.extra-margin-half-left{
-    /* margin-left: 1.75rem; */
-}
+/* .extra-margin-half-left{
+    margin-left: 1.75rem;
+} */
 
 .questions li a {
+    line-height: 2rem;
     text-decoration: none;
-    color: #a52a2a;
+    /* color: #a52a2a; */
+    color: #b7027e;
 }
 
 .questions li a:hover {
     text-decoration: underline;
 }
 
-.btn {
+/* .btn {
     left: 92% !important;
-}
+} */
 
 
 /* problem 1 */
