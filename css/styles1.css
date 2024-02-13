@@ -141,11 +141,11 @@ html {
 
 section > header {
     font-size: 3em;
+    cursor: pointer;
 }
 
 section > header:hover {
     text-decoration: underline;
-    cursor: pointer;
 }
 
 section > article {
@@ -310,7 +310,6 @@ dl dt code, dl dd code, ul li code, p code, li code {
 
 
 /* strings */
-
 article > h3 {
     text-decoration: underline;
 }
@@ -473,9 +472,9 @@ h3 a, h2 a, header a {
     word-spacing: normal;
 }
 
-.table tr {
+/* .table tr {
     width: 100%;
-}
+} */
 
 .table tr th  {
     word-spacing: normal;
@@ -493,3 +492,111 @@ h3 a, h2 a, header a {
     padding: 10px 15px;
     background-color: #9b9a9a;
 }
+
+
+/* for tablet */
+@media only screen and (max-width: 768px) {
+    #time {
+        display: none;
+    }
+
+    #navbar {
+        width: fit-content;
+    }
+
+    #navbar ul {
+        height: 95%;
+        overflow-x: auto;
+    }
+
+    #navbar > ul > li {
+        font-size: 15px;
+    }
+
+    #navbar > ul > li > a {
+        margin-left: 0.5rem;
+    }
+
+    #main-doc {
+        margin-left: 20em;
+        margin-right: 1em;
+        padding: 0.75em;
+    }
+
+    #main-doc > header {
+        font-size: 2.5em;
+    }
+
+    .line-height-para {
+        line-height: 32px;
+    }
+
+    section > header {
+        font-size: 1.75em;
+        text-decoration: underline;
+    }
+
+    section > article {
+        font-size: 1.25em;
+        word-spacing: normal;
+    }
+
+    #officialDocumentation > a {
+        font-size: large;
+        text-decoration: none;
+    }
+    
+    button[value="next"], button[value="prev"] {
+        margin-top: 1rem;
+        left: 68% !important;
+        padding: 5px;
+        font-size: 0.75em;
+    }
+
+    .btn {
+        left: 85% !important;
+    }
+
+    
+    ol li {
+        margin-left: .75rem;
+        font-size: 2rem;
+    }
+
+
+    .para {
+        font-size: 1.25em;
+    }
+
+    .line-height-li {
+        line-height: 25px;
+    }
+
+    article code[class*=language-], article pre[class*=language-] {
+        /* max-width: 500px; */
+        /* font-size: 1rem; */
+        text-wrap: balance;
+    }
+
+    .events, .imageSize {
+        width: 480px;
+    }
+    
+    .table tr th {
+        padding: 7px;
+    }
+
+    .table tr td {
+        padding: 7px;
+        text-wrap: balance;
+    }
+
+
+    .questions li {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* for mobile */
+@media only screen and (max-width: 600px) {}
