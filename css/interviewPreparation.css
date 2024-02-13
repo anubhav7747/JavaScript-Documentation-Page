@@ -123,3 +123,33 @@ section > article {
 section > article > ol > li > p {
     margin-top: -1rem;
 }
+
+button[value="prev"] {
+    cursor: pointer;
+    position: relative;
+    left: 92%;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    width: 75px;
+    font-size: 1em;
+    /* box-shadow: 3px 3px #888888; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+button[value="prev"]:hover {
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+}
+
+button a {
+    text-decoration: none;
+    color: #f0f8ff;
+    display: block;
+}
+
+button a:hover {
+    color: #8b0b8b;
+}
