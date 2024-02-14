@@ -11,6 +11,23 @@ html {
 }
 
 
+.menu, .undoChanges {
+    width: 30px;
+    height: 30px;
+    /* background-color: #8b0b8b; */
+    padding: 5px;
+    display: none;
+}
+
+.menu hr {
+    width: 20px;
+    height: 3px;
+    background-color: #000000;
+    padding: 1px;
+    margin: 1px;
+}
+
+
 /* div#time */
 #time {
     text-align: center;
@@ -525,6 +542,7 @@ h3 a, h2 a, header a {
 
     #main-doc > header {
         font-size: 2.5em;
+        margin-bottom: 1.5rem;
     }
 
     .line-height-para {
@@ -548,7 +566,7 @@ h3 a, h2 a, header a {
     
     button[value="next"], button[value="prev"] {
         margin-top: 1rem;
-        left: 68% !important;
+        left: 68% ;
         padding: 5px;
         font-size: 0.75em;
     }
@@ -599,4 +617,97 @@ h3 a, h2 a, header a {
 
 
 /* for mobile */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    #navbar {
+        all: unset;
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #8b0b8b;
+        margin-bottom: 1em;
+    }
+
+    .menu, .undoChanges {
+        display: block;
+        left: 5% !important;
+    }
+
+    #navbar > ul {
+        display: none;
+    }
+
+    #navbar ul {
+        height: 100%;
+    }
+
+    #navbar > ul > li {
+        padding-left: 10px;
+        text-align: left;
+        width: 97.25%;
+        font-size: large;
+    }
+
+    #navbar > ul > li:last-child {
+        border-bottom: 1px solid;
+    }
+
+    #main-doc {
+        margin: 0;
+        padding: 0.5em;
+    }
+
+    #main-doc > header {
+        font-size: 2.25em;
+    }
+
+    section > header {
+        font-size: 1.50em;
+    }
+
+    section > article {
+        font-size: 1em;
+    }
+
+    .line-height-para {
+        line-height: 25px;
+    }
+
+    button[value="next"], button[value="prev"] {
+        left: 60%;
+    }
+
+    .btn {
+        left: 80% !important;
+    }
+
+
+    ol li {
+        margin-left: 0.5rem;
+        font-size: 1.75rem;
+    }
+
+
+    .para {
+        font-size: 1em;
+    }
+
+    .line-height-li {
+        line-height: 20px;
+    }
+
+    .events, .imageSize {
+        width: 95%;
+    }
+
+
+    .question li {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+}

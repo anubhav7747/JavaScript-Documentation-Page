@@ -29,6 +29,22 @@ html {
     border-color: rgba(0, 22, 22, 0.4);
 }
 
+.menu {
+    width: 30px;
+    height: 30px;
+    /* background-color: #8b0b8b; */
+    padding: 5px;
+    display: none;
+}
+
+.menu hr {
+    width: 20px;
+    height: 3px;
+    background-color: #000000;
+    padding: 1px;
+    margin: 1px;
+}
+
 #navbar .left {
     padding-top: 0.75rem;
     padding-left: 4rem;
@@ -193,11 +209,6 @@ button a:hover {
         word-spacing: normal;
         line-height: 1.5em;
     }
-
-    #officialDocumentation > a {
-        font-size: large;
-        text-decoration: none;
-    }
     
     button[value="prev"] {
         margin-top: 1rem;
@@ -209,4 +220,67 @@ button a:hover {
 
 
 /* for mobile */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    #navbar {
+        all: unset;
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #8b0b8b;
+        margin-bottom: 1em;
+    }
+
+    .menu {
+        display: block;
+        left: 5% !important;
+    }
+
+    #navbar > ul {
+        display: none;
+    }
+
+    #navbar ul {
+        height: 100%;
+    }
+
+    #navbar > ul > li {
+        padding-left: 10px;
+        text-align: left;
+        width: 97.25%;
+        font-size: large;
+    }
+
+    #navbar > ul > li:last-child {
+        border-bottom: 1px solid;
+    }
+
+    #main-doc {
+        margin: 0;
+        padding: 0.5em;
+    }
+
+    #main-doc > header {
+        font-size: 2.25em;
+    }
+
+    /* section > header {
+        font-size: 1.50em;
+    } */
+
+    section > article {
+        font-size: 1em;
+    }
+
+    .line-height-para {
+        line-height: 25px;
+    }
+
+    button[value="prev"] {
+        left: 80% !important;
+    }
+}
