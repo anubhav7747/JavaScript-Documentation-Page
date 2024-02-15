@@ -29,15 +29,25 @@ html {
     border-color: rgba(0, 22, 22, 0.4);
 }
 
-.menu {
-    width: 30px;
-    height: 30px;
-    /* background-color: #8b0b8b; */
-    padding: 5px;
+#menu > img, .horizontal > img {
+    width: 20px;
+    margin-left: 7px;
+    margin-right: 40px;
+}
+
+#menu > img {
     display: none;
 }
 
-.menu hr {
+.horizontal {
+    display: none;
+}
+
+/* .horizontal {
+    display: none;
+} */
+
+#menu hr {
     width: 20px;
     height: 3px;
     background-color: #000000;
@@ -233,12 +243,21 @@ button a:hover {
         align-items: center;
         border-bottom: 2px solid #8b0b8b;
         margin-bottom: 1em;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        background-color: #D9D9D9;
     }
 
-    .menu {
+    #menu > img {
         display: block;
-        left: 5% !important;
+        /* left: 5% !important; */
     }
+
+    /* .horizontal > img {
+        display: block;
+    } */
 
     #navbar > ul {
         display: none;
@@ -259,8 +278,13 @@ button a:hover {
         border-bottom: 1px solid;
     }
 
+    .nav {
+        margin-top: 75px;
+    }
+
     #main-doc {
         margin: 0;
+        margin-top: 75px;
         padding: 0.5em;
     }
 
