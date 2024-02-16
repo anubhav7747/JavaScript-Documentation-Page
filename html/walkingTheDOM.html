@@ -101,7 +101,7 @@
 
 
     <!-- main -->
-    <main id="main-doc">
+    <main id="main-doc" class="mobile-width">
         <!-- walking the DOM -->
         <header>Walking the DOM</header>
 
@@ -114,8 +114,8 @@
                     <li class="line-height-li">comment nodes</li>
                 </ol>
 
-                <img src="/images/DOM-Tree.gif" alt="DOM tree" style="border-radius: 15px; " class="center-image">
-                <p>According to the W3C HTML DOM standard, everything in an HTML document is a node:</p>
+                <img src="/images/DOM-Tree.gif" alt="DOM tree" style="border-radius: 15px; " class="center-image" class="imageResize">
+                <p class="line-height-para">According to the W3C HTML DOM standard, everything in an HTML document is a node:</p>
                 <ol type="a">
                     <li class="line-height-li">The entire document is a document node</li>
                     <li class="line-height-li">Every HTML element is an element node</li>
@@ -126,19 +126,19 @@
                 <p class="line-height-para">With the HTML DOM, all nodes in the node tree can be accessed by JavaScript. New nodes can be created, and all nodes can be modified or deleted.</p>
                 
                 
-                <img src="/images/domtree.png" alt="DOM tree" style="border-radius: 15px;" class="center-image">
-                <p>The topmost tree nodes are available directly as document properties:</p>
+                <img src="/images/domtree.png" alt="DOM tree" style="border-radius: 15px;" class="center-image" class="imageResize">
+                <p class="line-height-para">The topmost tree nodes are available directly as document properties:</p>
 
                 <p class="line-height-para"><code>&lt;html&gt;</code> = <code>document.documentElement</code><br>The topmost document node is <code>document.documentElement</code>. That’s the DOM node of the <code>&lt;html&gt;</code> tag.</p>
                 <p class="line-height-para"><code>&lt;body&gt;</code> = <code>document.body</code><br>Another widely used DOM node is the <code>&lt;body&gt;</code> element – <code>document.body</code>.</p>
                 <p class="line-height-para"><code>&lt;head&gt;</code> = <code>document.head</code><br>The <code>&lt;head&gt;</code> tag is available as <code>document.head</code>.</p>
 
                 <div class="note">
-                    <p><strong><u>Note</u>:</strong> A text node is always a leaf of the tree.</p>
+                    <p class="notes"><strong><u>Note</u>:</strong> A text node is always a leaf of the tree.</p>
                 </div>
 
                 <div class="note margin-1less-top">
-                    <p><strong><u>Note</u>:</strong> In the DOM world <code>null</code> means “doesn’t exist” or “no such node”.</p>
+                    <p class="notes"><strong><u>Note</u>:</strong> In the DOM world <code>null</code> means “doesn’t exist” or “no such node”.</p>
                 </div>
 
                 <pre class="language-html"><code>&lt;html&gt;
@@ -163,31 +163,31 @@
                 <p class="line-height-para">If an erroneous HTML is encountered by the browser it tends to correct it. For example, if we put something after the body, it is automatically moved inside the body. Another example is <code>&lt;table&gt;</code> tag which must contain <code>&lt;tbody&gt;</code>.</p>
                 
                 <div class="note margin-1less-top">
-                    <p><strong><u>Note</u>:</strong> <code>document.body</code> can sometimes be <code>null</code> if the JavaScript is written before the <code>&lt;body&gt;</code> tag.</p>
+                    <p class="notes"><strong><u>Note</u>:</strong> <code>document.body</code> can sometimes be <code>null</code> if the JavaScript is written before the <code>&lt;body&gt;</code> tag.</p>
                 </div>
 
 
                 <!-- children of an element -->
                 <h2 class="margin-2em-top">Children of an element</h2>
-                <p>Direct as well as deeply nested elements of an element are called its children.</p>
+                <p class="line-height-para">Direct as well as deeply nested elements of an element are called its children.</p>
                 <p class="line-height-para">Child nodes => Elements that are direct children. For example, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tag are children of <code>&lt;html&gt;</code>.</p>
-                <p>Descendant nodes => All nested elements, children, their children and so on.</p>
+                <p class="line-height-para">Descendant nodes => All nested elements, children, their children and so on.</p>
 
                 
                 <!-- firstChild, lastChild and childNodes -->
                 <h2 class="margin-2em-top">firstChild, lastChild and childNodes</h2>
-                <p><code>element.firstChild</code> => first child element</p>
-                <p><code>element.lastChild</code> => last child element</p>
-                <p><code>element.childNodes</code> => all child element</p>
+                <p class="line-height-para"><code>element.firstChild</code> => first child element</p>
+                <p class="line-height-para"><code>element.lastChild</code> => last child element</p>
+                <p class="line-height-para"><code>element.childNodes</code> => all child element</p>
                 
-                <p>Following is always true:</p>
-                <p><code>element.childNodes[0]</code> === <code>element.firstChild</code></p>
-                <p><code>element.childNodes[element.childNodes.length-1]</code> === <code>element.lastChild</code></p>
+                <p class="line-height-para">Following is always true:</p>
+                <p class="line-height-para"><code>element.childNodes[0]</code> === <code>element.firstChild</code></p>
+                <p class="line-height-para"><code>element.childNodes[element.childNodes.length-1]</code> === <code>element.lastChild</code></p>
                 
-                <p>There is also a method <code>element.hasChildNodes()</code> to check whether there are any child nodes.</p>
+                <p class="line-height-para">There is also a method <code>element.hasChildNodes()</code> to check whether there are any child nodes.</p>
 
                 <div class="note margin-1less-top" style="height: 100px;">
-                    <p class="line-height-para"><strong><u>Note</u>:</strong> <code>childNodes</code> looks like an array. But its not actually an array but a collection. We can use <code>Array.from(collection)</code> to convert it into an Array.</p>
+                    <p class="notes"><strong><u>Note</u>:</strong> <code>childNodes</code> looks like an array. But its not actually an array but a collection. We can use <code>Array.from(collection)</code> to convert it into an Array.</p>
                 </div>
 
                 <pre class="language-html"><code>&lt;body&gt;&lt;div&gt;
@@ -222,8 +222,8 @@
             <!-- Siblings and the parent -->
             <h2 class="margin-2em-top">Siblings and the parent</h2>
             <p class="line-height-para">Siblings are nodes that are children of the same parent. For example, <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are siblings. Siblings have same parent. In the above example its <code>&lt;html&gt;</code>.</p>
-            <p><code>&lt;body&gt;</code> is said to be the <q>next</q> or <q>right</q> sibling of <code>&lt;head&gt;</code>.</p>
-            <p><code>&lt;head&gt;</code> is said to be the <q>previous</q> or <q>left</q> sibling of <code>&lt;body&gt;</code>.</p>
+            <p class="line-height-para"><code>&lt;body&gt;</code> is said to be the <q>next</q> or <q>right</q> sibling of <code>&lt;head&gt;</code>.</p>
+            <p class="line-height-para"><code>&lt;head&gt;</code> is said to be the <q>previous</q> or <q>left</q> sibling of <code>&lt;body&gt;</code>.</p>
             <p class="line-height-para">The next sibling is in <code>nextSibling</code> property and the previous one in <code>previousSibling</code>. The parent is available as <code>parentNode</code>.</p>
 
             <pre class="language-html"><code>&lt;body&gt;&lt;div&gt;&lt;div&gt; class="first"&gt;first&lt;/div&gt;&lt;div&gt; class="second"&gt;second&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</code></pre>
@@ -243,11 +243,11 @@
 
                 <!-- element only navigation -->
                 <h2 class="margin-2em-top">Element only Navigation</h2>
-                <p>Sometimes we don't want text or comment nodes. Some links only take element nodes into account. For example,</p>
-                <p><code>document.previousElementSibling</code> => previous sibling which is an element</p>
-                <p><code>document.nextElementSibling</code> => next sibling (element)</p>
-                <p><code>document.firstElementChild</code> => first element child</p>
-                <p><code>document.lastElementChild</code> => last element child</p>
+                <p class="line-height-para">Sometimes we don't want text or comment nodes. Some links only take element nodes into account. For example,</p>
+                <p class="line-height-para"><code>document.previousElementSibling</code> => previous sibling which is an element</p>
+                <p class="line-height-para"><code>document.nextElementSibling</code> => next sibling (element)</p>
+                <p class="line-height-para"><code>document.firstElementChild</code> => first element child</p>
+                <p class="line-height-para"><code>document.lastElementChild</code> => last element child</p>
 
                 <pre class="language-html"><code>&lt;body&gt;&lt;!-- this is a comment --&gt;
     &lt;nav&gt;
@@ -269,16 +269,16 @@
                 <!-- table links -->
                 <h2 class="margin-2em-top">Table links</h2>
                 <p class="line-height-para">certain DOM elements may provide additional properties specific to their type for convenience. Table element supports the following properties:</p>
-                <p><code>table.rows</code> => collection of <code>&lt;tr&gt;</code> elements</p>
-                <p><code>table.caption</code> => reference to <code>&lt;caption&gt;</code></p>
-                <p><code>table.tHead</code> => reference to <code>&lt;thead&gt;</code></p>
-                <p><code>table.tFoot</code> => reference to <code>&lt;tfoot&gt;</code></p>
-                <p><code>table.tBodies</code> => collection of <code>&lt;tbody&gt;</code> elements</p>
-                <p><code>tbody.rows</code> => collection of <code>&lt;tr&gt;</code> inside</p>
-                <p><code>tr.cells</code> => collection of <code>&lt;td&gt;</code> and <code>&lt;th&gt;</code></p>
-                <p><code>tr.sectionRowIndex</code> => index of <code>&lt;tr&gt;</code> inside enclosing element</p>
-                <p><code>tr.rowIndex</code> => row number starting from 0</p>
-                <p><code>td.cellIndex</code> => number of cells inside enclosing <code>&lt;tr&gt;</code></p>
+                <p class="line-height-para"><code>table.rows</code> => collection of <code>&lt;tr&gt;</code> elements</p>
+                <p class="line-height-para"><code>table.caption</code> => reference to <code>&lt;caption&gt;</code></p>
+                <p class="line-height-para"><code>table.tHead</code> => reference to <code>&lt;thead&gt;</code></p>
+                <p class="line-height-para"><code>table.tFoot</code> => reference to <code>&lt;tfoot&gt;</code></p>
+                <p class="line-height-para"><code>table.tBodies</code> => collection of <code>&lt;tbody&gt;</code> elements</p>
+                <p class="line-height-para"><code>tbody.rows</code> => collection of <code>&lt;tr&gt;</code> inside</p>
+                <p class="line-height-para"><code>tr.cells</code> => collection of <code>&lt;td&gt;</code> and <code>&lt;th&gt;</code></p>
+                <p class="line-height-para"><code>tr.sectionRowIndex</code> => index of <code>&lt;tr&gt;</code> inside enclosing element</p>
+                <p class="line-height-para"><code>tr.rowIndex</code> => row number starting from 0</p>
+                <p class="line-height-para"><code>td.cellIndex</code> => number of cells inside enclosing <code>&lt;tr&gt;</code></p>
                 
                 <pre class="language-html"><code>&lt;body&gt;
     &lt;div class="container my-4"&gt;
@@ -384,7 +384,7 @@ span.style.color = 'orange';</code></pre>
 
                 <!-- matches, closest and contains methods -->
                 <h2 class="margin-2em-top">matches, closest and contains methods</h2>
-                <p>There are three important methods to search the DOM:</p>
+                <p class="line-height-para">There are three important methods to search the DOM:</p>
                 <dl>
                     <dt><code>elem.matches(CSS)</code></dt>
                     <dd>to check if element matches the given CSS selector.</dd>

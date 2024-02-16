@@ -349,7 +349,7 @@ article > h3 {
     font-size: 1.5em;
 }
 
-.line-height-para {
+.line-height-para, .notes {
     line-height: 40px;
 }
 
@@ -363,6 +363,10 @@ article > h3 {
 
 article code[class*=language-], article pre[class*=language-] {
     font-size: 0.8em;
+}
+
+code[class*=language-], pre[class*=language-] {
+    font-size: 0.9em !important;
 }
 
 .hr-border-color {
@@ -559,7 +563,7 @@ h3 a, h2 a, header a {
         margin-bottom: 1.5rem;
     }
 
-    .line-height-para {
+    .line-height-para, .notes {
         line-height: 32px;
     }
 
@@ -640,15 +644,15 @@ h3 a, h2 a, header a {
     }
 
     .mobile {
+        background: #D9D9D9;
+        position: fixed;
+        top: 0;
+        width: 100%;
         display: flex;
         align-items: center;
         border-bottom: 2px solid #8b0b8b;
         margin-bottom: 1em;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1;
-        background-color: #D9D9D9;
+        z-index: 1000;
     }
 
     #menu > img {
@@ -698,7 +702,7 @@ h3 a, h2 a, header a {
     }
 
     #main-doc > header {
-        font-size: 2.25em;
+        font-size: 2em;
     }
 
     section > header {
@@ -709,8 +713,12 @@ h3 a, h2 a, header a {
         font-size: 1em;
     }
 
+    .line-height-para, .notes {
+        line-height: 21px;
+    }
+
     .line-height-para {
-        line-height: 25px;
+        text-align: justify;
     }
 
     button[value="next"], button[value="prev"] {
@@ -724,7 +732,78 @@ h3 a, h2 a, header a {
 
     ol li {
         margin-left: 0.5rem;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+    }
+
+    dl dt code, dl dd code, ul li code, p code, li code {
+        background-color: #a59fa5;
+        border-radius: 2px;
+        padding: 2px 3px;
+    }
+
+    .margin-from-top {
+        margin-top: 2rem;
+    }
+
+    article code[class*=language-], article pre[class*=language-] {
+        font-size: 1rem;
+    }
+
+    /* code.language-js {
+        font-size: 0.7rem;
+    } */
+
+    code[class*=language-], pre[class*=language-] {
+        text-wrap: balance;
+    }
+
+    
+    /* arrays */
+    .mobile-width {
+        width: 97%;
+    }
+
+    .margin-5em-top {
+        margin-top: 3em;
+    }
+
+    .font-size-20px {
+        font-size: inherit;
+    }
+
+    .examples {
+        font-size: 25px;
+    }
+
+    .light-weight{
+        font-size: 20px;
+    }
+    
+    .light-weight, .examples {
+        text-decoration: underline;
+    }
+
+
+    /* alertPromptConfirm */
+    .imageResize {
+        width: 85%;
+        height: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* walking the DOM */
+    ol[type="a"] li {
+        font-size: medium;
+    }
+
+    .center-image {
+        /* display: unset; */
+        /* margin-left: 0;
+        margin-right: 0; */
+        width: 85%;
+        /* all: unset; */
     }
 
 
@@ -734,6 +813,7 @@ h3 a, h2 a, header a {
 
     .line-height-li {
         line-height: 20px;
+        text-align: justify;
     }
 
     .events, .imageSize {
@@ -745,5 +825,25 @@ h3 a, h2 a, header a {
         padding: 0;
         margin: 0;
         font-size: 1rem;
+        margin-left: 0;
     }
+
+    .questions li a {
+        padding: 0;
+        line-height: 1.5rem;
+        text-align: justify;
+    }
+
+    #main-doc > h1 {
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    /* problem 34 */
+    .answer {
+        margin-top: -20px;
+        color: blue;
+        font-size: 1.25rem;
+    }
+
 }

@@ -17,11 +17,11 @@
     width: 78vw !important;
 }
 
-.scriptTag a {
+.scriptTag p a {
     color: rgb(148, 25, 25);
 }
 
-.scriptTag a:hover {
+.scriptTag p a:hover {
     text-decoration: none;
 }
 
@@ -29,4 +29,11 @@
 /* alertPromptConfirm */
 #main-doc {
     width: 74vw;
+}
+
+/* for mobile */
+@media only screen and (max-width: 600px) {
+    #main-doc {
+        width: 97vw !important;
+    }
 }
