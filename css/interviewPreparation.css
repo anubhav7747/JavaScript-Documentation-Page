@@ -283,7 +283,7 @@ button a:hover {
     }
 
     #main-doc {
-        margin: 0;
+        margin: 0 5px;
         margin-top: 75px;
         padding: 0.5em;
     }
