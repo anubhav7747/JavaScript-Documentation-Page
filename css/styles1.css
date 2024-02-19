@@ -672,6 +672,10 @@ h3 a, h2 a, header a {
         position: relative;
     } */
 
+    #menu > img, .horizontal > img {
+        margin-left: 1rem;
+    }
+
     #navbar > ul {
         display: none;
     }
