@@ -263,6 +263,13 @@ button a:hover {
         margin-left: 1rem;
     }
 
+    a > .left {
+        /* display: block; */
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #navbar > ul {
         display: none;
     }
