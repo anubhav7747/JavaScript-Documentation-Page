@@ -60,16 +60,32 @@ html {
     padding-left: 4rem;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #868383;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6b5858;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
 #navbar::-webkit-scrollbar {
     width: 10px;
 }
 
 #navbar::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #868383;
 }
 
 #navbar::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #6b5858;
 }
 
 #navbar::-webkit-scrollbar-thumb:hover {
@@ -79,7 +95,7 @@ html {
 #navbar ul {
     height: 79%;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto;
 }
 
@@ -181,6 +197,38 @@ button a:hover {
     color: #8b0b8b;
 }
 
+
+/* basic full form */
+#main-doc > .heading {
+    font-size: 3em;
+    width: 78vw;
+    text-align: center;
+    color: #a52a2a;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.fullForm > li {
+    margin-bottom: 0.5rem;
+}
+
+.acronym {
+    color: orangered;
+}
+
+
+/* basic git commands */
+table {
+    margin-top: 2em;
+}
+
+table, th, td {
+    border: 2px solid slateblue;
+    padding: 5px;
+    word-spacing: normal;
+}
+
+
 /* for tablet */
 @media only screen and (max-width: 768px) {
     #time {
@@ -207,7 +255,8 @@ button a:hover {
     #main-doc {
         margin-left: 20em;
         margin-right: 1em;
-        padding: 0.75em;
+        padding: 0;
+        padding-left: 2.25em;
     }
 
     #main-doc > header {
@@ -226,6 +275,18 @@ button a:hover {
         padding: 5px;
         font-size: 0.75em;
     }
+
+    #main-doc > .heading {
+        font-size: 2.5em;
+        width: 70vw;
+    }
+
+    
+    /* basic git commands */
+    .table-width {
+        width: 55vw;
+    }
+
 }
 
 
@@ -296,11 +357,12 @@ button a:hover {
     #main-doc {
         margin: 0 7px;
         margin-top: 75px;
-        padding: 0.5em;
+        padding: 0;
     }
 
     #main-doc > header {
         font-size: 2.25em;
+        text-align: center;
     }
 
     /* section > header {
@@ -308,6 +370,7 @@ button a:hover {
     } */
 
     section > article {
+        margin-top: 2em;
         font-size: 1em;
     }
 
@@ -317,5 +380,22 @@ button a:hover {
 
     button[value="prev"] {
         left: 80% !important;
+    }
+
+    
+    /* basic full form */
+    #main-doc > .heading {
+        font-size: 2.25em;
+        width: 100vw;
+    }
+
+    .fullForm > li {
+        margin-bottom: 0.25rem;
+    }
+
+
+    /* basic git commands */
+    .table-width {
+        width: 90vw;
     }
 }

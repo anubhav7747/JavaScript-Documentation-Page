@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Git Commands</title>
+    <link rel="icon" href="/images/icon.png" type="images/x-icon">
+    <link rel="stylesheet" href="/css/interviewPreparation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3L2W4PL0E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K3L2W4PL0E');
+</script>
+
+<body>
+    <!-- nav -->
+    <nav id="navbar">
+        <div class="mobile">
+            <div id="menu">
+                <img src="/images/menu.png" alt="menu button">
+            </div>
+
+            <div class="horizontal">
+                <img src="/images/close.png" alt="close button">
+            </div>
+            
+            <a href="/index.html"><img src="/images/logo.png" alt="logo" width="150" height="60" class="left"></a>
+        </div>
+        
+        <ul class="nav">
+            <li>
+                <a href="/index.html">Introduction</a>
+            </li>
+            <li>
+                <a href="/html/Basics.html">Basics</a>
+            </li>
+            <li>
+                <a href="/html/expressionAndOperators.html">Expressions and Operators</a>
+            </li>
+            <li>
+                <a href="/html/statements.html">Statements</a>
+            </li>
+            <li>
+                <a href="/html/loops.html">Loops</a>
+            </li>
+            <li>
+                <a href="/html/functions.html">Function</a>
+            </li>
+            <li>
+                <a href="/html/strings.html">Strings</a>
+            </li>
+            <li>
+                <a href="/html/arrays.html">Arrays</a>
+            </li>
+            <li>
+                <a href="/html/scriptTag.html">Script Tag</a>
+            </li>
+            <li>
+                <a href="/html/console.html">Console</a>
+            </li>
+            <li>
+                <a href="/html/alertPromptConfirm.html">Alert, Prompt, Confirm</a>
+            </li>
+            <li>
+                <a href="/html/BOM_DOM.html">BOM & DOM</a>
+            </li>
+            <li>
+                <a href="/html/walkingTheDOM.html">Walking the DOM</a>
+            </li>
+            <li>
+                <a href="/html/eventsAndOtherDOMProperties.html">Events and Other DOM Properties</a>
+            </li>
+            <li>
+                <a href="/html/practiceProblems.html">Practice Problems</a>
+            </li>
+            <li>
+                <a href="/html/interviewPreparation.html">Interview Preparation</a>
+            </li>
+            <li>
+                <a href="/html/basicFullForm.html">Basic Full Form</a>
+            </li>
+            <li>
+                <a href="/html/unitsOfComputer.html">Units Of Computer</a>
+            </li>
+            <li>
+                <a href="/html/basicGitCommand.html">Basic Git Commands</a>
+            </li>
+        </ul>
+        
+        <div id="time"></div>
+    </nav>
+
+
+    <!-- main  -->
+    <main id="main-doc">
+        <header class="heading">Basic Git Commands</header>
+
+        <section>
+            <article class="table-width">
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>git init</td>
+                        <td>Initialize a new Git repository in the current directory.</td>
+                    </tr>
+                    <tr>
+                        <td>git clone &lt;repository&gt;</td>
+                        <td>Clone a repository into a new directory.</td>
+                    </tr>
+                    <tr>
+                        <td>git add &lt;file&gt;</td>
+                        <td>Add changes in a file to the staging area.</td>
+                    </tr>
+                    <tr>
+                        <td>git add. or git add --all</td>
+                        <td>Add all changes to the staging area.</td>
+                    </tr>
+                    <tr>
+                        <td>git commit -m <q>message</q></td>
+                        <td>Commit changes in the staging area with a message.</td>
+                    </tr>
+                    <tr>
+                        <td>git status</td>
+                        <td>Show the status of changes as untracked, modified, or staged.</td>
+                    </tr>
+                    <tr>
+                        <td>git log</td>
+                        <td>Display the commit history.</td>
+                    </tr>
+                    <tr>
+                        <td>git branch</td>
+                        <td>List all local branches, with the current branch highlighted.</td>
+                    </tr>
+                    <tr>
+                        <td>git branch &lt;branch_name&gt;</td>
+                        <td>Create a new branch.</td>
+                    </tr>
+                    <tr>
+                        <td>git checkout &lt;branch_name&gt;</td>
+                        <td>Switch to a different branch.</td>
+                    </tr>
+                    <tr>
+                        <td>git merge &lt;branch_name&gt;</td>
+                        <td>Merge changes from another branch into the current branch.</td>
+                    </tr>
+                    <tr>
+                        <td>git pull</td>
+                        <td>Fetch changes from a remote repository and merge them into the current branch.</td>
+                    </tr>
+                    <tr>
+                        <td>git push</td>
+                        <td>Push local changes to a remote repository.</td>
+                    </tr>
+                    <tr>
+                        <td>git remote -v</td>
+                        <td>Show a list of remote repositories and their URLs.</td>
+                    </tr>
+                    <tr>
+                        <td>git fetch</td>
+                        <td>Fetch changes from a remote repository.</td>
+                    </tr>
+                    <tr>
+                        <td>git reset &lt;file&gt;</td>
+                        <td>Unstage changes for a file.</td>
+                    </tr>
+                    <tr>
+                        <td>git rm &lt;file&gt;</td>
+                        <td>Remove a file from the working directory and the repository.</td>
+                    </tr>
+                    <tr>
+                        <td>git diff</td>
+                        <td>Show the differences between the working directory and the staging area.</td>
+                    </tr>
+                    <tr>
+                        <td>git diff &lt;commit1&gt; &lt;commit2&gt;</td>
+                        <td>Show the differences between two commits.</td>
+                    </tr>
+                    <tr>
+                        <td>git tag &lt;tag_name&gt;</td>
+                        <td>Create a lightweight tag for the current commit.</td>
+                    </tr>
+                    <tr>
+                        <td>git remote add &lt;name&gt; &lt;url&gt;</td>
+                        <td>Add a remote repository.</td>
+                    </tr>
+                    <tr>
+                        <td>git pull origin &lt;branch&gt;</td>
+                        <td>Pull changes from a specific branch of the remote repository.</td>
+                    </tr>
+                    <tr>
+                        <td>git push origin &lt;branch&gt;</td>
+                        <td>Push changes to a specific branch of the remote repository.</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
