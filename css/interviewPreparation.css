@@ -396,6 +396,7 @@ table, th, td {
 
     /* basic git commands */
     .table-width {
-        width: 90vw;
+        margin: 0 7px;
+        width: 93vw;
     }
 }
