@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Documentation | IIFE</title>
     <link rel="icon" href="/images/icon.png" type="images/x-icon">
-    <link rel="stylesheet" href="/css/styles1.css">
+    <link rel="stylesheet" href="/css/page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
@@ -119,10 +119,7 @@
 
         <section>
             <article>
-
-                <p class="line-height-para">An <strong>IIFE</strong> (Immediately Invoked Function Expression) in JavaScript is a function that is defined
-                    and executed immediately after its creation. It is often used to create a private scope for variables and
-                    avoid polluting the global scope.</p>
+                <p class="line-height-para">An <strong>IIFE</strong> (Immediately Invoked Function Expression) in JavaScript is a function that is defined and executed immediately after its creation. It is often used to create a private scope for variables and avoid polluting the global scope.</p>
                     
                 <p class="line-height-para">Here's an example of an IIFE:</p>
                     
@@ -165,6 +162,43 @@
     console.log(`DB connected is ${database}`);
 } )('MONGODB');
                 </code></pre>
+            </article>
+        </section>
+
+
+        <!-- Why would I use an IIFE? -->
+        <section>
+            <header class="margin-1more-top">Why would I use an IIFE?</header>
+
+            <article>
+                <p class="line-height-para">An IIFE (Immediately Invoked Function Expression) in JavaScript serves several purposes:</p>
+
+                <ol>
+                    <li class="line-height-li"><strong>Encapsulation and Scope Isolation:</strong></li>
+                    <ul>
+                        <li class="line-height-li margin-1less-top">IIFEs create a private scope for variables, preventing them from polluting the global scope.</li>
+                        <li class="line-height-li margin-1less-top">Variables declared inside an IIFE are not accessible outside of it.</li>
+                        <li class="line-height-li margin-1less-top">This helps avoid naming conflicts and unintended interactions with other scripts.</li>
+                    </ul>
+                    
+                    <li class="line-height-li margin-1less-top"><strong>Module Pattern:</strong></li>
+                    <ul>
+                        <li class="line-height-li margin-1less-top">IIFEs are commonly used to create modules or self-contained components in JavaScript.</li>
+                        <li class="line-height-li margin-1less-top">By encapsulating functionality within an IIFE, you can expose only specific methods or properties to the outside world, keeping the rest private.</li>
+                    </ul>
+
+                    <li class="line-height-li margin-1less-top"><strong>Initialization and Setup:</strong></li>
+                    <ul>
+                        <li class="line-height-li margin-1less-top">IIFEs are useful for executing setup code or initializing variables.</li>
+                        <li class="line-height-li margin-1less-top">For example, setting up event listeners, configuring libraries, or initializing constants.</li>
+                    </ul>
+
+                    <li class="line-height-li margin-1less-top"><strong>Avoiding Global Pollution:</strong></li>
+                    <ul>
+                        <li class="line-height-li margin-1less-top">By wrapping code in an IIFE, you prevent global variables from being created.</li>
+                        <li class="line-height-li margin-1less-top">This is especially important in large applications to maintain code organization and prevent accidental variable collisions.</li>
+                    </ul>
+                </ol>
             </article>
         </section>
 

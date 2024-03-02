@@ -544,15 +544,14 @@ h3 a, h2 a, header a {
     background-color: #9b9a9a;
 }
 
-
-/* IIFE */
-/* footer syntax */
-/* copyright */
+/* hr before copyright */
 .before-copyright {
     margin-top: 2em;
     height: 2px;
     background-color: #000000;
 }
+
+/* footer syntax */
 .footer {
     text-align: center;
     font-family: monospace;
