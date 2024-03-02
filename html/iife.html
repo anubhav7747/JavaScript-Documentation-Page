@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Documentation | Script Tag</title>
+    <title>JavaScript Documentation | IIFE</title>
     <link rel="icon" href="/images/icon.png" type="images/x-icon">
     <link rel="stylesheet" href="/css/styles1.css">
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
@@ -17,11 +16,11 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3L2W4PL0E"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-K3L2W4PL0E');
+    gtag('config', 'G-K3L2W4PL0E');
 </script>
 
 <body>
@@ -30,8 +29,8 @@
     <!-- <header class="header">
         <h1 class="center"><a href="/index.html">JavaScript Documentation</a></h1>
     </header> -->
-    
-    
+
+
     <!-- nav -->
     <nav id="navbar">
         <div class="mobile">
@@ -42,10 +41,10 @@
             <div class="horizontal">
                 <img src="/images/close.png" alt="close button">
             </div>
-            
+
             <a href="/index.html"><img src="/images/logo.png" alt="logo" width="150" height="60" class="left"></a>
         </div>
-        
+
         <ul class="nav">
             <li>
                 <a href="/index.html">Introduction</a>
@@ -108,35 +107,77 @@
                 <a href="/html/basicGitCommand.html">Basic Git Commands</a>
             </li>
         </ul>
-        
+
         <div id="time"></div>
     </nav>
 
 
     <!-- main -->
-    <main id="main-doc" class="scriptTag">
-        <!-- Script Tag -->
-        <header>Script Tag</header>
-        
+    <main id="main-doc">
+        <!-- Strings -->
+        <header>Immediately Invoked Function Expression</header>
+
         <section>
             <article>
-                <p class="line-height-para">Advantage of using separate script file using <code>src</code> attribute of script tag</p>
-                <li class="line-height-li">separation of concerns</li>
-                <li class="line-height-li">browser caching</li>
-                <p class="line-height-para"><a href="https://replit.com/@AnubhavTiwari7/24ScriptTag#index.html" target="_blank">for better understanding</a></p>
-                <!-- <button id="linkOpenNewTab">for better understanding</button> -->
+
+                <p class="line-height-para">An <strong>IIFE</strong> (Immediately Invoked Function Expression) in JavaScript is a function that is defined
+                    and executed immediately after its creation. It is often used to create a private scope for variables and
+                    avoid polluting the global scope.</p>
+                    
+                <p class="line-height-para">Here's an example of an IIFE:</p>
+                    
+                <pre class="language-js"><code>
+(function() {
+    // Code inside the IIFE
+    var x = 10;
+    console.log("Inside IIFE: x =", x);
+})();
+                    
+// x is not accessible outside the IIFE
+// console.log("Outside IIFE: x =", x);  // Uncommenting this line will result in an error
+                </code></pre>
+
+
+                <p class="line-height-para">In the above example:</p>
+                <ul>
+                    <li class="line-height-li">We define an anonymous function using `(function() { ... })`.</li>
+                    <li class="line-height-li margin-1less-top">The function is immediately invoked with `()` right after its definition.</li>
+                    <li class="line-height-li margin-1less-top">The variable `x` is scoped only within the IIFE and is not accessible outside of it.</li>
+                </ul>
+
+                <p class="line-height-para">Another example of an IIFE:</p>
+                    
+                <pre class="language-js"><code>
+// named IIFE
+(function chai() {
+    console.log("DB Connected");
+})();
+
+
+// unnamed IIFE
+( () => {
+    console.log('DB Connected two');
+} )();
+
+
+// IIFE with parameters passed
+( (database) => {
+    console.log(`DB connected is ${database}`);
+} )('MONGODB');
+                </code></pre>
             </article>
         </section>
 
-        <button value="prev"><a href="/html/arrays.html">PREV</a></button>
-        <button value="next"><a href="/html/console.html">NEXT</a></button>
-                
+        <button value="prev"><a href="/html/functions.html">PREV</a></button>
+        <button value="next"><a href="/html/arrays.html">NEXT</a></button>
+        
         <hr class="before-copyright">
         <!-- copyright -->
         <!-- <footer class="footer"> -->
             <p class="footer">&copy; 2023 by Anubhav Tiwari. All rights reserved.</p>
         <!-- </footer> -->
     </main>
+
 
     <script src="/js/prism.js"></script>
     <script src="/js/script.js"></script>

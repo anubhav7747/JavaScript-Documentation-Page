@@ -545,6 +545,23 @@ h3 a, h2 a, header a {
 }
 
 
+/* IIFE */
+/* footer syntax */
+/* copyright */
+.before-copyright {
+    margin-top: 2em;
+    height: 2px;
+    background-color: #000000;
+}
+.footer {
+    text-align: center;
+    font-family: monospace;
+    font-size: 25px;
+    margin: 0.75em 0 0 0;
+}
+
+
+
 /* for tablet */
 @media only screen and (max-width: 768px) {
     #time {
@@ -647,6 +664,12 @@ h3 a, h2 a, header a {
 
     .questions li {
         font-size: 1.25rem;
+    }
+
+
+    /* footer */
+    .footer {
+        font-size: 20px;
     }
 }
 
@@ -875,4 +898,11 @@ h3 a, h2 a, header a {
         font-size: 1.25rem;
     }
 
+
+    /* footer */
+    .footer {
+        margin: 0;
+        font-size: 16px;
+        text-align: center;
+    }
 }
